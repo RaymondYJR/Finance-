@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "SourceHan";
+  font-weight: heavy;
+  src: font-url('SourceHanSansCN-Heavy') format('opentype'),
+}
+@font-face {
+  font-family: "SourceHan";
+  font-weight: regular;
+  src: font-url('SourceHanSansCN-Regular') format('opentype')
+}
+@font-face {
+  font-family: "SourceHan";
+  font-weight: extralight;
+  src: font-url('SourceHanSansCN-ExtraLight') format('opentype'),
+}
+$my-font: "SourceHan";
