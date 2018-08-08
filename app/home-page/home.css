@@ -1,5 +1,7 @@
 @import url(../assets/stylesheets/search.css);
 @import url(../assets/stylesheets/application.css);
+@import url(../assets/stylesheets/footer.css);
+@import url(../assets/stylesheets/sidebar.css);
 
 .home-banner {
   justify-content: center;
@@ -8,7 +10,7 @@
 }
 
 .home-h1 {
-  color: white;
+  color: #56ccf2;
   font-weight: lighter;
   letter-spacing: 5px;
   margin-top: 20vh;
@@ -19,5 +21,10 @@
 
 body {
   font-family: "SourceHan";
-  background-color: #56ccf2;
+  background-color: rgb(250, 250, 250);
 }
+
+.container {
+  min-height: 100vh;
+}
+
