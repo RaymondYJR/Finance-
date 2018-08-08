@@ -1,0 +1,23 @@
+@import url(../assets/stylesheets/search.css);
+@import url(../assets/stylesheets/application.css);
+
+.home-banner {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.home-h1 {
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 5px;
+  margin-top: 20vh;
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body {
+  font-family: "SourceHan";
+  background-color: #56ccf2;
+}
