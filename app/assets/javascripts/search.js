@@ -44,12 +44,9 @@ const searchWords = (event) => {
   // while (myNode.firstChild) {
   //   myNode.removeChild(myNode.firstChild);
   // }
+  var headers = new Headers({"Origin": ''});
   let finalSearch = event.currentTarget.value;
-  fetch(`https://crossorigin.me/http://autoc.finance.yahoo.com/autoc?query=${finalSearch}&region=1&lang=en&callback=YAHOO.Finance.SymbolSuggest.ssCallback`, { headers: {
-      "Origin": "localhost"
-    }
-
-  })
+  fetch(`https://crossorigin.me/http://autoc.finance.yahoo.com/autoc?query=${finalSearch}&region=1&lang=en&callback=YAHOO.Finance.SymbolSuggest.ssCallback&callback=?`, headers)
     .then(response => response.json())
     .then((data) => {
       // displayResults(data.result);
