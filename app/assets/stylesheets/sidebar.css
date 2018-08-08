@@ -24,17 +24,21 @@ a
 {
   text-decoration: none;
   color: #FAFAFA;
-  font-weight: 550;
+  font-weight: normal;
 
   transition: color 0.3s ease;
 }
 
-a:hover
+li:hover
 {
-  background-color: #D7DCE2;
+  color: #87D9F3;
   text-decoration: none;
-  font-weight: bolder;
+  font-weight: normal;
 
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 span:hover {
@@ -139,14 +143,14 @@ span:hover {
 #menu
 {
   position: fixed;
-  width: 200px;
+  width: 120px;
   top: 0;
   left: 0;
   padding: 50px;
   padding-top: 125px;
   height: 100vh;
 
-  background: #56ccf2;
+  background: #4F4F4F;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
