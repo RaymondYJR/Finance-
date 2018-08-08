@@ -40,7 +40,7 @@
   position: absolute;
   left: 15px;
   top: 13px;
-  z-index: 999;
+  z-index: 0;
   color: #4FBADC;
 }
 
