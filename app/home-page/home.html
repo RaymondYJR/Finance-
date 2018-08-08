@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>DianDianTou</title>
-    <script src="../assets/javascripts/search.js"></script>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -19,8 +19,13 @@
           <div class="nav-search">
             <div class="search-input">
               <i class="material-icons search-icon">search</i>
-              <input type="text" placeholder="请输入公司名称" id="search-input" />
-              <div class="search-dropdown" id="hits-container"></div>
+              <input type="text" placeholder="请输入公司名称" id="input-content" />
+              <div class="search-dropdown" id="hits-container">
+                <ul id="results">
+  <!--       <li>Resultat 1 (TODO: remove)</li>
+        <li>Resultat 2 (TODO: remove)</li> -->
+                </ul>
+              </div>
               <i class="close-search material-icons">close</i>
             </div>
           </div>
@@ -28,5 +33,6 @@
       </div>
     </div>
 
+    <script src="../assets/javascripts/search.js"></script>
   </body>
 </html>
