@@ -7,6 +7,20 @@
   height: 47px;
 }
 
+.sm-nav-search {
+  width: 21vw !important;
+  padding-left: 20px !important;
+}
+
+.sm-search-icon {
+  left: 0px !important;
+}
+
+.sm-close-search-icon {
+  right: 45px !important;
+  top: 50px !important;
+}
+
 .nav-search.active {
   box-shadow: 0 4px 4px rgba(79, 79, 79, 0.21);
 }
