@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "SourceHan";
+  font-weight: bold;
+  src: url('../font/SourceHanSansCN-Heavy.otf') format('opentype');
+}
+@font-face {
+  font-family: "SourceHan";
+  font-weight: normal;
+  src: url('../font/SourceHanSansCN-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: "SourceHan";
+  font-weight: lighter;
+  src: url('../font/SourceHanSansCN-ExtraLight.otf') format('opentype');
+}
+
