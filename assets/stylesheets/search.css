@@ -75,6 +75,7 @@
   -webkit-animation: expand-search-dropdown-animation 0.5s forwards;
   animation: expand-search-dropdown-animation 0.5s forwards;
   overflow-y: scroll;
+  overflow:auto;
   max-height: 400px;
   border-radius: 0 0 4px 4px;
   background-color: #FCFCFC;

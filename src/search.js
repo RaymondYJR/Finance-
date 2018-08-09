@@ -1,70 +1,72 @@
-// $(function() {
-//     $('#search-input').on('focus', function() {
-//       $('.nav-search').addClass('active');
-//     })
+// function() {
+//   const addActive = (event) => {
+  // };
+// const addActive = (event) => {
+// document.getElementsByClassName("nav-search")[0].classList.add("active");
+// }
+// document.getElementById("search-input").addEventListener("focus", addActive);
 
-//     $('#search-input').on('keyup', function() {
-//       $('#hits-container').scrollTop(0);
-//     })
+   //  $('#search-input').on('keyup', function() {
+   //    $('#hits-container').scrollTop(0);
+   //  })
 
-//     $('.close-search').on('click', function(evt) {
-//       evt.preventDefault();
-//       $('#search-input').val('');
-//        $('.nav-search').removeClass('active');
-//      })
+   //  $('.close-search').on('click', function(evt) {
+   //    evt.preventDefault();
+   //    $('#search-input').val('');
+   //     $('.nav-search').removeClass('active');
+   //   })
 
-//    $('#search-input').on('blur', function(evt) {
-//      if(!evt.isDefaultPrevented) {
-//        console.log("blur");
-//       $('.nav-search').removeClass('active');
-//      }
-//     })
-// });
-import axios from 'axios';
+   // $('#search-input').on('blur', function(evt) {
+   //   if(!evt.isDefaultPrevented) {
+   //     console.log("blur");
+   //    $('.nav-search').removeClass('active');
+   //   }
+   //  })
+// };
 
 // TODO: Autocomplete the input with AJAX calls.
 const displayResults = (companyList) => {
   const list = document.getElementById("results");
   if (companyList) {
-    list.insertAdjacentHTML("beforeend", `<div><li>${companyList}</li></div>`);
+    for (let i = 0; i < companyList.length; i += 1) {
+      list.insertAdjacentHTML("beforeend", `<li>${companyList[i].name}${companyList[i].ticker}</li>`);
+    }
+  } else {
+    list.insertAdjacentHTML("beforeend", `<li>Sorry, the company cannot be found.</li>`);
   }
-  // if (companyList) {
-  //   for (let i = 0; i < companyList.length; i += 1) {
-  //     if (companyList[i].exchDisp === "NYSE" || companyList[i].exchDisp === "NASDAQ") {
-  //       list.insertAdjacentHTML("beforeend", `<div class="item" id="myUL"><li>${companyList[i].name}${companyList[i].symbol}</li></div>`);
-  //     }
-  //   }
-  // }
 };
 
 let finalSearch = "";
 
 const searchWords = (event) => {
-
-  // const myNode = document.getElementById("results");
-  // while (myNode.firstChild) {
-  //   myNode.removeChild(myNode.firstChild);
-  // }
-  // var config = new Headers({"Origin": 'localhost:8080'});
   var config = {
-    headers: {'Authorization': 'localhost'}
+    headers: {'Authorization': 'Basic ZjNkNmRkMTcxNjNmNGZmMjU2OGE4YWE1ZjNiMTU1YmM6NzQ0OGNiNjY1YTBkYmNjMGNjMjdjNzBlZGRhMGRlZTE='}
   };
   let finalSearch = event.currentTarget.value;
-  fetch(`hhttps://api.intrinio.com/companies?query=${finalSearch}`, config)
-    .then(function(response){
-    console.log(response.data); // ex.: { user: 'Your User'}
-    console.log(response.status); // ex.: 200
-  });
-  // fetch(`https://crossorigin.me/http://autoc.finance.yahoo.com/autoc?query=${finalSearch}&region=1&lang=en&callback=YAHOO.Finance.SymbolSuggest.ssCallback&callback=?`, headers)
-  //   .then(response => response.json())
-  //   .then((data) => {
-  //     // displayResults(data.result);
-  //     console.log(data);
-  //   });
+  if (finalSearch != "") {
+    fetch(`https://api.intrinio.com/companies?query=${finalSearch}`, config)
+    .then(response => response.json())
+    .then((data) => {
+      const myNode = document.getElementById("results");
+      while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+      }
+      document.getElementsByClassName("nav-search")[0].classList.add("active");
+      displayResults(data.data);
+    });
+  } else {
+      const myNode = document.getElementById("results");
+      while (myNode.firstChild) {
+        myNode.removeChild(myNode.firstChild);
+      }
+      document.getElementsByClassName("nav-search")[0].classList.remove("active");
+  }
+
 };
 
 const input = document.getElementById("input-content");
 input.addEventListener("keyup", searchWords);
+
 
 // function toTitleCase(str) {
 //     return str.replace(/(?:^|\s)\w/g, function(match) {
