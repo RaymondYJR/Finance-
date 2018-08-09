@@ -10,59 +10,100 @@
 </head>
 <body>
 
-    <div class="container">
+  <div class="container" id="bootstrap-overrides">
+
+    <!-- <div class="col-lg-1">
       <div id="menuToggle">
-    <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
+
           <input type="checkbox" />
-
-        <!--
-        Some spans to act as a hamburger.
-
-        They are acting like a real hamburger,
-        not that McDonalds stuff.
-        -->
           <span></span>
           <span></span>
           <span></span>
 
-        <!--
-        Too bad the menu has to be inside of the button
-        but hey, it's pure CSS magic.
-        -->
+
           <ul id="menu">
             <a href="#"><li><i class="fas fa-search"></i>  搜索</li></a>
             <a href="#"><li><i class="fas fa-chart-pie"></i>   面板</li></a>
           </ul>
-        </div>
-      <div class="comp-container">
+      </div>
+    </div> -->
 
-        <div class="nav-search">
-          <div class="search-input">
-            <i class="material-icons search-icon">search</i>
-            <input type="text" placeholder="请输入公司名称" id="input-content" />
-            <div class="search-dropdown" id="hits-container">
-              <ul id="results">
-  <!--       <li>Resultat 1 (TODO: remove)</li>
-      <li>Resultat 2 (TODO: remove)</li> -->
-              </ul>
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="comp-container">
+
+          <div class="nav-search">
+            <div class="search-input">
+              <i class="material-icons search-icon">search</i>
+              <input type="text" placeholder="请输入公司名称" id="input-content" />
+              <div class="search-dropdown" id="hits-container">
+                <ul id="results">
+    <!--       <li>Resultat 1 (TODO: remove)</li>
+        <li>Resultat 2 (TODO: remove)</li> -->
+                </ul>
+              </div>
             </div>
-            <i class="close-search material-icons">close</i>
           </div>
+        </div>
+      </div>
+      <div class="col-lg-offset-1 col-lg-8">
+          <div class="card">
+              <div class="card-title">
+                  <h4>Table Striped </h4>
+
+              </div>
+              <div class="card-body">
+                  <div class="table-responsive">
+                      <table class="table table-striped">
+                          <thead>
+                              <tr>
+                                  <th>#</th>
+                                  <th>Name</th>
+                                  <th>Status</th>
+                                  <th>Date</th>
+                                  <th>Price</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <th scope="row">1</th>
+                                  <td>Kolor Tea Shirt For Man</td>
+                                  <td><span class="badge badge-primary">Sale</span></td>
+                                  <td>January 22</td>
+                                  <td class="color-primary">$21.56</td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">2</th>
+                                  <td>Kolor Tea Shirt For Women</td>
+                                  <td><span class="badge badge-success">Tax</span></td>
+                                  <td>January 30</td>
+                                  <td class="color-success">$55.32</td>
+                              </tr>
+                              <tr>
+                                  <th scope="row">3</th>
+                                  <td>Blue Backpack For Baby</td>
+                                  <td><span class="badge badge-danger">Extended</span></td>
+                                  <td>January 25</td>
+                                  <td class="color-danger">$14.85</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-container">
+      <div class="footer">
+        <div class="footer-links">
+          <a href="#"><p class="foot-text">关于我们</p></a>
+          <a href="#"><p class="foot-text">联系我们</p></a>
         </div>
       </div>
     </div>
-    <div class="footer-container">
-        <div class="footer">
-          <div class="footer-links">
-            <a href="#"><p class="foot-text">关于我们</p></a>
-            <a href="#"><p class="foot-text">联系我们</p></a>
-          </div>
-        </div>
-      </div>
+  </div>
 
-    <script src="../assets/javascripts/search.js"></script>
+  <script src="../assets/javascripts/search.js"></script>
 </body>
 </html>
