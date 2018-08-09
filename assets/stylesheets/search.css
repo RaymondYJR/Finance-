@@ -106,8 +106,8 @@
   margin-bottom: 20px;
 }
 .hit .hit-title {
-  color: #44A948;
-  border-bottom: 1px solid #44A948;
+  color: #56ccf2;
+/*  border-bottom: 1px solid #44A948;*/
   font-weight: 500;
   margin-bottom: 0;
   margin-top: 0;
@@ -118,8 +118,10 @@
   text-decoration: none;
   color: black;
   font-size: 14px;
-  display: block;
+/*  display: block;*/
+  display: inline-block;
   margin-top: 3px;
+  margin-left: 20px;
 }
 .hit .hit-anchor {
   font-size: 13px;
