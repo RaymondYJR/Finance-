@@ -3,3 +3,4 @@ import './application.js'
 import './cable.js'
 
 import './enrichdb.js'
+import './readfromdb.js'
