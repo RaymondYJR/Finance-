@@ -1,0 +1,58 @@
+#registration-popup {
+  display: none;
+}
+
+a { cursor: pointer; }
+
+.home-banner-content {
+  position: relative;
+}
+
+.reg-close-icon {
+  margin: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+#registration-popup {
+  position: absolute;
+  left: 13vw;
+  top: -10vh;
+  z-index: 2;
+}
+
+.register-submit-btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #56ccf2;
+  border: #56ccf2;
+}
+
+/* added from style.css */
+.login-content {
+    margin: 100px 0;
+}
+
+.login-form {
+  background: #FFFFFF;
+  padding: 20px 8vw 20px 8vw;
+/*  margin-left: 10px;
+  margin-right: 10px;*/
+  border-radius: 2px;
+}
+
+.login-form h4 {
+  color: #444;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.login-form .checkbox {
+  color: #444;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}

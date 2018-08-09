@@ -2,6 +2,7 @@
 @import url(assets/stylesheets/application.css);
 @import url(assets/stylesheets/footer.css);
 @import url(assets/stylesheets/sidebar.css);
+@import url(assets/stylesheets/registration-form.css);
 
 .home-banner {
   justify-content: center;
@@ -28,3 +29,14 @@ body {
   min-height: 100vh;
 }
 
+.color-change-hover {
+  color: white;
+}
+
+.color-change-hover:hover {
+  color: #87D9F3;
+}
+
+/*.text-white-color {
+  color: white;
+}*/

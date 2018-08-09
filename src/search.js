@@ -29,11 +29,11 @@ const searchWords = (event) => {
       displayResults(data.data);
     });
   } else {
-      const myNode = document.getElementById("results");
-      while (myNode.firstChild) {
-        myNode.removeChild(myNode.firstChild);
-      }
-      document.getElementsByClassName("nav-search")[0].classList.remove("active");
+    const myNode = document.getElementById("results");
+    while (myNode.firstChild) {
+      myNode.removeChild(myNode.firstChild);
+    }
+    document.getElementsByClassName("nav-search")[0].classList.remove("active");
   }
 
 };
