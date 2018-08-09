@@ -1,3 +1,32 @@
 @import url(../assets/stylesheets/application.css);
 @import url(../assets/stylesheets/footer.css);
 @import url(../assets/stylesheets/sidebar.css);
+@import url(../assets/stylesheets/search.css);
+
+
+body {
+  font-family: "SourceHan";
+  background-color: rgb(250, 250, 250);
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.comp-container {
+  width: 250px;
+  height: 100vh;
+  background-color: #87d9f3;
+}
+
+.nav-search {
+  width: 100%;
+  padding: 35px;
+}
+
+.search-icon {
+  padding: 35px;
+}
+/*.nav-search .search-input input {
+  width: 75%;
+}*/
