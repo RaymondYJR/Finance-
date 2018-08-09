@@ -30,7 +30,7 @@ body {
 }
 
 .color-change-hover {
-  color: white;
+  color: white !important;
 }
 
 .color-change-hover:hover {
