@@ -1,7 +1,7 @@
 @import url(assets/stylesheets/application.css);
 @import url(assets/stylesheets/footer.css);
 @import url(assets/stylesheets/sidebar.css);
-@import url(../assets/stylesheets/search.css);
+@import url(assets/stylesheets/search.css);
 
 body {
   font-family: "SourceHan";
@@ -32,6 +32,26 @@ body {
   padding: 0px;
 }
 
+.col-lg-8 {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 90px;
+}
+
+.card {
+  width: 800px;
+}
+
+.card-title {
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+.card-body {
+  padding: 0;
+}
 /*#bootstrap-overrides .row {
   width: 130%;
 }

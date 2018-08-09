@@ -32,9 +32,9 @@
       <div class="col-lg-3">
         <div class="comp-container">
 
-          <div class="nav-search">
+          <div class="nav-search sm-nav-search">
             <div class="search-input">
-              <i class="material-icons search-icon">search</i>
+              <i class="material-icons search-icon sm-search-icon">search</i>
               <input type="text" placeholder="请输入公司名称" id="input-content" />
               <div class="search-dropdown" id="hits-container">
                 <ul id="results">
@@ -42,6 +42,7 @@
         <li>Resultat 2 (TODO: remove)</li> -->
                 </ul>
               </div>
+              <i class="close-search material-icons sm-close-search-icon" id="close-search-icon">close</i>
             </div>
           </div>
         </div>
@@ -58,10 +59,11 @@
                           <thead>
                               <tr>
                                   <th>#</th>
-                                  <th>Name</th>
-                                  <th>Status</th>
-                                  <th>Date</th>
-                                  <th>Price</th>
+                                  <th>2013</th>
+                                  <th>2014</th>
+                                  <th>2015</th>
+                                  <th>2016</th>
+                                  <th>2017</th>
                               </tr>
                           </thead>
                           <tbody>
@@ -71,6 +73,7 @@
                                   <td><span class="badge badge-primary">Sale</span></td>
                                   <td>January 22</td>
                                   <td class="color-primary">$21.56</td>
+                                  <td>1</td>
                               </tr>
                               <tr>
                                   <th scope="row">2</th>
@@ -78,6 +81,7 @@
                                   <td><span class="badge badge-success">Tax</span></td>
                                   <td>January 30</td>
                                   <td class="color-success">$55.32</td>
+                                  <td>1</td>
                               </tr>
                               <tr>
                                   <th scope="row">3</th>
@@ -85,6 +89,15 @@
                                   <td><span class="badge badge-danger">Extended</span></td>
                                   <td>January 25</td>
                                   <td class="color-danger">$14.85</td>
+                                  <td>1</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                  <td>Blue Backpack For Baby</td>
+                                  <td><span class="badge badge-danger">Extended</span></td>
+                                  <td>January 25</td>
+                                  <td class="color-danger">$14.85</td>
+                                  <td>1</td>
                               </tr>
                           </tbody>
                       </table>
@@ -104,6 +117,6 @@
     </div>
   </div>
 
-  <script src="../assets/javascripts/search.js"></script>
+  <script src="build/application.js"></script>
 </body>
 </html>
