@@ -21,11 +21,19 @@
   top: 50px !important;
 }
 
+.sm-results-dropdown {
+  padding-left: 8px;
+}
+
 .nav-search.active {
   box-shadow: 0 4px 4px rgba(79, 79, 79, 0.21);
 }
 .nav-search.active .search-dropdown {
   display: block;
+}
+
+.sm-nav-search.active {
+  box-shadow: 0 0 0 #000;
 }
 
 .nav-search.active .search-input {
@@ -126,6 +134,7 @@
   margin-top: 0;
   display: inline-block;
   font-size: 14px;
+  margin-right: 20px;
 }
 .hit .hit-description {
   text-decoration: none;
@@ -134,7 +143,7 @@
 /*  display: block;*/
   display: inline-block;
   margin-top: 3px;
-  margin-left: 20px;
+/*  margin-left: 20px;*/
 }
 .hit .hit-anchor {
   font-size: 13px;

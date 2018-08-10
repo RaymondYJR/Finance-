@@ -17,6 +17,7 @@ body {
   width: 250px;
   height: 100vh;
   background-color: #87d9f3;
+  position: fixed;
 }
 
 .nav-search {
@@ -34,10 +35,7 @@ body {
 
 .col-lg-8 {
   margin-top: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 90px;
+  margin-left: 70px;
 }
 
 .card {
@@ -51,6 +49,34 @@ body {
 
 .card-body {
   padding: 0;
+}
+
+#mychart {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.graph-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#linechart {
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.graph-card {
+  height: 350px;
+  width: 350px;
+  border: 2px solid red;
+}
+
+#right-card{
+  margin-left: 70px;
+  margin-right: -70px;
 }
 /*#bootstrap-overrides .row {
   width: 130%;
