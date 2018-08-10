@@ -3,6 +3,13 @@
 @import url(assets/stylesheets/footer.css);
 @import url(assets/stylesheets/sidebar.css);
 @import url(assets/stylesheets/registration-form.css);
+@import url(assets/stylesheets/button.css);
+
+.reg-login-header {
+  position: absolute;
+  right: 3vw;
+  top: 7vh;
+}
 
 .home-banner {
   justify-content: center;
@@ -30,7 +37,9 @@ body {
 }
 
 .color-change-hover {
-  color: white !important;
+  color: black !important;
+  display: block;
+  text-decoration: none;
 }
 
 .color-change-hover:hover {
