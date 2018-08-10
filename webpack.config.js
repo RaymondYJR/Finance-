@@ -11,12 +11,13 @@ module.exports = {
   devServer: {
     publicPath: "/",
     historyApiFallback: true
-  },
-  plugins: [
-    new HtmlWebpackPlugin(),
-    new HtmlWebpackPlugin({  // Also generate a test.html
-      filename: 'dashboard.html',
-      template: 'dashboard.html'
-    })
-  ]
+  }
+  // },
+  // plugins: [
+  //   new HtmlWebpackPlugin(),
+  //   new HtmlWebpackPlugin({  // Also generate a test.html
+  //     filename: 'dashboard.html',
+  //     template: 'dashboard.html'
+  //   })
+  // ]
 };
