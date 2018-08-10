@@ -79,6 +79,11 @@ body {
   margin-right: -70px;
 }
 
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
 /*#left-bottom-card {
   margin-top: 50px;
 }*/
