@@ -58,3 +58,23 @@ let lineChart = new Chart(lctx, {
           }
     }
 });
+
+const pctx = document.getElementById("pieChart").getContext('2d');
+let pieChart = new Chart(pctx, {
+    type: 'pie',
+    data: {
+      labels: ["2013", "2014", "2015", "2016", "2017"],
+      datasets: [{
+        data: [20, 10, 30, 48, 8]
+      }]
+    }
+    // options: {
+    //   scales: {
+    //           yAxes: [{
+    //               ticks: {
+    //                   beginAtZero:true
+    //               }
+    //           }]
+    //       }
+    // }
+});
