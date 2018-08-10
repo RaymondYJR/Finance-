@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="src/registration_popup.js"></script>
+<!--     <link rel="stylesheet" type="text/css" href="light/css/style.css"> -->
 
 
   </head>
@@ -35,14 +37,50 @@
     but hey, it's pure CSS magic.
     -->
       <ul id="menu">
-        <a href="#"><li><i class="fas fa-search"></i>  搜索</li></a>
-        <a href="dashboard.html"><li><i class="fas fa-chart-pie"></i>   面板</li></a>
+        <a href="#"><li><i class="fas fa-search"></i>搜索</li></a>
+        <a href="dashboard.html"><li><i class="fas fa-chart-pie"></i>面板</li></a>
+        <a onclick="div_show()" class="color-change-hover"><li class="text-white-color"><i class="fas fa-user"></i>登录</li></a>
       </ul>
     </div>
     <div class="container">
       <div class= "home-banner">
         <div class="home-banner-content">
           <h1 class="home-h1">投资从这里开始...</h1>
+
+          <!-- registration form -->
+          <div id="registration-popup">
+            <div class="login-content card">
+              <a onclick="div_hide()"><i class="fas fa-times-circle reg-close-icon"></i></a>
+              <div class="login-form">
+
+                <h4>注册</h4>
+                <form>
+                    <div class="form-group">
+                        <label>用户名</label>
+                        <input type="username" class="form-control" placeholder="用户名">
+                    </div>
+                    <div class="form-group">
+                        <label>邮箱</label>
+                        <input type="email" class="form-control" placeholder="邮箱">
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="password" class="form-control" placeholder="密码">
+                    </div>
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> 我同意隐私及保密条款
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-flat register-submit-btn">注册</button>
+                    <div class="register-link m-t-15 text-center">
+                        <p>已经注册了账户？ <a href="#"> Sign in</a></p>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
           <div class="nav-search">
             <div class="search-input">
               <i class="material-icons search-icon">search</i>
