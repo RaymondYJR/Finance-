@@ -1,4 +1,4 @@
-#registration-popup {
+#registration-popup, #login-popup {
   display: none;
 }
 
@@ -16,7 +16,7 @@ a { cursor: pointer; }
   text-align: center;
 }
 
-#registration-popup {
+#registration-popup, #login-popup {
   position: absolute;
   left: 13vw;
   top: -10vh;
@@ -28,6 +28,12 @@ a { cursor: pointer; }
   margin-bottom: 5px;
   background-color: #56ccf2;
   border: #56ccf2;
+  opacity: 0.8;
+}
+
+.register-submit-btn:hover {
+  background-color: #56ccf2;
+  opacity: 1;
 }
 
 /* added from style.css */
@@ -35,7 +41,7 @@ a { cursor: pointer; }
     margin: 100px 0;
 }
 
-.login-form {
+.reg-form {
   background: #FFFFFF;
   padding: 20px 8vw 20px 8vw;
 /*  margin-left: 10px;
@@ -43,13 +49,13 @@ a { cursor: pointer; }
   border-radius: 2px;
 }
 
-.login-form h4 {
+.reg-form h4 {
   color: #444;
   text-align: center;
   margin-bottom: 50px;
 }
 
-.login-form .checkbox {
+.reg-form .checkbox {
   color: #444;
 }
 

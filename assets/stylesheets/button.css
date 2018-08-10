@@ -1,0 +1,22 @@
+.btn-clear {
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  font-weight: lighter;
+  font-size: 13px;
+  opacity: 0.8;
+}
+.btn-clear:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+}
+
+.btn-signup {
+  background-color: #56ccf2;
+}
+
+.btn-login {
+  color: #56ccf2;
+  font-size: 13px;
+}
