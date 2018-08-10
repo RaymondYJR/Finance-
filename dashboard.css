@@ -23,6 +23,7 @@ body {
 .nav-search {
   width: 100%;
   padding: 35px;
+  top: 55px;
 }
 
 .search-icon {
