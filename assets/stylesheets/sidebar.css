@@ -154,8 +154,8 @@ span:hover {
 
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  padding-left: 22.5 !important;
-  padding-right: 20 !important;
+  padding-left: 22.5px !important;
+  padding-right: 20px !important;
 
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
