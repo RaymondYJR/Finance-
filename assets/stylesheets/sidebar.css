@@ -17,7 +17,6 @@ body
   /* make it look decent enough */
   background: #232323;
   color: #cdcdcd;
-  font-family: "Avenir Next", "Avenir", sans-serif;
 }
 
 a
@@ -34,7 +33,6 @@ li:hover
   color: #87D9F3;
   text-decoration: none;
   font-weight: normal;
-
 }
 
 a:hover {

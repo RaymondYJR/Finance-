@@ -3,7 +3,7 @@ const displayResults = (companyList) => {
   const list = document.getElementById("results");
   if (companyList) {
     for (let i = 0; i < companyList.length; i += 1) {
-      list.insertAdjacentHTML("beforeend", `<div class="hit"><div class="hit-title">${companyList[i].name}</div><div class="hit-description">${companyList[i].ticker}</div></div>`);
+      list.insertAdjacentHTML("beforeend", `<a href="./dashboard?ticker=${companyList[i].ticker}"><div class="hit"><div class="hit-title">${companyList[i].name}</div><div class="hit-description">${companyList[i].ticker}</div></div></a>`);
     }
   } else {
     list.insertAdjacentHTML("beforeend", `<li>Sorry, the company cannot be found.</li>`);
@@ -29,11 +29,11 @@ const searchWords = (event) => {
       displayResults(data.data);
     });
   } else {
-      const myNode = document.getElementById("results");
-      while (myNode.firstChild) {
-        myNode.removeChild(myNode.firstChild);
-      }
-      document.getElementsByClassName("nav-search")[0].classList.remove("active");
+    const myNode = document.getElementById("results");
+    while (myNode.firstChild) {
+      myNode.removeChild(myNode.firstChild);
+    }
+    document.getElementsByClassName("nav-search")[0].classList.remove("active");
   }
 
 };
