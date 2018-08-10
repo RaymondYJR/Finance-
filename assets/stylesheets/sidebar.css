@@ -48,7 +48,7 @@ span:hover {
   display: block;
   position: fixed;
   top: 50px;
-  left: 50px;
+  left: 22.5px;
 
   z-index: 1;
 
@@ -84,7 +84,7 @@ span:hover {
   margin-bottom: 5px;
   position: relative;
 
-  background: #cdcdcd;
+  background: #4F4F4F;
   border-radius: 3px;
 
   z-index: 1;
@@ -141,10 +141,9 @@ span:hover {
 #menu
 {
   position: fixed;
-  width: 120px;
+  width: 70px;
   top: 0;
   left: 0;
-  padding: 50px;
   padding-top: 125px;
   height: 100vh;
 
@@ -155,6 +154,8 @@ span:hover {
 
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
+  padding-left: 22.5px !important;
+  padding-right: 20px !important;
 
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
