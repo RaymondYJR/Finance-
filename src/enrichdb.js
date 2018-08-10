@@ -1,5 +1,6 @@
+import AV from './leancloud-config';
 const { Query, User } = AV;
-AV.init('HS8Deh8YMUw4Vy6Fl3ixLQNN-gzGzoHsz', 'vCCT2XtjqFeBaTgdPMHTxbbu');
+// AV.init('HS8Deh8YMUw4Vy6Fl3ixLQNN-gzGzoHsz', 'vCCT2XtjqFeBaTgdPMHTxbbu');
 
 AV.User.logIn("raymond", "123456").then(function (loginedUser) {
     // 登录成功，跳转到商品 list 页面
