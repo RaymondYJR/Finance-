@@ -1,10 +1,6 @@
 // README: The file hasn't been added to browser.js
 // TIPS: Please check the id of buttons & the search buttons to make sure they
 //       are different and don't conflict with each other!
-
-import AV from './leancloud-config';
-const { Query, User } = AV;
-
 var currentUser = AV.User.current();
 
 // add a click event listener on subscribe to a company function

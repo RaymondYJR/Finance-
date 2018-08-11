@@ -1,6 +1,3 @@
-import AV from './leancloud-config';
-const { Query, User } = AV;
-
 AV.User.logIn('Tom', 'cat!@#123').then(function (loggedInUser) {
   console.log(loggedInUser);
   var username = loggedInUser.getUsername();

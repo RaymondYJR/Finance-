@@ -1,6 +1,3 @@
-import AV from './leancloud-config';
-const { Query, User } = AV;
-
 let reg = document.getElementById('registration-form');
 
 const register = (event) => {
