@@ -3,7 +3,10 @@ const displayResults = (companyList) => {
   const list = document.getElementById("results");
   if (companyList) {
     for (let i = 0; i < companyList.length; i += 1) {
-      list.insertAdjacentHTML("beforeend", `<a href="dashboard.html?ticker=${companyList[i].ticker}"><div class="hit"><div class="hit-title">${companyList[i].name}</div><div class="hit-description">${companyList[i].ticker}</div></div></a>`);
+      list.insertAdjacentHTML("beforeend", `<div class="hit"><div class="hit-title">${companyList[i].name}</div><div class="hit-description"><div class="hit-description">${companyList[i].ticker}</div></div>`)
+      list.addEventListener("click", function() {
+        window.location.href = `dashboard${window.location.protocol == 'file:' ? '.html' : ''}?ticker=` + companyList[i].ticker;
+      });
     }
   } else {
     list.insertAdjacentHTML("beforeend", `<li>Sorry, the company cannot be found.</li>`);
