@@ -19,13 +19,14 @@ a { cursor: pointer; }
 #registration-popup, #login-popup {
   position: absolute;
   left: 13vw;
-  top: -10vh;
+  top: -1.5vh;
   z-index: 2;
 }
 
 .register-submit-btn {
   margin-top: 5px;
   margin-bottom: 5px;
+  margin-left: 60px;
   background-color: #56ccf2;
   border: #56ccf2;
   opacity: 0.8;
@@ -52,7 +53,7 @@ a { cursor: pointer; }
 .reg-form h4 {
   color: #444;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .reg-form .checkbox {
