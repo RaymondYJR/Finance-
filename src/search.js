@@ -9,7 +9,7 @@ const displayResults = (companyList) => {
       });
     }
   } else {
-    list.insertAdjacentHTML("beforeend", `<li>Sorry, the company cannot be found.</li>`);
+    list.insertAdjacentHTML("beforeend", `<div class="hit"><div class="hit-title">Sorry, the company cannot be found.</div></div>`);
   }
 };
 
