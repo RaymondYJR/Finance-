@@ -1,5 +1,3 @@
-import AV from './leancloud-config';
-const { Query, User } = AV;
 // AV.init('HS8Deh8YMUw4Vy6Fl3ixLQNN-gzGzoHsz', 'vCCT2XtjqFeBaTgdPMHTxbbu');
 
 AV.User.logIn("raymond", "123456").then(function (loginedUser) {
@@ -19,7 +17,6 @@ function getUrlParams(search) {
   return params
 }
 
-let ticker = getUrlParams(window.location.search).ticker;
 
 // var Company = AV.Object.extend('Company');
 // var currentUser = AV.User.current();
@@ -30,7 +27,6 @@ let ticker = getUrlParams(window.location.search).ticker;
 let headers = new Headers();
 headers.set('Authorization', 'Basic ' + 'ZjNkNmRkMTcxNjNmNGZmMjU2OGE4YWE1ZjNiMTU1YmM6NzQ0OGNiNjY1YTBkYmNjMGNjMjdjNzBlZGRhMGRlZTE=');
 
-let year = [2017, 2016, 2015, 2014, 2013];
 const Balance_Sheet = AV.Object.extend('Balance_Sheet');
 const Income_Statement = AV.Object.extend('Income_Statement');
 const Cash_Flow_Statement = AV.Object.extend('Cash_Flow_Statement');
