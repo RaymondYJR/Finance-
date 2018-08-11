@@ -4,8 +4,8 @@ module.exports = {
   entry: "./src/browser.js",
   mode: "development",
   output: {
-    path: __dirname + "/dist",
-    filename: "build/application.js"
+    path: __dirname + "/build",
+    filename: "application.js"
    },
   devtool: "sourcemap",
   devServer: {
