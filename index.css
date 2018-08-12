@@ -4,11 +4,36 @@
 @import url(assets/stylesheets/sidebar.css);
 @import url(assets/stylesheets/registration-form.css);
 @import url(assets/stylesheets/button.css);
+@import url(assets/stylesheets/user-dropdown.css);
 
 .reg-login-header {
   position: absolute;
   right: 3vw;
   top: 7vh;
+}
+
+.btn-login, .btn-signup {
+  font-size: 15px;
+}
+
+.user-header {
+  position: absolute;
+  right: 3vw;
+  top: 4vh;
+  cursor: pointer;
+}
+
+.user-header .fa-caret-down {
+  color: #56ccf2;
+}
+
+#username-display {
+  font-size: 20px;
+  padding-right: 2px;
+}
+
+#username-display:hover {
+  color: #56ccf2;
 }
 
 .home-banner {

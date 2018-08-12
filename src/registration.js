@@ -17,7 +17,9 @@ const register = (event) => {
     alert("请填写密码");
   } else {
     user.signUp().then(function (loggedInUser) {
+      alert("注册成功！");
       console.log(loggedInUser);
+      window.location.reload(false);
     }, function (error) {
       let errorMes = error.message.match(/.+\u3002/)[0];
       if (errorMes != null) {
