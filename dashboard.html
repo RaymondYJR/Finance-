@@ -7,8 +7,78 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" type="text/css" href="dashboard.css">
+  <script src="src/registration_popup.js"></script>
 </head>
 <body>
+  <div class="overlay"></div>
+  <div class="reg-login-header">
+    <a onclick="div_show_login()"><span class="btn btn-login">登录</span></a>
+    <a onclick="div_show()"><span class="btn btn-clear btn-signup" id="test">注册</span></a>
+  </div>
+  <div class="user-header" id="user-header-dropdown-call">
+    <span class="btn btn-login" id="username-display"></span>
+    <i class="fas fa-caret-down"></i>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#" id="user-logout">登出</a>
+    </div>
+  </div>
+
+   <!-- registration form -->
+  <div id="registration-popup">
+    <div class="login-content">
+      <a onclick="div_hide()"><i class="fas fa-times-circle reg-close-icon"></i></a>
+      <div class="reg-form" id="registration-form">
+
+        <h4>注册</h4>
+        <form>
+            <div class="form-group">
+                <label>用户名</label>
+                <input type="username" class="form-control" id="reg-username-input" placeholder="用户名">
+            </div>
+            <div class="form-group">
+                <label>邮箱</label>
+                <input type="email" class="form-control" id="reg-email-input" placeholder="邮箱">
+            </div>
+            <div class="form-group">
+                <label>密码</label>
+                <input type="password" class="form-control" id="reg-password-input" placeholder="密码">
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> 我同意隐私及保密条款
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-flat register-submit-btn" id="reg-submit">注册</button>
+            <div class="register-link m-t-15 text-center">
+                <p>已经注册了账户？ <a href="#"> Sign in</a></p>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="login-popup">
+    <div class="login-content">
+      <a onclick="div_hide_login()"><i class="fas fa-times-circle reg-close-icon"></i></a>
+      <div class="reg-form" id="login-form">
+        <h4>登录</h4>
+        <form>
+            <div class="form-group">
+                <label>用户名</label>
+                <input type="username" class="form-control" id="login-username-input" placeholder="用户名">
+            </div>
+            <div class="form-group">
+                <label>密码</label>
+                <input type="password" class="form-control" id="login-password-input" placeholder="密码">
+            </div>
+              <button type="submit" class="btn btn-primary btn-flat register-submit-btn" id="login-submit">登录</button>
+            <div class="register-link m-t-15 text-center">
+                <p>还未注册账户？ <a href="#"> Sign up</a></p>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <div class="container" id="bootstrap-overrides">
 
@@ -25,7 +95,7 @@
 
 
             <ul id="menu">
-              <a href="./index"><li><i class="fas fa-search"></i>  搜索</li></a>
+              <a href="./index.html"><li><i class="fas fa-search"></i>  搜索</li></a>
               <a href="#"><li><i class="fas fa-chart-pie"></i>   面板</li></a>
             </ul>
           </div>
@@ -413,9 +483,14 @@
 
   <script src="src/av-min.js"></script>
   <script src="src/leancloud-config.js"></script>
+  <script src="src/userBanner.js"></script>
+  <script src="src/login.js"></script>
+
+  <script src="src/registration.js"></script>
   <script src="src/readfromdb.js"></script>
   <script src="src/enrichdb.js"></script>
   <script src="src/Chart.min.js"></script>
   <script src="src/graph.js"></script>
+  <script src="src/search.js"></script>
 </body>
 </html>
