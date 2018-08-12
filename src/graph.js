@@ -1,4 +1,3 @@
-import Chart from 'chart.js'
 Chart.defaults.global.defaultFontSize = 15 ;
 
 const ctx = document.getElementById("myChart").getContext('2d');

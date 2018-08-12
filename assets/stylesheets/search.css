@@ -87,6 +87,10 @@
   cursor: pointer;
 }
 
+.hit {
+  cursor: pointer;
+}
+
 .search-dropdown {
   box-sizing: border-box;
   color: #B3B3B3;

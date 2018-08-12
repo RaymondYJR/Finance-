@@ -1,15 +1,4 @@
 // TODO: Autocomplete the input with AJAX calls.
-const displayResults = (companyList) => {
-  const list = document.getElementById("results");
-  if (companyList) {
-    for (let i = 0; i < companyList.length; i += 1) {
-      list.insertAdjacentHTML("beforeend", `<a href="/dashboard.html?ticker=${companyList[i].ticker}"><div class="hit"><div class="hit-title">${companyList[i].name}</div><div class="hit-description">${companyList[i].ticker}</div></div></a>`);
-    }
-  } else {
-    list.insertAdjacentHTML("beforeend", `<li>Sorry, the company cannot be found.</li>`);
-  }
-};
-
 let finalSearch = "";
 
 const searchWords = (event) => {
@@ -36,6 +25,27 @@ const searchWords = (event) => {
     document.getElementsByClassName("nav-search")[0].classList.remove("active");
   }
 
+};
+
+const displayResults = (companyList) => {
+  // if (window.location.protocol === 'file:') {
+  //   const linkModify = ".html";
+  // }
+  // } else {
+  //   const linkModify = "";
+  // }
+  const list = document.getElementById("results");
+  if (companyList) {
+    for (let i = 0; i < companyList.length; i += 1) {
+      list.insertAdjacentHTML("beforeend", `<a href="dashboard.html?ticker=${companyList[i].ticker}"><div class="hit"><div class="hit-title">${companyList[i].name}</div><div class="hit-description"><div class="hit-description">${companyList[i].ticker}</div></div></a>`);
+
+      // list.addEventListener("click", function() {
+      //   document.getElementsByClassName('hit')[i].href = `dashboard${window.location.protocol == 'file:' ? '.html' : ''}?ticker=` + companyList[i].ticker;
+      // });
+    }
+  } else {
+    list.insertAdjacentHTML("beforeend", `<div class="hit"><div class="hit-title">Sorry, the company cannot be found.</div></div>`);
+  }
 };
 
 const input = document.getElementById("input-content");
