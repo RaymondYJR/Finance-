@@ -1,10 +1,8 @@
-// AV.init('HS8Deh8YMUw4Vy6Fl3ixLQNN-gzGzoHsz', 'vCCT2XtjqFeBaTgdPMHTxbbu');
-
-AV.User.logIn("raymond", "123456").then(function (loginedUser) {
-    // 登录成功，跳转到商品 list 页面
-  }, function (error) {
-    alert(JSON.stringify(error));
-  });
+// AV.User.logIn("raymond", "123456").then(function (loginedUser) {
+//     // 登录成功，跳转到商品 list 页面
+//   }, function (error) {
+//     alert(JSON.stringify(error));
+//   });
 
 function getUrlParams(search) {
   let hashes = search.slice(search.indexOf('?') + 1).split('&')
