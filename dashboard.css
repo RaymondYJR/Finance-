@@ -122,7 +122,6 @@ body {
 }
 
 .table thead th {
-  width: 20px;
   text-align: center;
 }
 
@@ -148,7 +147,6 @@ body {
 
 th {
   color: rgb(79, 79, 79);
-  width: 50px;
 }
 
 /*#left-bottom-card {
