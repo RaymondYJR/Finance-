@@ -11,4 +11,14 @@
 
 #company-header-subscribe-btn {
   padding-top: 0px;
+  padding-left: 0px;
+  color: #45CB85;
+  display: none;
+}
+
+#company-header-unsubscribe-btn {
+  padding-top: 0px;
+  color: #D5573B;
+  padding-left: 0px;
+  display: none;
 }
