@@ -1,5 +1,5 @@
 .footer {
-  background: #d7dce2;
+  background: #4F4F4F;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,7 +15,7 @@
   margin: auto;
 }
 .footer-links a {
-  color: #63686d;
+  color: #8AD9F1;
   opacity: 1;
   text-decoration: none;
   font-size: 24px;
