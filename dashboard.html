@@ -131,10 +131,10 @@
           </div>
           <div class="card-body">
             <div class="table-responsive">
-              <table class="table table-striped">
+              <table class="table table-striped" id="balance-sheet">
                 <thead>
-                  <tr>
-                    <th></th>
+                  <tr class="graphhelper">
+                    <th>（亿美元）</th>
                     <th>2013</th>
                     <th>2014</th>
                     <th>2015</th>
@@ -143,111 +143,7 @@
                   </tr>
                 </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">流动资产总计</th>
-                      <td id="totalcurrentassets2013"></td>
-                      <td id="totalcurrentassets2014"></td>
-                      <td id="totalcurrentassets2015"></td>
-                      <td id="totalcurrentassets2016"></td>
-                      <td id="totalcurrentassets2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">现金及等价物</th>
-                      <td id="cashandequivalents2013"></td>
-                      <td id="cashandequivalents2014"></td>
-                      <td id="cashandequivalents2015"></td>
-                      <td id="cashandequivalents2016"></td>
-                      <td id="cashandequivalents2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">短期投资</th>
-                      <td id="shortterminvestments2013"></td>
-                      <td id="shortterminvestments2014"></td>
-                      <td id="shortterminvestments2015"></td>
-                      <td id="shortterminvestments2016"></td>
-                      <td id="shortterminvestments2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">应收票据</th>
-                      <td id="notereceivable2013"></td>
-                      <td id="notereceivable2014"></td>
-                      <td id="notereceivable2015"></td>
-                      <td id="notereceivable2016"></td>
-                      <td id="notereceivable2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">应收账款</th>
-                      <td id="accountsreceivable2013"></td>
-                      <td id="accountsreceivable2014"></td>
-                      <td id="accountsreceivable2015"></td>
-                      <td id="accountsreceivable2016"></td>
-                      <td id="accountsreceivable2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">存货</th>
-                      <td id="netinventory2013"></td>
-                      <td id="netinventory2014"></td>
-                      <td id="netinventory2015"></td>
-                      <td id="netinventory2016"></td>
-                      <td id="netinventory2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">其他流动资产</th>
-                      <td id="othercurrentassets2013"></td>
-                      <td id="othercurrentassets2014"></td>
-                      <td id="othercurrentassets2015"></td>
-                      <td id="othercurrentassets2016"></td>
-                      <td id="othercurrentassets2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">固定资产</th>
-                      <td id="netppe2013"></td>
-                      <td id="netppe2014"></td>
-                      <td id="netppe2015"></td>
-                      <td id="netppe2016"></td>
-                      <td id="netppe2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">长期投资</th>
-                      <td id="longterminvestments2013"></td>
-                      <td id="longterminvestments2014"></td>
-                      <td id="longterminvestments2015"></td>
-                      <td id="longterminvestments2016"></td>
-                      <td id="longterminvestments2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">商誉</th>
-                      <td id="goodwill2013"></td>
-                      <td id="goodwill2014"></td>
-                      <td id="goodwill2015"></td>
-                      <td id="goodwill2016"></td>
-                      <td id="goodwill2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">无形资产</th>
-                      <td id="intangibleassets2013"></td>
-                      <td id="intangibleassets2014"></td>
-                      <td id="intangibleassets2015"></td>
-                      <td id="intangibleassets2016"></td>
-                      <td id="intangibleassets2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">其他非流动资产</th>
-                      <td id="othernoncurrentassets2013"></td>
-                      <td id="othernoncurrentassets2014"></td>
-                      <td id="othernoncurrentassets2015"></td>
-                      <td id="othernoncurrentassets2016"></td>
-                      <td id="othernoncurrentassets2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">非流动资产总计</th>
-                      <td id="totalnoncurrentassets2013"></td>
-                      <td id="totalnoncurrentassets2014"></td>
-                      <td id="totalnoncurrentassets2015"></td>
-                      <td id="totalnoncurrentassets2016"></td>
-                      <td id="totalnoncurrentassets2017"></td>
-                    </tr>
-                    <tr>
+                    <tr class="graphhelper parent">
                       <th scope="row">资产总计</th>
                       <td id="totalassets2013"></td>
                       <td id="totalassets2014"></td>
@@ -255,127 +151,111 @@
                       <td id="totalassets2016"></td>
                       <td id="totalassets2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">短期负债</th>
-                      <td id="shorttermdebt2013"></td>
-                      <td id="shorttermdebt2014"></td>
-                      <td id="shorttermdebt2015"></td>
-                      <td id="shorttermdebt2016"></td>
-                      <td id="shorttermdebt2017"></td>
+                    <tr class="graphhelper parent">
+                      <th scope="row"><a href="#">流动资产总计</a></th>
+                      <td id="totalcurrentassets2013"></td>
+                      <td id="totalcurrentassets2014"></td>
+                      <td id="totalcurrentassets2015"></td>
+                      <td id="totalcurrentassets2016"></td>
+                      <td id="totalcurrentassets2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">应付账款</th>
-                      <td id="accountspayable2013"></td>
-                      <td id="accountspayable2014"></td>
-                      <td id="accountspayable2015"></td>
-                      <td id="accountspayable2016"></td>
-                      <td id="accountspayable2017"></td>
+                    <tr class="graphhelper">
+                      <th scope="row">现金及等价物</th>
+                      <td id="cashandequivalents2013"></td>
+                      <td id="cashandequivalents2014"></td>
+                      <td id="cashandequivalents2015"></td>
+                      <td id="cashandequivalents2016"></td>
+                      <td id="cashandequivalents2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">应计费用</th>
-                      <td id="accruedexpenses2013"></td>
-                      <td id="accruedexpenses2014"></td>
-                      <td id="accruedexpenses2015"></td>
-                      <td id="accruedexpenses2016"></td>
-                      <td id="accruedexpenses2017"></td>
+                    <tr class="graphhelper">
+                      <th scope="row">短期投资</th>
+                      <td id="shortterminvestments2013"></td>
+                      <td id="shortterminvestments2014"></td>
+                      <td id="shortterminvestments2015"></td>
+                      <td id="shortterminvestments2016"></td>
+                      <td id="shortterminvestments2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">流动负债总计</th>
-                      <td id="totalcurrentliabilities2013"></td>
-                      <td id="totalcurrentliabilities2014"></td>
-                      <td id="totalcurrentliabilities2015"></td>
-                      <td id="totalcurrentliabilities2016"></td>
-                      <td id="totalcurrentliabilities2017"></td>
+                    <tr class="graphhelper">
+                      <th scope="row">应收票据</th>
+                      <td id="notereceivable2013"></td>
+                      <td id="notereceivable2014"></td>
+                      <td id="notereceivable2015"></td>
+                      <td id="notereceivable2016"></td>
+                      <td id="notereceivable2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">长期负债</th>
-                      <td id="longtermdebt2013"></td>
-                      <td id="longtermdebt2014"></td>
-                      <td id="longtermdebt2015"></td>
-                      <td id="longtermdebt2016"></td>
-                      <td id="longtermdebt2017"></td>
+                    <tr class="graphhelper">
+                      <th scope="row">应收账款</th>
+                      <td id="accountsreceivable2013"></td>
+                      <td id="accountsreceivable2014"></td>
+                      <td id="accountsreceivable2015"></td>
+                      <td id="accountsreceivable2016"></td>
+                      <td id="accountsreceivable2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">其他非流动负债</th>
-                      <td id="othernoncurrentliabilities2013"></td>
-                      <td id="othernoncurrentliabilities2014"></td>
-                      <td id="othernoncurrentliabilities2015"></td>
-                      <td id="othernoncurrentliabilities2016"></td>
-                      <td id="othernoncurrentliabilities2017"></td>
+                    <tr class="graphhelper">
+                      <th scope="row">存货</th>
+                      <td id="netinventory2013"></td>
+                      <td id="netinventory2014"></td>
+                      <td id="netinventory2015"></td>
+                      <td id="netinventory2016"></td>
+                      <td id="netinventory2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">非流动负债总计</th>
-                      <td id="totalnoncurrentliabilities2013"></td>
-                      <td id="totalnoncurrentliabilities2014"></td>
-                      <td id="totalnoncurrentliabilities2015"></td>
-                      <td id="totalnoncurrentliabilities2016"></td>
-                      <td id="totalnoncurrentliabilities2017"></td>
+                    <tr class="graphhelper">
+                      <th scope="row">其他流动资产</th>
+                      <td id="othercurrentassets2013"></td>
+                      <td id="othercurrentassets2014"></td>
+                      <td id="othercurrentassets2015"></td>
+                      <td id="othercurrentassets2016"></td>
+                      <td id="othercurrentassets2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">负债总计</th>
-                      <td id="totalliabilities2013"></td>
-                      <td id="totalliabilities2014"></td>
-                      <td id="totalliabilities2015"></td>
-                      <td id="totalliabilities2016"></td>
-                      <td id="totalliabilities2017"></td>
+                    <tr class="graphhelper parent">
+                      <th scope="row"><a href="#">非流动资产总计</a></th>
+                      <td id="totalnoncurrentassets2013"></td>
+                      <td id="totalnoncurrentassets2014"></td>
+                      <td id="totalnoncurrentassets2015"></td>
+                      <td id="totalnoncurrentassets2016"></td>
+                      <td id="totalnoncurrentassets2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">承付款项与或有负债</th>
-                      <td id="commitmentsandcontingencies2013"></td>
-                      <td id="commitmentsandcontingencies2014"></td>
-                      <td id="commitmentsandcontingencies2015"></td>
-                      <td id="commitmentsandcontingencies2016"></td>
-                      <td id="commitmentsandcontingencies2017"></td>
+                    <tr class="graphhelper">
+                      <th scope="row">固定资产</th>
+                      <td id="netppe2013"></td>
+                      <td id="netppe2014"></td>
+                      <td id="netppe2015"></td>
+                      <td id="netppe2016"></td>
+                      <td id="netppe2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">普通股股本</th>
-                      <td id="commonequity2013"></td>
-                      <td id="commonequity2014"></td>
-                      <td id="commonequity2015"></td>
-                      <td id="commonequity2016"></td>
-                      <td id="commonequity2017"></td>
+                    <tr class="graphhelper">
+                      <th scope="row">长期投资</th>
+                      <td id="longterminvestments2013"></td>
+                      <td id="longterminvestments2014"></td>
+                      <td id="longterminvestments2015"></td>
+                      <td id="longterminvestments2016"></td>
+                      <td id="longterminvestments2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">未分配利润</th>
-                      <td id="retainedearnings2013"></td>
-                      <td id="retainedearnings2014"></td>
-                      <td id="retainedearnings2015"></td>
-                      <td id="retainedearnings2016"></td>
-                      <td id="retainedearnings2017"></td>
+                    <tr class="graphhelper">
+                      <th scope="row">商誉</th>
+                      <td id="goodwill2013"></td>
+                      <td id="goodwill2014"></td>
+                      <td id="goodwill2015"></td>
+                      <td id="goodwill2016"></td>
+                      <td id="goodwill2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">递延所得税</th>
-                      <td id="aoci2013"></td>
-                      <td id="aoci2014"></td>
-                      <td id="aoci2015"></td>
-                      <td id="aoci2016"></td>
-                      <td id="aoci2017"></td>
+                    <tr class="graphhelper">
+                      <th scope="row">无形资产</th>
+                      <td id="intangibleassets2013"></td>
+                      <td id="intangibleassets2014"></td>
+                      <td id="intangibleassets2015"></td>
+                      <td id="intangibleassets2016"></td>
+                      <td id="intangibleassets2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">普通股权益总计</th>
-                      <td id="totalcommonequity2013"></td>
-                      <td id="totalcommonequity2014"></td>
-                      <td id="totalcommonequity2015"></td>
-                      <td id="totalcommonequity2016"></td>
-                      <td id="totalcommonequity2017"></td>
+                    <tr class="graphhelper">
+                      <th scope="row">其他非流动资产</th>
+                      <td id="othernoncurrentassets2013"></td>
+                      <td id="othernoncurrentassets2014"></td>
+                      <td id="othernoncurrentassets2015"></td>
+                      <td id="othernoncurrentassets2016"></td>
+                      <td id="othernoncurrentassets2017"></td>
                     </tr>
-                    <tr>
-                      <th scope="row">多数股东权益总计</th>
-                      <td id="totalequity2013"></td>
-                      <td id="totalequity2014"></td>
-                      <td id="totalequity2015"></td>
-                      <td id="totalequity2016"></td>
-                      <td id="totalequity2017"></td>
-                    </tr>
-                    <tr>
-                      <th scope="row">股东权益</th>
-                      <td id="totalequityandnoncontrollinginterests2013"></td>
-                      <td id="totalequityandnoncontrollinginterests2014"></td>
-                      <td id="totalequityandnoncontrollinginterests2015"></td>
-                      <td id="totalequityandnoncontrollinginterests2016"></td>
-                      <td id="totalequityandnoncontrollinginterests2017"></td>
-                    </tr>
-                    <tr>
+                    <tr class="graphhelper parent">
                       <th scope="row">负债与权益总计</th>
                       <td id="totalliabilitiesandequity2013"></td>
                       <td id="totalliabilitiesandequity2014"></td>
@@ -383,7 +263,127 @@
                       <td id="totalliabilitiesandequity2016"></td>
                       <td id="totalliabilitiesandequity2017"></td>
                     </tr>
-                    <tr>
+                    <tr class="graphhelper parent">
+                      <th scope="row">负债总计</th>
+                      <td id="totalliabilities2013"></td>
+                      <td id="totalliabilities2014"></td>
+                      <td id="totalliabilities2015"></td>
+                      <td id="totalliabilities2016"></td>
+                      <td id="totalliabilities2017"></td>
+                    </tr>
+                    <tr class="graphhelper parent">
+                      <th scope="row"><a href="#">流动负债总计</a></th>
+                      <td id="totalcurrentliabilities2013"></td>
+                      <td id="totalcurrentliabilities2014"></td>
+                      <td id="totalcurrentliabilities2015"></td>
+                      <td id="totalcurrentliabilities2016"></td>
+                      <td id="totalcurrentliabilities2017"></td>
+                    </tr>
+                    <tr class="graphhelper">
+                      <th scope="row">短期负债</th>
+                      <td id="shorttermdebt2013"></td>
+                      <td id="shorttermdebt2014"></td>
+                      <td id="shorttermdebt2015"></td>
+                      <td id="shorttermdebt2016"></td>
+                      <td id="shorttermdebt2017"></td>
+                    </tr>
+                    <tr class="graphhelper">
+                      <th scope="row">应付账款</th>
+                      <td id="accountspayable2013"></td>
+                      <td id="accountspayable2014"></td>
+                      <td id="accountspayable2015"></td>
+                      <td id="accountspayable2016"></td>
+                      <td id="accountspayable2017"></td>
+                    </tr>
+                    <tr class="graphhelper">
+                      <th scope="row">应计费用</th>
+                      <td id="accruedexpenses2013"></td>
+                      <td id="accruedexpenses2014"></td>
+                      <td id="accruedexpenses2015"></td>
+                      <td id="accruedexpenses2016"></td>
+                      <td id="accruedexpenses2017"></td>
+                    </tr>
+                    <tr class="graphhelper parent">
+                      <th scope="row"><a href="#">非流动负债总计</a></th>
+                      <td id="totalnoncurrentliabilities2013"></td>
+                      <td id="totalnoncurrentliabilities2014"></td>
+                      <td id="totalnoncurrentliabilities2015"></td>
+                      <td id="totalnoncurrentliabilities2016"></td>
+                      <td id="totalnoncurrentliabilities2017"></td>
+                    </tr>
+                    <tr class="graphhelper">
+                      <th scope="row">长期负债</th>
+                      <td id="longtermdebt2013"></td>
+                      <td id="longtermdebt2014"></td>
+                      <td id="longtermdebt2015"></td>
+                      <td id="longtermdebt2016"></td>
+                      <td id="longtermdebt2017"></td>
+                    </tr>
+                    <tr class="graphhelper">
+                      <th scope="row">其他非流动负债</th>
+                      <td id="othernoncurrentliabilities2013"></td>
+                      <td id="othernoncurrentliabilities2014"></td>
+                      <td id="othernoncurrentliabilities2015"></td>
+                      <td id="othernoncurrentliabilities2016"></td>
+                      <td id="othernoncurrentliabilities2017"></td>
+                    </tr>
+                    <tr class="graphhelper">
+                      <th scope="row">承付款项与或有负债</th>
+                      <td id="commitmentsandcontingencies2013"></td>
+                      <td id="commitmentsandcontingencies2014"></td>
+                      <td id="commitmentsandcontingencies2015"></td>
+                      <td id="commitmentsandcontingencies2016"></td>
+                      <td id="commitmentsandcontingencies2017"></td>
+                    </tr>
+                    <tr class="graphhelper parent">
+                      <th scope="row"><a href="#">股东权益总计</a></th>
+                      <td id="totalequityandnoncontrollinginterests2013"></td>
+                      <td id="totalequityandnoncontrollinginterests2014"></td>
+                      <td id="totalequityandnoncontrollinginterests2015"></td>
+                      <td id="totalequityandnoncontrollinginterests2016"></td>
+                      <td id="totalequityandnoncontrollinginterests2017"></td>
+                    </tr>
+                    <tr class="graphhelper">
+                      <th scope="row">普通股股本</th>
+                      <td id="commonequity2013"></td>
+                      <td id="commonequity2014"></td>
+                      <td id="commonequity2015"></td>
+                      <td id="commonequity2016"></td>
+                      <td id="commonequity2017"></td>
+                    </tr>
+                    <tr class="graphhelper">
+                      <th scope="row">未分配利润</th>
+                      <td id="retainedearnings2013"></td>
+                      <td id="retainedearnings2014"></td>
+                      <td id="retainedearnings2015"></td>
+                      <td id="retainedearnings2016"></td>
+                      <td id="retainedearnings2017"></td>
+                    </tr>
+                    <tr class="graphhelper">
+                      <th scope="row">递延所得税</th>
+                      <td id="aoci2013"></td>
+                      <td id="aoci2014"></td>
+                      <td id="aoci2015"></td>
+                      <td id="aoci2016"></td>
+                      <td id="aoci2017"></td>
+                    </tr>
+                    <tr class="graphhelper">
+                      <th scope="row">普通股权益总计</th>
+                      <td id="totalcommonequity2013"></td>
+                      <td id="totalcommonequity2014"></td>
+                      <td id="totalcommonequity2015"></td>
+                      <td id="totalcommonequity2016"></td>
+                      <td id="totalcommonequity2017"></td>
+                    </tr>
+                    <tr class="graphhelper">
+                      <th scope="row">多数股东权益总计</th>
+                      <td id="totalequity2013"></td>
+                      <td id="totalequity2014"></td>
+                      <td id="totalequity2015"></td>
+                      <td id="totalequity2016"></td>
+                      <td id="totalequity2017"></td>
+                    </tr>
+                    <tr class="graphhelper">
                       <th scope="row">当期未分配利润</th>
                       <td id="currentdeferredrevenue2013"></td>
                       <td id="currentdeferredrevenue2014"></td>
@@ -391,7 +391,7 @@
                       <td id="currentdeferredrevenue2016"></td>
                       <td id="currentdeferredrevenue2017"></td>
                     </tr>
-                    <tr>
+                    <tr class="graphhelper">
                       <th scope="row">归属少数股东未分配利润</th>
                       <td id="noncurrentdeferredrevenue2013"></td>
                       <td id="noncurrentdeferredrevenue2014"></td>
@@ -443,9 +443,10 @@
   <script src="src/login.js"></script>
 
   <script src="src/registration.js"></script>
+  <script src="src/enrichdb.js"></script>
   <script src="src/readfromdb.js"></script>
   <script src="src/companyInfoDisplay.js"></script>
-  <script src="src/enrichdb.js"></script>
+  <script src="src/tabledropdown.js"></script>
 
   <script src="src/Chart.min.js"></script>
   <script src="src/graph.js"></script>

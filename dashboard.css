@@ -6,6 +6,7 @@
 @import url(assets/stylesheets/registration-form.css);
 @import url(assets/stylesheets/button.css);
 @import url(assets/stylesheets/company-header.css);
+@import url(assets/stylesheets/tabledropdown.css);
 
 body {
   font-family: "SourceHan";
@@ -123,7 +124,6 @@ body {
 }
 
 .table thead th {
-  width: 20px;
   text-align: center;
 }
 
@@ -149,7 +149,6 @@ body {
 
 th {
   color: rgb(79, 79, 79);
-  width: 50px;
 }
 
 /*#left-bottom-card {
