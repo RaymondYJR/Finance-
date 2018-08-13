@@ -9,6 +9,8 @@ function getUrlParams(search) {
 }
 const ticker = getUrlParams(window.location.search).ticker;
 let year = [2013, 2014, 2015, 2016, 2017];
+let companyQuery = new AV.Query('Company');
+let subscriptionQuery = new AV.Query('Subscription');
 
 // var Company = AV.Object.extend('Company');
 // var company = new Company();

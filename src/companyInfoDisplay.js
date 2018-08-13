@@ -4,37 +4,38 @@ if (ticker) {
   alert("请输入股票名称");
 }
 
-// if user subscriptions has any company which = ticker
-// display removal button
-// else
-// display add button
-function subToCompany() {
-  const companyQuery = new AV.Query('Company')
-  .equalTo('Ticker', ticker)
-  .find()
-  .then(res2 => {
-    let currentCompany = res2[0];
-    const query = new AV.Query('Subscription');
-    query.equalTo('user', currentUser);
-    query.equalTo('company', currentCompany);
-    query.find().then(res => {
-      if (res.length == 0) {
-        document.getElementById("company-header-subscribe-btn").style.display = "inline-block";
-        console.log("display add button");
-      } else {
-        document.getElementById("company-header-unsubscribe-btn").style.display = "inline-block";
-        console.log("display removal button");
-      }
-    });
-  });
+function toggleSubscribeButton(subStatusToCurrentComp) {
+  if (subStatusToCurrentComp.length == 0) {
+    document.getElementById("company-header-subscribe-btn").style.display = "inline-block";
+    console.log("display add button");
+  } else {
+    document.getElementById("company-header-unsubscribe-btn").style.display = "inline-block";
+    console.log("display removal button");
+  }
 }
 
-subToCompany();
+function searchForSub(companyArray) {
+  let currentCompany = companyArray[0];
+  subscriptionQuery
+  .equalTo('user', currentUser)
+  .equalTo('company', currentCompany)
+  .find()
+  .then( res2 => toggleSubscribeButton(res2));
+}
+
+function subToCompanyBtn() {
+  companyQuery
+  .equalTo('Ticker', ticker)
+  .find()
+  .then( res => searchForSub(res));
+}
+
+subToCompanyBtn();
 
 const subscribeToCompany = (event) => {
   let subscription = new AV.Object('Subscription');
   subscription.set('user', currentUser);
-  const query = new AV.Query('Company')
+  companyQuery
   .equalTo('Ticker', ticker)
   .find()
   .then(res => {
@@ -49,10 +50,10 @@ const subscribeToCompany = (event) => {
 
 const unsubscribeFromCompany = (event) => {
   // find all subs which the user owns
-  const query = new AV.Query('Subscription')
-  query.equalTo('user', currentUser);
-  query.find().then(res => {
-    const companyQuery = new AV.Query('Company')
+  subscriptionQuery
+  .equalTo('user', currentUser)
+  .find().then(res => {
+    companyQuery
     .equalTo('Ticker', ticker)
     .find()
     .then(res2 => {
