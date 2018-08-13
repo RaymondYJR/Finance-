@@ -5,6 +5,7 @@
 @import url(assets/stylesheets/user-dropdown.css);
 @import url(assets/stylesheets/registration-form.css);
 @import url(assets/stylesheets/button.css);
+@import url(assets/stylesheets/tabledropdown.css);
 
 body {
   font-family: "SourceHan";
