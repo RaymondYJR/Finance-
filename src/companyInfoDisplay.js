@@ -7,10 +7,10 @@ if (ticker) {
 function toggleSubscribeButton(subStatusToCurrentComp) {
   if (subStatusToCurrentComp.length == 0) {
     document.getElementById("company-header-subscribe-btn").style.display = "inline-block";
-    console.log("display add button");
+    // console.log("display add button");
   } else {
     document.getElementById("company-header-unsubscribe-btn").style.display = "inline-block";
-    console.log("display removal button");
+    // console.log("display removal button");
   }
 }
 
@@ -31,6 +31,30 @@ function subToCompanyBtn() {
 }
 
 subToCompanyBtn();
+
+const sidebarForComp = document.getElementById("sidebar-company-display");
+
+function displayCompanyHTML(comps) {
+  console.log(comps.attributes.name, comps.attributes.Ticker);
+  sidebarForComp.insertAdjacentHTML("beforeend", `<a href="dashboard.html?ticker=${comps.attributes.Ticker}"><div class="side-card-comp"><div class="side-card-comp-title">${comps.attributes.name}</div><div class="side-card-comp-description">${comps.attributes.Ticker}</div></div></a>`);
+}
+
+function iterateSubList(subs) {
+  subs.forEach(function(sub) {
+    companyQuery
+    .get(sub.attributes.company.id)
+    .then( comps => displayCompanyHTML(comps) )
+  });
+}
+
+function displaySideCompanies() {
+  subscriptionQuery
+  .equalTo('user', currentUser)
+  .find()
+  .then( subs => iterateSubList(subs));
+}
+
+displaySideCompanies();
 
 const subscribeToCompany = (event) => {
   let subscription = new AV.Object('Subscription');

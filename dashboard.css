@@ -8,10 +8,18 @@
 @import url(assets/stylesheets/company-header.css);
 @import url(assets/stylesheets/tabledropdown.css);
 @import url(assets/stylesheets/iconfont.css);
+@import url(assets/stylesheets/companyInfoDisplay.css);
 
 body {
   font-family: "SourceHan";
   background-color: rgb(250, 250, 250);
+}
+
+.company-sidebar {
+  top: 5vh;
+  right: -2.5vw;
+  position: relative;
+  color: white;
 }
 
 /* temp fix: login card + reg card bg; */
