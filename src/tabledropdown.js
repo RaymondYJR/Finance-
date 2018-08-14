@@ -1,5 +1,5 @@
 document.getElementById("balance-sheet").addEventListener("click", function(e) {
-  if (e.target.tagName === "A") {
+  if (e.target.tagName === "I") {
     e.preventDefault();
     var row = e.target.parentNode.parentNode;
     while ((row = nextTr(row)) && !/\bparent\b/.test(row.className))
@@ -18,4 +18,3 @@ function toggle_it(item){
   else
     item.className += " open";
 }
-
