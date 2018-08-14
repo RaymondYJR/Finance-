@@ -10,10 +10,15 @@ function getUrlParams(search) {
 const ticker = getUrlParams(window.location.search).ticker;
 let year = [2013, 2014, 2015, 2016, 2017];
 
-let headers = new Headers();
-headers.set('Authorization', 'Basic ' + 'ZjNkNmRkMTcxNjNmNGZmMjU2OGE4YWE1ZjNiMTU1YmM6NzQ0OGNiNjY1YTBkYmNjMGNjMjdjNzBlZGRhMGRlZTE=');
+let companyQuery = new AV.Query('Company');
+let subscriptionQuery = new AV.Query('Subscription');
 
-// const Company = AV.Object.extend('Company');
+
+// let headers = new Headers();
+// headers.set('Authorization', 'Basic ' + 'ZjNkNmRkMTcxNjNmNGZmMjU2OGE4YWE1ZjNiMTU1YmM6NzQ0OGNiNjY1YTBkYmNjMGNjMjdjNzBlZGRhMGRlZTE=');
+
+
+const Company = AV.Object.extend('Company');
 // const Balance_Sheet = AV.Object.extend('Balance_Sheet');
 // const Income_Statement = AV.Object.extend('Income_Statement');
 // const Cash_Flow_Statement = AV.Object.extend('Cash_Flow_Statement');
@@ -30,6 +35,8 @@ fetch(url_comp, {method:'GET', headers: headers})
     company.set('Short_description', data["short_description"]);
     company.save();
   });
+
+
 
 // for (const y of year) {
 //   let url_bs = `https://api.intrinio.com/financials/standardized?identifier=${ticker}&statement=balance_sheet&type=FY&fiscal_year=${y}`;

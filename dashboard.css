@@ -5,11 +5,21 @@
 @import url(assets/stylesheets/user-dropdown.css);
 @import url(assets/stylesheets/registration-form.css);
 @import url(assets/stylesheets/button.css);
+@import url(assets/stylesheets/company-header.css);
 @import url(assets/stylesheets/tabledropdown.css);
+@import url(assets/stylesheets/iconfont.css);
+@import url(assets/stylesheets/companyInfoDisplay.css);
 
 body {
-  font-family: "SourceHan";
+  font-family: "SourceHan", sans-serif;
   background-color: rgb(250, 250, 250);
+}
+
+.company-sidebar {
+  top: 5vh;
+  right: -2.5vw;
+  position: relative;
+  color: white;
 }
 
 /* temp fix: login card + reg card bg; */
@@ -52,7 +62,7 @@ body {
 }
 
 .user-header .fa-caret-down {
-  color: #56ccf2;
+  color: #89C0EF;
 }
 
 #username-display {
@@ -72,7 +82,7 @@ body {
 .comp-container {
   width: 250px;
   height: 100vh;
-  background-color: #87d9f3;
+  background-color: #89C0EF;
   position: fixed;
 }
 
@@ -92,7 +102,7 @@ body {
 }
 
 .col-lg-8 {
-  margin-top: 75px;
+  margin-top: 50px;
   margin-left: 30px;
 }
 
@@ -103,7 +113,7 @@ body {
 .card-title {
   margin-bottom: 0;
   padding: 5px;
-  color: #8AD9F1;
+  color: #5DA9E9;
 }
 
 .card-body {
@@ -120,12 +130,8 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: 30px;
+  margin-bottom: 30px;
 }
-
-.table thead th {
-  text-align: center;
-}
-
 
 
 #linechart {
@@ -149,6 +155,44 @@ body {
 th {
   color: rgb(79, 79, 79);
 }
+
+
+
+.expand {
+  padding: 0 10px;
+  margin-top: 3.5px;
+  color: rgba(50,50,50, 0.7);
+}
+
+.expand:hover{
+  color: #5DA9E9;
+}
+
+.teaching-winfield {
+  display: flex;
+  align-items: center;
+}
+
+.first-show {
+  padding-left: 33px !important;
+}
+
+.parent {
+  background-color: rgba(0,0,0,.05) !important;
+}
+
+.table {
+  margin-bottom: 0 !important;
+}
+
+.table td {
+  color: rgb(79, 79, 79);
+}
+
+.children {
+  background-color: rgb(250, 250, 250) !important;
+}
+
 
 /*#left-bottom-card {
   margin-top: 50px;
