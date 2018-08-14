@@ -1,4 +1,5 @@
-
+companyQuery = new AV.Query('Company');
+let subscriptionQuery = new AV.Query('Subscription');
 
 if (ticker) {
   document.getElementById("company-header-name").innerHTML = ticker;

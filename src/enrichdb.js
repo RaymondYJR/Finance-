@@ -13,8 +13,6 @@ let year = [2013, 2014, 2015, 2016, 2017];
 let headers = new Headers();
 headers.set('Authorization', 'Basic ' + 'ZjNkNmRkMTcxNjNmNGZmMjU2OGE4YWE1ZjNiMTU1YmM6NzQ0OGNiNjY1YTBkYmNjMGNjMjdjNzBlZGRhMGRlZTE=');
 
-let companyQuery = new AV.Query('Company');
-let subscriptionQuery = new AV.Query('Subscription');
 const Company = AV.Object.extend('Company');
 // const Balance_Sheet = AV.Object.extend('Balance_Sheet');
 // const Income_Statement = AV.Object.extend('Income_Statement');
@@ -29,7 +27,7 @@ function addInfoInDb(res) {
         const company = new Company();
         company.set('Ticker', ticker);
         company.set('Name', data["name"]);
-        company.set('Company_url', data["Company_url"]);
+        company.set('Company_url', data["company_url"]);
         company.set('Industry_group', data["industry_group"]);
         company.set('Short_description', data["short_description"]);
         company.save();
@@ -37,6 +35,7 @@ function addInfoInDb(res) {
   }
 };
 
+let companyQuery = new AV.Query('Company');
 function searchForCompanyInDb() {
   companyQuery
   .equalTo('Ticker', ticker)
