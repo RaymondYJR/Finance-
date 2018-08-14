@@ -1,3 +1,5 @@
+
+
 if (ticker) {
   document.getElementById("company-header-name").innerHTML = ticker;
 } else {
@@ -15,18 +17,23 @@ function toggleSubscribeButton(subStatusToCurrentComp) {
 }
 
 function searchForSub(companyArray) {
-  let currentCompany = companyArray[0];
-  subscriptionQuery
-  .equalTo('user', currentUser)
-  .equalTo('company', currentCompany)
-  .find()
-  .then( res2 => toggleSubscribeButton(res2));
+  if (companyArray.length == 0) {
+    document.getElementById("company-header-subscribe-btn").style.display = "inline-block";
+  } else {
+    let currentCompany = companyArray[0];
+    subscriptionQuery
+    .equalTo('user', currentUser)
+    .equalTo('company', currentCompany)
+    .find()
+    .then( res2 => toggleSubscribeButton(res2));
+  }
 }
 
 function subToCompanyBtn() {
   companyQuery
   .equalTo('Ticker', ticker)
   .find()
+  // if failed to find company, automatically displays an add button
   .then( res => searchForSub(res));
 }
 
@@ -37,7 +44,7 @@ const sidebarForComp = document.getElementById("sidebar-company-display");
 function displayCompanyHTML(comps) {
   // console.log(comps)
   // console.log(comps.attributes.name, comps.attributes.Ticker);
-  sidebarForComp.insertAdjacentHTML("beforeend", `<a href="dashboard.html?ticker=${comps.attributes.Ticker}"><div class="side-card-comp"><div class="side-card-comp-title">${comps.attributes.name}</div><div class="side-card-comp-description">${comps.attributes.Ticker}</div></div></a>`);
+  sidebarForComp.insertAdjacentHTML("beforeend", `<a href="dashboard.html?ticker=${comps.attributes.Ticker}"><div class="side-card-comp"><div class="side-card-comp-title">${comps.attributes.Name}</div><div class="side-card-comp-description">${comps.attributes.Ticker}</div></div></a>`);
 }
 
 function iterateSubList(subs) {
