@@ -53,7 +53,7 @@
     </div>
     <div class="container">
 
-      <div class= "home-banner">
+      <div class= "home-banner" id="particles-js">
         <div class="home-banner-content">
           <h1 class="home-h1">投资从这里开始...</h1>
 
@@ -133,8 +133,66 @@
           </div>
         </div>
       </div>
+    <div class="landing-companies">
+      <ul class="landing-list">
+        <li class="company">
+          <img src="assets/vectors/apple.svg" alt="" class="logo-image">
+        </li>
+        <li class="company">
+          <img src="assets/vectors/amazon-2.svg" alt="" class="logo-image">
+        </li>
+        <li class="company">
+          <img src="assets/vectors/nike-3.svg" alt="" class="logo-image">
+        </li>
+        <li class="company">
+          <img src="assets/vectors/starbucks.svg" alt="" class="logo-image">
+        </li>
+        <li class="company">
+          <img src="assets/vectors/goldman-sachs.svg" alt="" class="logo-image">
+        </li>
+        <li class="company">
+          <img src="assets/vectors/twitter.svg" alt="" class="logo-image">
+        </li>
+        <li class="company">
+          <img src="assets/vectors/baidu.svg" alt="" class="logo-image">
+        </li>
 
+      </ul>
+      <ul class="landing-list">
+
+        <li class="company">
+          <img src="assets/vectors/facebook-2.svg" alt="" class="logo-image">
+        </li>
+        <li class="company">
+          <img src="assets/vectors/netflix-1.svg" alt="" class="logo-image">
+        </li>
+        <li class="company">
+          <img src="assets/vectors/tesla-motors.svg" alt="" class="logo-image">
+        </li>
+        <li class="company">
+          <img src="assets/vectors/alphabet.svg" alt="" class="logo-image">
+        </li>
+        <li class="company">
+          <img src="assets/vectors/at-t-4.svg" alt="" class="logo-image">
+        </li>
+        <li class="company">
+          <img src="assets/vectors/microsoft.svg" alt="" class="logo-image">
+        </li>
+        <li class="company">
+          <img src="assets/vectors/visa.svg" alt="" class="logo-image">
+        </li>
+      </ul>
     </div>
+    <div class="landing-enrichment">
+      <div class="bear">
+        <img src="assets/vectors/diandianbear.svg" alt="" class="save-bear">
+      </div>
+      <div class="enrich-container">
+        <div class="speech-bubble">
+        </div>
+      </div>
+    </div>
+    <!-- </div>
     <div class="footer-container">
       <div class="footer">
         <div class="footer-links">
@@ -142,7 +200,7 @@
           <a href="#"><p class="foot-text">联系我们</p></a>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <script src="src/av-min.js"></script>
     <script src="src/leancloud-config.js"></script>
@@ -150,5 +208,13 @@
     <script src="src/login.js"></script>
     <script src="src/registration.js"></script>
     <script src="src/search.js"></script>
+
+    <script src="src/particles.js"></script>
+    <script>
+      /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+      particlesJS.load('particles-js', 'particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+      });
+    </script>
   </body>
 </html>
