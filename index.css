@@ -18,13 +18,14 @@
 
 .user-header {
   position: absolute;
+  color: #89C0EF;
   right: 3vw;
   top: 4vh;
   cursor: pointer;
 }
 
 .user-header .fa-caret-down {
-  color: #56ccf2;
+  color: #89C0EF;
 }
 
 #username-display {
@@ -81,6 +82,7 @@
 body {
   font-family: "SourceHan", sans-serif;
   background-color: rgb(250, 250, 250);
+  color: #5DA9E9;
 }
 
 .container {
