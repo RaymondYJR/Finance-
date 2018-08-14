@@ -26,9 +26,17 @@ function insideviewCompId(company) {
   fetch(url_iv, {method:'GET', headers: headers_iv})
   .then(response => response.json())
   .then((data) => {
-    let id = data.companies[0].companyId;
-    company.set('Insideview_id', id);
-    displayCompanyLogo(company, id);
+    if (data.companies.length === 0) {
+      company.save().then(function (res) {
+        console.log("company saved!");
+      }, function (error) {
+        console.log(error);
+      });
+    } else {
+      let id = data.companies[0].companyId;
+      company.set('Insideview_id', id);
+      displayCompanyLogo(company, id);
+    }
   });
 }
 
@@ -110,7 +118,13 @@ function addInfoInDb(res) {
         company.set('Company_url', data["company_url"]);
         company.set('Industry_group', data["industry_group"]);
         company.set('Short_description', data["short_description"]);
-        translate(company, data["industry_group"], data["short_description"], data["name"]);
+        if (data["name"].match(/^(.+?)Inc/)) {
+          let name = data["name"].match(/^(.+?)Inc/)[1];
+          translate(company, data["industry_group"], data["short_description"], name);
+        } else {
+          let name = data["name"];
+          translate(company, data["industry_group"], data["short_description"], name);
+        }
       });
   }
 };
