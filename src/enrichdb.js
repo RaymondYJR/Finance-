@@ -66,8 +66,8 @@ function displayCompanyLogo(company, id) {
   // });
 }
 
-function translate(company, industry, description) {
-  let query = industry + "\n" + description;
+function translate(company, industry, description, name) {
+  let query = industry + "\n" + description + "\n" + name;
   let appid = "20180814000194037";
   let appkey = "KyyZTdnsU8lC7hl42xQ9";
   let salt = (new Date).getTime();
@@ -89,8 +89,10 @@ function translate(company, industry, description) {
       console.log(data);
       let chnInd = data.trans_result[0].dst;
       let chnDes = data.trans_result[1].dst;
+      let chnNam = data.trans_result[2].dst;
       company.set("Description_chn", chnDes);
       company.set("Industry_chn", chnInd);
+      company.set("Name_chn", chnNam);
       insideviewCompId(company);
     }
   });
@@ -108,7 +110,7 @@ function addInfoInDb(res) {
         company.set('Company_url', data["company_url"]);
         company.set('Industry_group', data["industry_group"]);
         company.set('Short_description', data["short_description"]);
-        translate(company, data["industry_group"], data["short_description"]);
+        translate(company, data["industry_group"], data["short_description"], data["name"]);
       });
   }
 };
