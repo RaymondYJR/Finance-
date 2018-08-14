@@ -18,6 +18,84 @@ const Company = AV.Object.extend('Company');
 // const Income_Statement = AV.Object.extend('Income_Statement');
 // const Cash_Flow_Statement = AV.Object.extend('Cash_Flow_Statement');
 
+function insideviewCompId(company) {
+  let url_iv = 'https://cors-anywhere.herokuapp.com/https://api.insideview.com/api/v1/companies?ticker=' + ticker;
+  let headers_iv = new Headers();
+  headers_iv.set('accessToken', 'Q1WhO/7I8UEXgNgwj/xV47kBhFdbsSZZsalIyaPx0geXcpj2q/dKlj68DS5toPjD/RPzvU39vYeL2shp7s9omcejKycrl5Wr764u3kS6P22gpTnPqnotyx0jVLfFkUpkd3HBH2CeUp/yP2p3jjOQP1z4jI4DsOZTcqTMWTNY5MY=.eyJmZWF0dXJlcyI6InsgfSIsImNsaWVudElkIjoiMjBsaDc1ZXI4Z2J0aGNqNHBqNmkiLCJncmFudFR5cGUiOiJjcmVkIiwidHRsIjoiMTIwOTYwMCIsImlhdCI6IjE1MzQyMzcwNzQiLCJ2ZXJzaW9uIjoidjEiLCJqdGkiOiJkMWIzZGQ2Yy1mNzQ2LTRhZmYtODk5Ni03ZGVkYmM0YjI1ZGEifQ==');
+  headers_iv.set('Accept', 'application/json');
+  fetch(url_iv, {method:'GET', headers: headers_iv})
+  .then(response => response.json())
+  .then((data) => {
+    let id = data.companies[0].companyId;
+    company.set('Insideview_id', id);
+    displayCompanyLogo(company, id);
+  });
+}
+
+function displayCompanyLogo(company, id) {
+  let url_ivlogo = `https://cors-anywhere.herokuapp.com/https://api.insideview.com/api/v1/company/${id}/logos/100`;
+  let headers_ivlogo = new Headers();
+  headers_ivlogo.set('accessToken', 'Q1WhO/7I8UEXgNgwj/xV47kBhFdbsSZZsalIyaPx0geXcpj2q/dKlj68DS5toPjD/RPzvU39vYeL2shp7s9omcejKycrl5Wr764u3kS6P22gpTnPqnotyx0jVLfFkUpkd3HBH2CeUp/yP2p3jjOQP1z4jI4DsOZTcqTMWTNY5MY=.eyJmZWF0dXJlcyI6InsgfSIsImNsaWVudElkIjoiMjBsaDc1ZXI4Z2J0aGNqNHBqNmkiLCJncmFudFR5cGUiOiJjcmVkIiwidHRsIjoiMTIwOTYwMCIsImlhdCI6IjE1MzQyMzcwNzQiLCJ2ZXJzaW9uIjoidjEiLCJqdGkiOiJkMWIzZGQ2Yy1mNzQ2LTRhZmYtODk5Ni03ZGVkYmM0YjI1ZGEifQ==');
+  headers_ivlogo.set('Accept', 'application/json');
+  fetch(url_ivlogo, {method:'GET', headers: headers_ivlogo})
+  .then((data) => {
+    return data.blob();
+  }).then(function(blob) {
+    var file = new AV.File('logo.png', blob);
+    // console.log(file);
+    company.set('logo', file);
+    company.save().then(function (res) {
+      console.log("company saved!");
+    }, function (error) {
+      console.log(error);
+    });
+  });
+  // }).then(function(blob) {
+    // var objectURL = URL.createObjectURL(blob);
+    // companyLogo.src = objectURL;
+    // const Company2 = AV.Object.extend('Company');
+
+    // let base64Data = blob
+    // var img = "url('data:image/png;base64, "+base64Data + "')";
+    // companyLogo.style.backgroundImage = img;
+    // company.set('Ticker','RAND');
+    // company.save();
+    // let image = data.toDataURL();
+    // companyHeader.insertAdjacentHTML("afterbegin", `${data}`);
+    // companyLogo.src = data;
+  // });
+}
+
+function translate(company, industry, description) {
+  let query = industry + "\n" + description;
+  let appid = "20180814000194037";
+  let appkey = "KyyZTdnsU8lC7hl42xQ9";
+  let salt = (new Date).getTime();
+  let str = appid + query + salt + appkey;
+  let sign = md5(str);
+  $.ajax({
+    url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
+    type: 'get',
+    dataType: 'jsonp',
+    data: {
+        q: query,
+        appid: appid,
+        salt: salt,
+        from: 'en',
+        to: 'zh',
+        sign: sign
+    },
+    success: function (data) {
+      console.log(data);
+      let chnInd = data.trans_result[0].dst;
+      let chnDes = data.trans_result[1].dst;
+      company.set("Description_chn", chnDes);
+      company.set("Industry_chn", chnInd);
+      insideviewCompId(company);
+    }
+  });
+}
+
 function addInfoInDb(res) {
   if (res.length === 0) {
     let url_comp = `https://api.intrinio.com/companies?identifier=${ticker}`;
@@ -30,7 +108,7 @@ function addInfoInDb(res) {
         company.set('Company_url', data["company_url"]);
         company.set('Industry_group', data["industry_group"]);
         company.set('Short_description', data["short_description"]);
-        company.save();
+        translate(company, data["industry_group"], data["short_description"]);
       });
   }
 };
