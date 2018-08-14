@@ -27,13 +27,13 @@ a { cursor: pointer; }
   margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 60px;
-  background-color: #56ccf2;
-  border: #56ccf2;
+  background-color: #89C0EF;
+  border: #89C0EF;
   opacity: 0.8;
 }
 
 .register-submit-btn:hover {
-  background-color: #56ccf2;
+  background-color: #89C0EF;
   opacity: 1;
 }
 

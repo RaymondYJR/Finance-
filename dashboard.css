@@ -11,7 +11,7 @@
 @import url(assets/stylesheets/companyInfoDisplay.css);
 
 body {
-  font-family: "SourceHan";
+  font-family: "SourceHan", sans-serif;
   background-color: rgb(250, 250, 250);
 }
 
@@ -82,7 +82,7 @@ body {
 .comp-container {
   width: 250px;
   height: 100vh;
-  background-color: #87d9f3;
+  background-color: #89C0EF;
   position: fixed;
 }
 

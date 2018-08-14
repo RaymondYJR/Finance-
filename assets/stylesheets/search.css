@@ -58,12 +58,12 @@
   left: 15px;
   top: 13px;
   z-index: 0;
-  color: #4FBADC;
+  color: #89C0EF;
 }
 
 .nav-search .search-input input {
   height: 50px;
-  border: 1px solid #84D9F5;
+  border: 1px solid #89C0EF;
   border-radius: 4px;
   width: 100%;
   padding-left: 50px;
@@ -74,7 +74,7 @@
 }
 
 .nav-search .search-input i.close-search {
-  color: #84D9F5;
+  color: #89C0EF;
   display: none;
   position: absolute;
   right: 15px;
@@ -126,7 +126,7 @@
   margin-bottom: 20px;
 }
 .hit .hit-title {
-  color: #56ccf2;
+  color: #5DA9E9;
 /*  border-bottom: 1px solid #44A948;*/
   font-weight: 500;
   margin-bottom: 0;

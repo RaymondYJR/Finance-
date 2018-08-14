@@ -35,7 +35,8 @@ subToCompanyBtn();
 const sidebarForComp = document.getElementById("sidebar-company-display");
 
 function displayCompanyHTML(comps) {
-  console.log(comps.attributes.name, comps.attributes.Ticker);
+  // console.log(comps)
+  // console.log(comps.attributes.name, comps.attributes.Ticker);
   sidebarForComp.insertAdjacentHTML("beforeend", `<a href="dashboard.html?ticker=${comps.attributes.Ticker}"><div class="side-card-comp"><div class="side-card-comp-title">${comps.attributes.name}</div><div class="side-card-comp-description">${comps.attributes.Ticker}</div></div></a>`);
 }
 

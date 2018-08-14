@@ -7,3 +7,7 @@ tr.parent {
 tr.open {
   display : table-row;
 }
+
+.card-title h4 {
+  color: #5DA9E9;
+}
