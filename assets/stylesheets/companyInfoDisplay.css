@@ -1,0 +1,7 @@
+.side-card-comp-title {
+  margin-right: 5px;
+}
+
+.side-card-comp-description, .side-card-comp-title {
+  display: inline;
+}
