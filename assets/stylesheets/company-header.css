@@ -1,0 +1,24 @@
+#company-header-name {
+  font-size: 20px;
+  color: #56ccf2;
+  display: inline;
+  margin-right: 5px;
+}
+
+.company-header {
+  margin-bottom: 50px;
+}
+
+#company-header-subscribe-btn {
+  padding-top: 0px;
+  padding-left: 0px;
+  color: #45CB85;
+  display: none;
+}
+
+#company-header-unsubscribe-btn {
+  padding-top: 0px;
+  color: #D5573B;
+  padding-left: 0px;
+  display: none;
+}

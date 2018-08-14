@@ -26,3 +26,10 @@ if (log) {
   const submit = document.getElementById('login-submit');
   submit.addEventListener("click", login);
 }
+
+const showLoginForm = (event) => {
+  document.getElementById('login-popup').style.display = "block";
+  document.getElementById('registration-popup').style.display = "none";
+}
+
+document.getElementById('shift-to-login').addEventListener("click", showLoginForm);

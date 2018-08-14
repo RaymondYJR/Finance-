@@ -5,11 +5,21 @@
 @import url(assets/stylesheets/user-dropdown.css);
 @import url(assets/stylesheets/registration-form.css);
 @import url(assets/stylesheets/button.css);
+@import url(assets/stylesheets/company-header.css);
 @import url(assets/stylesheets/tabledropdown.css);
+@import url(assets/stylesheets/iconfont.css);
+@import url(assets/stylesheets/companyInfoDisplay.css);
 
 body {
   font-family: "SourceHan";
   background-color: rgb(250, 250, 250);
+}
+
+.company-sidebar {
+  top: 5vh;
+  right: -2.5vw;
+  position: relative;
+  color: white;
 }
 
 /* temp fix: login card + reg card bg; */
@@ -92,7 +102,7 @@ body {
 }
 
 .col-lg-8 {
-  margin-top: 75px;
+  margin-top: 50px;
   margin-left: 30px;
 }
 
