@@ -1,4 +1,5 @@
-
+companyQuery = new AV.Query('Company');
+let subscriptionQuery = new AV.Query('Subscription');
 
 if (ticker) {
   document.getElementById("company-header-name").innerHTML = ticker;
@@ -45,6 +46,7 @@ function displayCompanyHTML(comps) {
   // console.log(comps)
   // console.log(comps.attributes.name, comps.attributes.Ticker);
   sidebarForComp.insertAdjacentHTML("beforeend", `<a href="dashboard.html?ticker=${comps.attributes.Ticker}"><div class="side-card-comp"><div class="side-card-comp-title">${comps.attributes.Name}</div><div class="side-card-comp-description">${comps.attributes.Ticker}</div></div></a>`);
+  // displayCompanyLogo(comps);
 }
 
 function iterateSubList(subs) {
