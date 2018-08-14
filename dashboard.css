@@ -11,7 +11,7 @@
 @import url(assets/stylesheets/companyInfoDisplay.css);
 
 body {
-  font-family: "SourceHan";
+  font-family: "SourceHan", sans-serif;
   background-color: rgb(250, 250, 250);
 }
 
