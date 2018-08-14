@@ -23,7 +23,9 @@ for (const y of year) {
         output.innerHTML = (financials[item] / 100000000).toFixed(2);
       };
     });
+    // getHead()
 };
+
 
 function getHead() {
   result = {};
@@ -36,3 +38,4 @@ function getHead() {
 };
 
 console.log(getHead());
+

@@ -9,11 +9,14 @@ function getUrlParams(search) {
 }
 const ticker = getUrlParams(window.location.search).ticker;
 let year = [2013, 2014, 2015, 2016, 2017];
+
 let companyQuery = new AV.Query('Company');
 let subscriptionQuery = new AV.Query('Subscription');
 
-let headers = new Headers();
-headers.set('Authorization', 'Basic ' + 'ZjNkNmRkMTcxNjNmNGZmMjU2OGE4YWE1ZjNiMTU1YmM6NzQ0OGNiNjY1YTBkYmNjMGNjMjdjNzBlZGRhMGRlZTE=');
+
+// let headers = new Headers();
+// headers.set('Authorization', 'Basic ' + 'ZjNkNmRkMTcxNjNmNGZmMjU2OGE4YWE1ZjNiMTU1YmM6NzQ0OGNiNjY1YTBkYmNjMGNjMjdjNzBlZGRhMGRlZTE=');
+
 
 const Company = AV.Object.extend('Company');
 // const Balance_Sheet = AV.Object.extend('Balance_Sheet');
@@ -32,6 +35,7 @@ fetch(url_comp, {method:'GET', headers: headers})
     company.set('Short_description', data["short_description"]);
     company.save();
   });
+
 
 
 // for (const y of year) {
