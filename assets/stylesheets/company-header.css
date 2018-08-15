@@ -1,8 +1,15 @@
-#company-header-name {
+#company-header-ticker, #company-header-name {
   font-size: 20px;
-  color: #5DA9E9;
   display: inline;
   margin-right: 5px;
+}
+
+#company-header-name {
+  color: #5DA9E9;
+}
+
+#company-header-ticker {
+  color: #232323;
 }
 
 .company-header {
@@ -21,4 +28,52 @@
   color: #D5573B;
   padding-left: 0px;
   display: none;
+}
+
+#company-header-industry, #company-header-desc {
+  /*padding-left: 5px;*/
+  color: grey;
+}
+
+/*#company-header-desc-with-collapse p.collapse[aria-expanded="false"]{
+  padding-left: 5px;
+  max-width: 97%;
+  height: 1.5rem;
+  overflow: hidden;
+  display: inline-block;
+  margin-bottom: 0px;
+}*/
+
+#company-header-desc {
+  padding-left: 5px;
+  max-width: 97%;
+  height: 1.5rem;
+  overflow: hidden;
+  margin-bottom: 0px;
+  display: -webkit-inline-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  transition: transform 1s;
+}
+
+#companyLogo {
+  vertical-align: unset;
+}
+
+#companyLogo-right {
+  display: inline-block;
+}
+
+.comp-header-collapse-action {
+  height: auto !important;
+  display: inline-block !important;
+  -webkit-line-clamp: 0 !important;
+}
+
+#company-header-collapse {
+  position: absolute;
+  margin-top: 3px;
+  color: grey;
+  opacity: 0.8;
+  display: inline-block;
 }

@@ -17,9 +17,10 @@ body {
 
 .company-sidebar {
   top: 5vh;
-  right: -2.5vw;
+  right: -2.7vw;
   position: relative;
   color: white;
+  max-width: 85%;
 }
 
 /* temp fix: login card + reg card bg; */
@@ -99,6 +100,11 @@ body {
 
 .col-lg-3 {
   padding: 0px;
+  max-width: 300px;
+}
+
+.row {
+  max-width: 100%;
 }
 
 .col-lg-8 {
@@ -107,7 +113,7 @@ body {
 }
 
 .card {
-  width: 120%;
+  width: 100%;
 }
 
 .card-title {

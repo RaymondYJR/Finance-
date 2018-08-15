@@ -50,10 +50,15 @@ function displayCompanyLogo(company, id) {
     return data.blob();
   }).then(function(blob) {
     var file = new AV.File('logo.png', blob);
-    // console.log(file);
     company.set('logo', file);
     company.save().then(function (res) {
-      console.log("company saved!");
+      if (file) {
+        console.log(file.attributes)
+        if (file.attributes.url && file.attributes.metaData.size >= 200) {
+          document.getElementById("companyLogo").src = file.attributes.url;
+          document.getElementById("company-header-desc").style.paddingLeft = "15px";
+        }
+      }
     }, function (error) {
       console.log(error);
     });
@@ -98,12 +103,46 @@ function translate(company, industry, description, name) {
       let chnInd = data.trans_result[0].dst;
       let chnDes = data.trans_result[1].dst;
       let chnNam = data.trans_result[2].dst;
+      if (chnNam) {
+        document.getElementById("company-header-name").innerHTML += chnNam;
+      }
+      if (chnInd) {
+        document.getElementById("company-header-industry").innerHTML += chnInd;
+      }
+      if (chnDes && chnDes != "不适用") {
+        document.getElementById("company-header-desc").innerHTML = chnDes;
+      }
       company.set("Description_chn", chnDes);
       company.set("Industry_chn", chnInd);
       company.set("Name_chn", chnNam);
       insideviewCompId(company);
     }
   });
+}
+
+function displayExistedCompany(company) {
+  // console.log(company.logo.attributes)
+  if (company.logo) {
+    if (company.logo.attributes.url && company.logo.attributes.metaData.size >= 200) {
+      document.getElementById("companyLogo").src = company.logo.attributes.url;
+      document.getElementById("company-header-desc").style.paddingLeft = "15px";
+    }
+  }
+  if (company.Name) {
+    document.getElementById("company-header-name").innerHTML = `${company.Name} `;
+  }
+  if (company.Name_chn) {
+    document.getElementById("company-header-name").innerHTML += company.Name_chn;
+  }
+  if (company.Industry_group) {
+    document.getElementById("company-header-industry").innerHTML = `${company.Industry_group} `;
+  }
+  if (company.Industry_chn) {
+    document.getElementById("company-header-industry").innerHTML += company.Industry_chn;
+  }
+  if (company.Description_chn && company.Description_chn != "不适用") {
+    document.getElementById("company-header-desc").innerHTML = company.Description_chn;
+  }
 }
 
 function addInfoInDb(res) {
@@ -115,8 +154,14 @@ function addInfoInDb(res) {
         const company = new Company();
         company.set('Ticker', ticker);
         company.set('Name', data["name"]);
+        if (data["name"]) {
+          document.getElementById("company-header-name").innerHTML = `${data["name"]} `;
+        }
         company.set('Company_url', data["company_url"]);
         company.set('Industry_group', data["industry_group"]);
+        if (data["industry_group"]) {
+          document.getElementById("company-header-industry").innerHTML = `${data["industry_group"]} `;
+        }
         company.set('Short_description', data["short_description"]);
         if (data["name"].match(/^(.+?)Inc/)) {
           let name = data["name"].match(/^(.+?)Inc/)[1];
@@ -126,6 +171,8 @@ function addInfoInDb(res) {
           translate(company, data["industry_group"], data["short_description"], name);
         }
       });
+  } else {
+    displayExistedCompany(res[0].attributes);
   }
 };
 
