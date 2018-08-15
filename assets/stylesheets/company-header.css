@@ -21,8 +21,8 @@
   padding-left: 0px;
   color: #FFCD51;
   font-size: 20px;
-  position: absolute;
-  top: 16px;
+  position: relative;
+/*  top: 16px;*/
   display: none;
   margin-left: 5px;
 }
