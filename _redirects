@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-http://brave-perlman-0f67a6.netlify.com/* http://diandiantou.win/:splat 301!
