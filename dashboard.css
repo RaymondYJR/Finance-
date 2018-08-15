@@ -154,15 +154,12 @@ body {
 }
 
 #right-card{
-  margin-left: 100px;
   margin-right: -70px;
 }
 
 th {
   color: rgb(79, 79, 79);
 }
-
-
 
 .expand {
   padding: 0 10px;
