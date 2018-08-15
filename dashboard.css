@@ -116,11 +116,7 @@ body {
 }
 
 .card {
-<<<<<<< HEAD
   max-width: 100%;
-=======
-  width: 100%;
->>>>>>> 1f0a3059f5323f27912d201b60e3a1641d557e82
 }
 
 .card-title {
@@ -203,7 +199,14 @@ th {
   background-color: rgb(250, 250, 250) !important;
 }
 
+.question-helper {
+  margin-bottom: 0px;
+  font-weight: bolder;
+}
 
+.question-helper:hover {
+
+}
 /*#left-bottom-card {
   margin-top: 50px;
 }*/
