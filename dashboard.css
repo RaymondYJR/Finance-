@@ -107,7 +107,7 @@ body {
 }
 
 .card {
-  width: 120%;
+  max-width: 100%;
 }
 
 .card-title {
@@ -129,8 +129,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 30px;
+  margin-left: 45px;
   margin-bottom: 30px;
+
 }
 
 
@@ -148,8 +149,6 @@ body {
 }
 
 #right-card{
-  margin-left: 100px;
-  margin-right: -70px;
 }
 
 th {
