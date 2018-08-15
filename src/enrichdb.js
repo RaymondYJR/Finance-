@@ -13,7 +13,7 @@ let year = [2013, 2014, 2015, 2016, 2017];
 let headers = new Headers();
 headers.set('Authorization', 'Basic ' + 'ZjNkNmRkMTcxNjNmNGZmMjU2OGE4YWE1ZjNiMTU1YmM6NzQ0OGNiNjY1YTBkYmNjMGNjMjdjNzBlZGRhMGRlZTE=');
 
-// const Company = AV.Object.extend('Company');
+const Company = AV.Object.extend('Company');
 // const Balance_Sheet = AV.Object.extend('Balance_Sheet');
 // const Income_Statement = AV.Object.extend('Income_Statement');
 // const Cash_Flow_Statement = AV.Object.extend('Cash_Flow_Statement');
