@@ -9,6 +9,8 @@
 @import url(assets/stylesheets/tabledropdown.css);
 @import url(assets/stylesheets/iconfont.css);
 @import url(assets/stylesheets/companyInfoDisplay.css);
+@import url(assets/stylesheets/addrow-form.css);
+@import url(assets/stylesheets/addgraph-form.css);
 
 body {
   font-family: "SourceHan", sans-serif;

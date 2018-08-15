@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" type="text/css" href="dashboard.css">
   <script src="src/registration_popup.js"></script>
+  <script src="src/addrow_popup.js"></script>
+  <script src="src/addgraph_popup.js"></script>
 </head>
 <body>
   <div class="overlay"></div>
@@ -82,8 +84,6 @@
 
   <div class="container" id="bootstrap-overrides">
 
-
-
     <div class="row">
       <div class="col-lg-3">
         <div class="comp-container">
@@ -105,8 +105,6 @@
               <input type="text" placeholder="请输入公司名称" id="input-content" />
               <div class="search-dropdown" id="hits-container">
                 <ul id="results" class="sm-results-dropdown">
-    <!--       <li>Resultat 1 (TODO: remove)</li>
-        <li>Resultat 2 (TODO: remove)</li> -->
                 </ul>
               </div>
               <i class="close-search material-icons sm-close-search-icon" id="close-search-icon">close</i>
@@ -117,8 +115,6 @@
           </div>
         </div>
       </div>
-
-
 
       <div class="col-lg-offset-1 col-lg-8">
         <div class="company-header">
@@ -150,284 +146,331 @@
                     <th>2017</th>
                   </tr>
                 </thead>
-                  <tbody>
-                    <tr class="graphhelper parent">
-                      <th scope="row" class="first-show">资产总计</th>
-                      <td id="totalassets2013"></td>
-                      <td id="totalassets2014"></td>
-                      <td id="totalassets2015"></td>
-                      <td id="totalassets2016"></td>
-                      <td id="totalassets2017"></td>
-                    </tr>
-                    <tr class="graphhelper parent">
-                      <div class="teaching-winfield">
-                        <th scope="row" class="row">
-                        <i class="fas fa-chevron-circle-down expand"></i>流动资产总计
-                        </th>
-                      </div>
-                      <td id="totalcurrentassets2013"></td>
-                      <td id="totalcurrentassets2014"></td>
-                      <td id="totalcurrentassets2015"></td>
-                      <td id="totalcurrentassets2016"></td>
-                      <td id="totalcurrentassets2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">现金及等价物</th>
-                      <td id="cashandequivalents2013"></td>
-                      <td id="cashandequivalents2014"></td>
-                      <td id="cashandequivalents2015"></td>
-                      <td id="cashandequivalents2016"></td>
-                      <td id="cashandequivalents2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">短期投资</th>
-                      <td id="shortterminvestments2013"></td>
-                      <td id="shortterminvestments2014"></td>
-                      <td id="shortterminvestments2015"></td>
-                      <td id="shortterminvestments2016"></td>
-                      <td id="shortterminvestments2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">应收票据</th>
-                      <td id="notereceivable2013"></td>
-                      <td id="notereceivable2014"></td>
-                      <td id="notereceivable2015"></td>
-                      <td id="notereceivable2016"></td>
-                      <td id="notereceivable2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">应收账款</th>
-                      <td id="accountsreceivable2013"></td>
-                      <td id="accountsreceivable2014"></td>
-                      <td id="accountsreceivable2015"></td>
-                      <td id="accountsreceivable2016"></td>
-                      <td id="accountsreceivable2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">存货</th>
-                      <td id="netinventory2013"></td>
-                      <td id="netinventory2014"></td>
-                      <td id="netinventory2015"></td>
-                      <td id="netinventory2016"></td>
-                      <td id="netinventory2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">其他流动资产</th>
-                      <td id="othercurrentassets2013"></td>
-                      <td id="othercurrentassets2014"></td>
-                      <td id="othercurrentassets2015"></td>
-                      <td id="othercurrentassets2016"></td>
-                      <td id="othercurrentassets2017"></td>
-                    </tr>
-                    <tr class="graphhelper parent">
-                      <div class='teaching-winfield'>
-                         <th scope="row"class="row">
-                        <i class="fas fa-chevron-circle-down expand"></i>非流动资产总计
-                        </th>
-                      </div>
-                      <td id="totalnoncurrentassets2013"></td>
-                      <td id="totalnoncurrentassets2014"></td>
-                      <td id="totalnoncurrentassets2015"></td>
-                      <td id="totalnoncurrentassets2016"></td>
-                      <td id="totalnoncurrentassets2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">固定资产</th>
-                      <td id="netppe2013"></td>
-                      <td id="netppe2014"></td>
-                      <td id="netppe2015"></td>
-                      <td id="netppe2016"></td>
-                      <td id="netppe2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">长期投资</th>
-                      <td id="longterminvestments2013"></td>
-                      <td id="longterminvestments2014"></td>
-                      <td id="longterminvestments2015"></td>
-                      <td id="longterminvestments2016"></td>
-                      <td id="longterminvestments2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">商誉</th>
-                      <td id="goodwill2013"></td>
-                      <td id="goodwill2014"></td>
-                      <td id="goodwill2015"></td>
-                      <td id="goodwill2016"></td>
-                      <td id="goodwill2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">无形资产</th>
-                      <td id="intangibleassets2013"></td>
-                      <td id="intangibleassets2014"></td>
-                      <td id="intangibleassets2015"></td>
-                      <td id="intangibleassets2016"></td>
-                      <td id="intangibleassets2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">其他非流动资产</th>
-                      <td id="othernoncurrentassets2013"></td>
-                      <td id="othernoncurrentassets2014"></td>
-                      <td id="othernoncurrentassets2015"></td>
-                      <td id="othernoncurrentassets2016"></td>
-                      <td id="othernoncurrentassets2017"></td>
-                    </tr>
-                    <tr class="graphhelper parent">
-                      <th scope="row"  class="first-show">负债与权益总计</th>
-                      <td id="totalliabilitiesandequity2013"></td>
-                      <td id="totalliabilitiesandequity2014"></td>
-                      <td id="totalliabilitiesandequity2015"></td>
-                      <td id="totalliabilitiesandequity2016"></td>
-                      <td id="totalliabilitiesandequity2017"></td>
-                    </tr>
-                    <tr class="graphhelper parent ">
-                      <th scope="row" class="first-show">负债总计</th>
-                      <td id="totalliabilities2013"></td>
-                      <td id="totalliabilities2014"></td>
-                      <td id="totalliabilities2015"></td>
-                      <td id="totalliabilities2016"></td>
-                      <td id="totalliabilities2017"></td>
-                    </tr>
-                    <tr class="graphhelper parent">
-                      <div class="teaching-winfield">
-                        <th scope="row" class="row">
-                        <i class="fas fa-chevron-circle-down expand"></i>流动负债总计
-                         </th>
-                      </div>
-                      <td id="totalcurrentliabilities2013"></td>
-                      <td id="totalcurrentliabilities2014"></td>
-                      <td id="totalcurrentliabilities2015"></td>
-                      <td id="totalcurrentliabilities2016"></td>
-                      <td id="totalcurrentliabilities2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">短期负债</th>
-                      <td id="shorttermdebt2013"></td>
-                      <td id="shorttermdebt2014"></td>
-                      <td id="shorttermdebt2015"></td>
-                      <td id="shorttermdebt2016"></td>
-                      <td id="shorttermdebt2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">应付账款</th>
-                      <td id="accountspayable2013"></td>
-                      <td id="accountspayable2014"></td>
-                      <td id="accountspayable2015"></td>
-                      <td id="accountspayable2016"></td>
-                      <td id="accountspayable2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">应计费用</th>
-                      <td id="accruedexpenses2013"></td>
-                      <td id="accruedexpenses2014"></td>
-                      <td id="accruedexpenses2015"></td>
-                      <td id="accruedexpenses2016"></td>
-                      <td id="accruedexpenses2017"></td>
-                    </tr>
-                    <tr class="graphhelper parent">
-                      <div class="teaching-winfield">
-                        <th scope="row" class="row">
-                        <i class="fas fa-chevron-circle-down expand"></i>非流动负债总计
-                        </th>
-                      </div>
-                      <td id="totalnoncurrentliabilities2013"></td>
-                      <td id="totalnoncurrentliabilities2014"></td>
-                      <td id="totalnoncurrentliabilities2015"></td>
-                      <td id="totalnoncurrentliabilities2016"></td>
-                      <td id="totalnoncurrentliabilities2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">长期负债</th>
-                      <td id="longtermdebt2013"></td>
-                      <td id="longtermdebt2014"></td>
-                      <td id="longtermdebt2015"></td>
-                      <td id="longtermdebt2016"></td>
-                      <td id="longtermdebt2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">其他非流动负债</th>
-                      <td id="othernoncurrentliabilities2013"></td>
-                      <td id="othernoncurrentliabilities2014"></td>
-                      <td id="othernoncurrentliabilities2015"></td>
-                      <td id="othernoncurrentliabilities2016"></td>
-                      <td id="othernoncurrentliabilities2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">承付款项与或有负债</th>
-                      <td id="commitmentsandcontingencies2013"></td>
-                      <td id="commitmentsandcontingencies2014"></td>
-                      <td id="commitmentsandcontingencies2015"></td>
-                      <td id="commitmentsandcontingencies2016"></td>
-                      <td id="commitmentsandcontingencies2017"></td>
-                    </tr>
-                    <tr class="graphhelper parent">
-                      <div class="teaching-winfield">
-                        <th scope="row" class="row"><i class="fas fa-chevron-circle-down expand"></i>股东权益总计
-                        </th>
-                      </div>
-                      <td id="totalequityandnoncontrollinginterests2013"></td>
-                      <td id="totalequityandnoncontrollinginterests2014"></td>
-                      <td id="totalequityandnoncontrollinginterests2015"></td>
-                      <td id="totalequityandnoncontrollinginterests2016"></td>
-                      <td id="totalequityandnoncontrollinginterests2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">普通股股本</th>
-                      <td id="commonequity2013"></td>
-                      <td id="commonequity2014"></td>
-                      <td id="commonequity2015"></td>
-                      <td id="commonequity2016"></td>
-                      <td id="commonequity2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">未分配利润</th>
-                      <td id="retainedearnings2013"></td>
-                      <td id="retainedearnings2014"></td>
-                      <td id="retainedearnings2015"></td>
-                      <td id="retainedearnings2016"></td>
-                      <td id="retainedearnings2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">递延所得税</th>
-                      <td id="aoci2013"></td>
-                      <td id="aoci2014"></td>
-                      <td id="aoci2015"></td>
-                      <td id="aoci2016"></td>
-                      <td id="aoci2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">普通股权益总计</th>
-                      <td id="totalcommonequity2013"></td>
-                      <td id="totalcommonequity2014"></td>
-                      <td id="totalcommonequity2015"></td>
-                      <td id="totalcommonequity2016"></td>
-                      <td id="totalcommonequity2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">多数股东权益总计</th>
-                      <td id="totalequity2013"></td>
-                      <td id="totalequity2014"></td>
-                      <td id="totalequity2015"></td>
-                      <td id="totalequity2016"></td>
-                      <td id="totalequity2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">当期未分配利润</th>
-                      <td id="currentdeferredrevenue2013"></td>
-                      <td id="currentdeferredrevenue2014"></td>
-                      <td id="currentdeferredrevenue2015"></td>
-                      <td id="currentdeferredrevenue2016"></td>
-                      <td id="currentdeferredrevenue2017"></td>
-                    </tr>
-                    <tr class="graphhelper children">
-                      <th scope="row">归属少数股东未分配利润</th>
-                      <td id="noncurrentdeferredrevenue2013"></td>
-                      <td id="noncurrentdeferredrevenue2014"></td>
-                      <td id="noncurrentdeferredrevenue2015"></td>
-                      <td id="noncurrentdeferredrevenue2016"></td>
-                      <td id="noncurrentdeferredrevenue2017"></td>
-                    </tr>
-                  </tbody>
+                <tbody>
+                  <tr class="graphhelper parent">
+                    <th scope="row" class="first-show">资产总计</th>
+                    <td id="totalassets2013"></td>
+                    <td id="totalassets2014"></td>
+                    <td id="totalassets2015"></td>
+                    <td id="totalassets2016"></td>
+                    <td id="totalassets2017"></td>
+                  </tr>
+                  <tr class="graphhelper parent">
+                    <div class="teaching-winfield">
+                      <th scope="row" class="row">
+                      <i class="fas fa-chevron-circle-down expand"></i>流动资产总计
+                      </th>
+                    </div>
+                    <td id="totalcurrentassets2013"></td>
+                    <td id="totalcurrentassets2014"></td>
+                    <td id="totalcurrentassets2015"></td>
+                    <td id="totalcurrentassets2016"></td>
+                    <td id="totalcurrentassets2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">现金及等价物</th>
+                    <td id="cashandequivalents2013"></td>
+                    <td id="cashandequivalents2014"></td>
+                    <td id="cashandequivalents2015"></td>
+                    <td id="cashandequivalents2016"></td>
+                    <td id="cashandequivalents2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">短期投资</th>
+                    <td id="shortterminvestments2013"></td>
+                    <td id="shortterminvestments2014"></td>
+                    <td id="shortterminvestments2015"></td>
+                    <td id="shortterminvestments2016"></td>
+                    <td id="shortterminvestments2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">应收票据</th>
+                    <td id="notereceivable2013"></td>
+                    <td id="notereceivable2014"></td>
+                    <td id="notereceivable2015"></td>
+                    <td id="notereceivable2016"></td>
+                    <td id="notereceivable2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">应收账款</th>
+                    <td id="accountsreceivable2013"></td>
+                    <td id="accountsreceivable2014"></td>
+                    <td id="accountsreceivable2015"></td>
+                    <td id="accountsreceivable2016"></td>
+                    <td id="accountsreceivable2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">存货</th>
+                    <td id="netinventory2013"></td>
+                    <td id="netinventory2014"></td>
+                    <td id="netinventory2015"></td>
+                    <td id="netinventory2016"></td>
+                    <td id="netinventory2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">其他流动资产</th>
+                    <td id="othercurrentassets2013"></td>
+                    <td id="othercurrentassets2014"></td>
+                    <td id="othercurrentassets2015"></td>
+                    <td id="othercurrentassets2016"></td>
+                    <td id="othercurrentassets2017"></td>
+                  </tr>
+                  <tr class="graphhelper parent">
+                    <div class='teaching-winfield'>
+                       <th scope="row"class="row">
+                      <i class="fas fa-chevron-circle-down expand"></i>非流动资产总计
+                      </th>
+                    </div>
+                    <td id="totalnoncurrentassets2013"></td>
+                    <td id="totalnoncurrentassets2014"></td>
+                    <td id="totalnoncurrentassets2015"></td>
+                    <td id="totalnoncurrentassets2016"></td>
+                    <td id="totalnoncurrentassets2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">固定资产</th>
+                    <td id="netppe2013"></td>
+                    <td id="netppe2014"></td>
+                    <td id="netppe2015"></td>
+                    <td id="netppe2016"></td>
+                    <td id="netppe2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">长期投资</th>
+                    <td id="longterminvestments2013"></td>
+                    <td id="longterminvestments2014"></td>
+                    <td id="longterminvestments2015"></td>
+                    <td id="longterminvestments2016"></td>
+                    <td id="longterminvestments2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">商誉</th>
+                    <td id="goodwill2013"></td>
+                    <td id="goodwill2014"></td>
+                    <td id="goodwill2015"></td>
+                    <td id="goodwill2016"></td>
+                    <td id="goodwill2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">无形资产</th>
+                    <td id="intangibleassets2013"></td>
+                    <td id="intangibleassets2014"></td>
+                    <td id="intangibleassets2015"></td>
+                    <td id="intangibleassets2016"></td>
+                    <td id="intangibleassets2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">其他非流动资产</th>
+                    <td id="othernoncurrentassets2013"></td>
+                    <td id="othernoncurrentassets2014"></td>
+                    <td id="othernoncurrentassets2015"></td>
+                    <td id="othernoncurrentassets2016"></td>
+                    <td id="othernoncurrentassets2017"></td>
+                  </tr>
+                  <tr class="graphhelper parent">
+                    <th scope="row"  class="first-show">负债与权益总计</th>
+                    <td id="totalliabilitiesandequity2013"></td>
+                    <td id="totalliabilitiesandequity2014"></td>
+                    <td id="totalliabilitiesandequity2015"></td>
+                    <td id="totalliabilitiesandequity2016"></td>
+                    <td id="totalliabilitiesandequity2017"></td>
+                  </tr>
+                  <tr class="graphhelper parent ">
+                    <th scope="row" class="first-show">负债总计</th>
+                    <td id="totalliabilities2013"></td>
+                    <td id="totalliabilities2014"></td>
+                    <td id="totalliabilities2015"></td>
+                    <td id="totalliabilities2016"></td>
+                    <td id="totalliabilities2017"></td>
+                  </tr>
+                  <tr class="graphhelper parent">
+                    <div class="teaching-winfield">
+                      <th scope="row" class="row">
+                      <i class="fas fa-chevron-circle-down expand"></i>流动负债总计
+                       </th>
+                    </div>
+                    <td id="totalcurrentliabilities2013"></td>
+                    <td id="totalcurrentliabilities2014"></td>
+                    <td id="totalcurrentliabilities2015"></td>
+                    <td id="totalcurrentliabilities2016"></td>
+                    <td id="totalcurrentliabilities2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">短期负债</th>
+                    <td id="shorttermdebt2013"></td>
+                    <td id="shorttermdebt2014"></td>
+                    <td id="shorttermdebt2015"></td>
+                    <td id="shorttermdebt2016"></td>
+                    <td id="shorttermdebt2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">应付账款</th>
+                    <td id="accountspayable2013"></td>
+                    <td id="accountspayable2014"></td>
+                    <td id="accountspayable2015"></td>
+                    <td id="accountspayable2016"></td>
+                    <td id="accountspayable2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">应计费用</th>
+                    <td id="accruedexpenses2013"></td>
+                    <td id="accruedexpenses2014"></td>
+                    <td id="accruedexpenses2015"></td>
+                    <td id="accruedexpenses2016"></td>
+                    <td id="accruedexpenses2017"></td>
+                  </tr>
+                  <tr class="graphhelper parent">
+                    <div class="teaching-winfield">
+                      <th scope="row" class="row">
+                      <i class="fas fa-chevron-circle-down expand"></i>非流动负债总计
+                      </th>
+                    </div>
+                    <td id="totalnoncurrentliabilities2013"></td>
+                    <td id="totalnoncurrentliabilities2014"></td>
+                    <td id="totalnoncurrentliabilities2015"></td>
+                    <td id="totalnoncurrentliabilities2016"></td>
+                    <td id="totalnoncurrentliabilities2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">长期负债</th>
+                    <td id="longtermdebt2013"></td>
+                    <td id="longtermdebt2014"></td>
+                    <td id="longtermdebt2015"></td>
+                    <td id="longtermdebt2016"></td>
+                    <td id="longtermdebt2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">其他非流动负债</th>
+                    <td id="othernoncurrentliabilities2013"></td>
+                    <td id="othernoncurrentliabilities2014"></td>
+                    <td id="othernoncurrentliabilities2015"></td>
+                    <td id="othernoncurrentliabilities2016"></td>
+                    <td id="othernoncurrentliabilities2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">承付款项与或有负债</th>
+                    <td id="commitmentsandcontingencies2013"></td>
+                    <td id="commitmentsandcontingencies2014"></td>
+                    <td id="commitmentsandcontingencies2015"></td>
+                    <td id="commitmentsandcontingencies2016"></td>
+                    <td id="commitmentsandcontingencies2017"></td>
+                  </tr>
+                  <tr class="graphhelper parent">
+                    <div class="teaching-winfield">
+                      <th scope="row" class="row"><i class="fas fa-chevron-circle-down expand"></i>股东权益总计
+                      </th>
+                    </div>
+                    <td id="totalequityandnoncontrollinginterests2013"></td>
+                    <td id="totalequityandnoncontrollinginterests2014"></td>
+                    <td id="totalequityandnoncontrollinginterests2015"></td>
+                    <td id="totalequityandnoncontrollinginterests2016"></td>
+                    <td id="totalequityandnoncontrollinginterests2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">普通股股本</th>
+                    <td id="commonequity2013"></td>
+                    <td id="commonequity2014"></td>
+                    <td id="commonequity2015"></td>
+                    <td id="commonequity2016"></td>
+                    <td id="commonequity2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">未分配利润</th>
+                    <td id="retainedearnings2013"></td>
+                    <td id="retainedearnings2014"></td>
+                    <td id="retainedearnings2015"></td>
+                    <td id="retainedearnings2016"></td>
+                    <td id="retainedearnings2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">递延所得税</th>
+                    <td id="aoci2013"></td>
+                    <td id="aoci2014"></td>
+                    <td id="aoci2015"></td>
+                    <td id="aoci2016"></td>
+                    <td id="aoci2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">普通股权益总计</th>
+                    <td id="totalcommonequity2013"></td>
+                    <td id="totalcommonequity2014"></td>
+                    <td id="totalcommonequity2015"></td>
+                    <td id="totalcommonequity2016"></td>
+                    <td id="totalcommonequity2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">多数股东权益总计</th>
+                    <td id="totalequity2013"></td>
+                    <td id="totalequity2014"></td>
+                    <td id="totalequity2015"></td>
+                    <td id="totalequity2016"></td>
+                    <td id="totalequity2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">当期未分配利润</th>
+                    <td id="currentdeferredrevenue2013"></td>
+                    <td id="currentdeferredrevenue2014"></td>
+                    <td id="currentdeferredrevenue2015"></td>
+                    <td id="currentdeferredrevenue2016"></td>
+                    <td id="currentdeferredrevenue2017"></td>
+                  </tr>
+                  <tr class="graphhelper children">
+                    <th scope="row">归属少数股东未分配利润</th>
+                    <td id="noncurrentdeferredrevenue2013"></td>
+                    <td id="noncurrentdeferredrevenue2014"></td>
+                    <td id="noncurrentdeferredrevenue2015"></td>
+                    <td id="noncurrentdeferredrevenue2016"></td>
+                    <td id="noncurrentdeferredrevenue2017"></td>
+                  </tr>
+                </tbody>
               </table>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <table class="table table-striped" id="user-designed-data">
+              <tbody>
+                <tr>
+                  <a onclick="div_show_addrow()"><span class="btn" id="btn-addrow">+ 创建新数据</span></a>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div id="addrow-popup">
+          <div class="addrow-content card">
+            <div id="addrow-form">
+              <h4>创建新数据</h4>
+              <form>
+                <div class="form-group">
+                  <label>数据名称</label>
+                  <input type="dataname" class="form-control" id="addrow-dataname-input" placeholder="命名创建的数据">
+                </div>
+                <div class="form-group">
+                  <label>制定运算方法</label>
+                  <input type="data" class="form-control" id="data-select-one" placeholder="选择数据">
+                  <div>
+                    <label>
+                      <input type="checkbox" id="addrow-add">➕
+                    </label>
+                    <label>
+                      <input type="checkbox" id="addrow-minus">➖
+                    </label>
+                    <label>
+                      <input type="checkbox" id="addrow-multiply">✖️
+                    </label>
+                    <label>
+                      <input type="checkbox" id="addrow-divide">➗
+                    </label>
+                  </div>
+                  <input type="data" class="form-control" id="data-select-two" placeholder="选择数据">
+                </div>
+                <div type="submit" class="btn btn-primary btn-flat addrow-submit-btn" id="addrow-submit">添加</div>
+                <div type="cancel" class="btn btn-primary btn-flat addrow-cancel-btn" id="addrow-cancel" onclick="div_hide_addrow()">取消</div>
+              </form>
             </div>
           </div>
         </div>
@@ -436,33 +479,61 @@
           <div class="row">
             <div class="col-md-6">
               <div class="graph-card">
-                <canvas id="myChart" width="200" height="200"></canvas>
+                <canvas id="default-barchart" width="200" height="200"></canvas>
               </div>
             </div>
             <div class="col-md-6">
               <div class="graph-card" id="right-card">
-                <canvas id="lineChart" width="200" height="200"></canvas>
+                <canvas id="default-lineChart" width="200" height="200"></canvas>
               </div>
             </div>
             <div class="col-md-6">
               <div class="graph-card" id="left-bottom-card">
-                <canvas id="pieChart" width="200" height="200"></canvas>
+                <canvas id="default-pieChart" width="200" height="200"></canvas>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="graph-card" id="left-bottom-card">
+                <a onclick="div_show_addgraph()"><span class="btn" id="btn-addgraph">+ 创建新图表</span></a>
               </div>
             </div>
           </div>
         </div>
+
+        <div id="addgraph-popup">
+          <div class="addgraph-content card">
+            <div id="addgraph-form">
+              <h4>创建新图表</h4>
+              <form>
+                <div class="form-group">
+                  <label>图表名称</label>
+                  <input type="graphname" class="form-control" id="addgraph-graphname-input" placeholder="命名创建的图表">
+                </div>
+                <div class="form-group">
+                  <label>选择图表类型</label>
+                  <input type="data" class="form-control" id="data-select-graph" placeholder="选择数据">
+                  <div>
+                    <label>
+                      <input type="checkbox" id="addgraph-bar">柱状图
+                    </label>
+                    <label>
+                      <input type="checkbox" id="addgraph-pie">饼图
+                    </label>
+                    <label>
+                      <input type="checkbox" id="addgraph-line">折线图
+                    </label>
+                  </div>
+                </div>
+                <div type="submit" class="btn btn-primary btn-flat addgraph-submit-btn" id="addgraph-submit">添加</div>
+                <div type="cancel" class="btn btn-primary btn-flat addgraph-cancel-btn" id="addgraph-cancel" onclick="div_hide_addgraph()">取消</div>
+              </form>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-  <!-- <div class="footer-container">
-      <div class="footer">
-        <div class="footer-links">
-          <a href="#"><p class="foot-text">关于我们</p></a>
-          <a href="#"><p class="foot-text">联系我们</p></a>
-        </div>
-      </div>
-    </div>
-  </div> -->
 
   <script src="src/av-min.js"></script>
   <script src="src/leancloud-config.js"></script>
@@ -475,8 +546,10 @@
   <script src="src/companyInfoDisplay.js"></script>
   <script src="src/tabledropdown.js"></script>
 
+  <script src="src/addrow.js"></script>
   <script src="src/Chart.min.js"></script>
   <script src="src/graph.js"></script>
+  <script src="src/addgraph.js"></script>
   <script src="src/search.js"></script>
 </body>
 </html>
