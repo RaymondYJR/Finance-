@@ -31,6 +31,9 @@ const Company = AV.Object.extend('Company');
 //     company.set('Short_description', data["short_description"]);
 //     company.save();
 //   });
+function loadGraphs() {
+  console.log("load graph!");
+}
 
 function insideviewCompId(company) {
   let url_iv = 'https://cors-anywhere.herokuapp.com/https://api.insideview.com/api/v1/companies?ticker=' + ticker;
