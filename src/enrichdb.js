@@ -13,7 +13,7 @@ let year = [2013, 2014, 2015, 2016, 2017];
 let headers = new Headers();
 headers.set('Authorization', 'Basic ' + 'ZjNkNmRkMTcxNjNmNGZmMjU2OGE4YWE1ZjNiMTU1YmM6NzQ0OGNiNjY1YTBkYmNjMGNjMjdjNzBlZGRhMGRlZTE=');
 
-// const Company = AV.Object.extend('Company');
+const Company = AV.Object.extend('Company');
 // const Balance_Sheet = AV.Object.extend('Balance_Sheet');
 // const Income_Statement = AV.Object.extend('Income_Statement');
 // const Cash_Flow_Statement = AV.Object.extend('Cash_Flow_Statement');
@@ -31,6 +31,9 @@ headers.set('Authorization', 'Basic ' + 'ZjNkNmRkMTcxNjNmNGZmMjU2OGE4YWE1ZjNiMTU
 //     company.set('Short_description', data["short_description"]);
 //     company.save();
 //   });
+function loadGraphs() {
+  console.log("load graph!");
+}
 
 function insideviewCompId(company) {
   let url_iv = 'https://cors-anywhere.herokuapp.com/https://api.insideview.com/api/v1/companies?ticker=' + ticker;
@@ -102,7 +105,7 @@ function translate(company, industry, description, name) {
   let str = appid + query + salt + appkey;
   let sign = md5(str);
   $.ajax({
-    url: 'http://api.fanyi.baidu.com/api/trans/vip/translate',
+    url: 'https://api.fanyi.baidu.com/api/trans/vip/translate',
     type: 'get',
     dataType: 'jsonp',
     data: {

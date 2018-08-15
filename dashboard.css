@@ -116,7 +116,7 @@ body {
 }
 
 .card {
-  width: 100%;
+  max-width: 100%;
 }
 
 .card-title {
@@ -138,8 +138,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 30px;
+  margin-left: 27px;
   margin-bottom: 30px;
+
 }
 
 
@@ -157,7 +158,6 @@ body {
 }
 
 #right-card{
-  margin-right: -70px;
 }
 
 th {
@@ -197,6 +197,42 @@ th {
 
 .children {
   background-color: rgb(250, 250, 250) !important;
+}
+
+.question-helper {
+  margin-bottom: 0px;
+  font-weight: bolder;
+}
+
+.question-helper:hover {
+  color: #5DA9E9 !important;
+}
+
+.i-hate-raymond {
+  padding-right: 30;
+}
+
+.graph-filler {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(137, 192, 239, 1)
+}
+
+.graph-filler:hover {
+  background-color: #649ed1;
+}
+
+#btn-addgraph {
+  padding: 0;
+
+}
+
+.classic-calvin {
+  color: rgb(250, 250, 250);
 }
 
 

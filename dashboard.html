@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>DianDianTouDash</title>
+  <title>我的面板 Dashboard</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -166,7 +166,7 @@
                 </thead>
                 <tbody>
                   <tr class="graphhelper parent">
-                    <th scope="row" class="first-show">资产总计</th>
+                    <th scope="row" class="first-show"><a class="question-helper">资产总计</a></th>
                     <td id="totalassets2013"></td>
                     <td id="totalassets2014"></td>
                     <td id="totalassets2015"></td>
@@ -176,7 +176,7 @@
                   <tr class="graphhelper parent">
                     <div class="teaching-winfield">
                       <th scope="row" class="row">
-                      <i class="fas fa-chevron-circle-down expand"></i>流动资产总计
+                      <i class="fas fa-chevron-circle-down expand"></i><a class="question-helper">流动资产总计</a>
                       </th>
                     </div>
                     <td id="totalcurrentassets2013"></td>
@@ -236,7 +236,7 @@
                   <tr class="graphhelper parent">
                     <div class='teaching-winfield'>
                        <th scope="row"class="row">
-                      <i class="fas fa-chevron-circle-down expand"></i>非流动资产总计
+                      <i class="fas fa-chevron-circle-down expand"></i><a class="question-helper">非流动资产总计</a>
                       </th>
                     </div>
                     <td id="totalnoncurrentassets2013"></td>
@@ -286,7 +286,7 @@
                     <td id="othernoncurrentassets2017"></td>
                   </tr>
                   <tr class="graphhelper parent">
-                    <th scope="row"  class="first-show">负债与权益总计</th>
+                    <th scope="row"  class="first-show"><a class="question-helper">负债与权益总计</a></th>
                     <td id="totalliabilitiesandequity2013"></td>
                     <td id="totalliabilitiesandequity2014"></td>
                     <td id="totalliabilitiesandequity2015"></td>
@@ -294,7 +294,7 @@
                     <td id="totalliabilitiesandequity2017"></td>
                   </tr>
                   <tr class="graphhelper parent ">
-                    <th scope="row" class="first-show">负债总计</th>
+                    <th scope="row" class="first-show"><a class="question-helper">负债总计</a></th>
                     <td id="totalliabilities2013"></td>
                     <td id="totalliabilities2014"></td>
                     <td id="totalliabilities2015"></td>
@@ -304,7 +304,7 @@
                   <tr class="graphhelper parent">
                     <div class="teaching-winfield">
                       <th scope="row" class="row">
-                      <i class="fas fa-chevron-circle-down expand"></i>流动负债总计
+                      <i class="fas fa-chevron-circle-down expand"></i><a class="question-helper">流动负债总计</a>
                        </th>
                     </div>
                     <td id="totalcurrentliabilities2013"></td>
@@ -340,7 +340,7 @@
                   <tr class="graphhelper parent">
                     <div class="teaching-winfield">
                       <th scope="row" class="row">
-                      <i class="fas fa-chevron-circle-down expand"></i>非流动负债总计
+                      <i class="fas fa-chevron-circle-down expand"></i><a class="question-helper">非流动负债总计</a>
                       </th>
                     </div>
                     <td id="totalnoncurrentliabilities2013"></td>
@@ -375,7 +375,7 @@
                   </tr>
                   <tr class="graphhelper parent">
                     <div class="teaching-winfield">
-                      <th scope="row" class="row"><i class="fas fa-chevron-circle-down expand"></i>股东权益总计
+                      <th scope="row" class="row"><i class="fas fa-chevron-circle-down expand"></i><a class="question-helper">股东权益总计</a>
                       </th>
                     </div>
                     <td id="totalequityandnoncontrollinginterests2013"></td>
@@ -440,6 +440,16 @@
                     <td id="noncurrentdeferredrevenue2016"></td>
                     <td id="noncurrentdeferredrevenue2017"></td>
                   </tr>
+
+                </tbody>
+              </table>
+            </div>
+            <div class="card-body">
+              <table class="table table-striped" id="user-designed-data">
+                <tbody>
+                  <tr>
+
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -447,16 +457,25 @@
         </div>
 
         <div class="card">
-          <div class="card-body">
-            <table class="table table-striped" id="user-designed-data">
-              <tbody>
-                <tr>
-                  <a onclick="div_show_addrow()"><span class="btn" id="btn-addrow">+ 创建新数据</span></a>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+
         </div>
+
+        <div class="card" id="css-bitch">
+          <a onclick="div_show_addrow()" class="row-button">
+            <span class="btn" id="btn-addrow">
+              <div class="card-body">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                        + 创建新数据
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </span>
+          </a>
+        </div>
+
 
         <div id="addrow-popup">
           <div class="addrow-content card">
@@ -494,7 +513,18 @@
         </div>
 
         <div class="graph-container">
-          <div class="row" id="graphs-row">
+
+          <div class="row">
+            <a onclick="div_show_addgraph()"><span class="btn" id="btn-addgraph">
+              <div class="col-md-6">
+                <div class="graph-card" id="left-bottom-card">
+                    <div class="graph-filler">
+                      <p class="classic-calvin">+ 创建新图表</p>
+                    </div>
+                </div>
+              </div>
+            </span></a>
+
             <div class="col-md-6">
               <div class="graph-card">
                 <canvas id="default-barchart" width="200" height="200"></canvas>
@@ -510,13 +540,10 @@
                 <canvas id="default-pieChart" width="200" height="200"></canvas>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="graph-card">
-                <a onclick="div_show_addgraph()"><span class="btn" id="btn-addgraph">+ 创建新图表</span></a>
-              </div>
-            </div>
           </div>
         </div>
+
+
 
 
         <div id="addgraph-popup">
@@ -554,7 +581,7 @@
     </div>
   </div>
 
-  <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="src/av-min.js"></script>
   <script src="src/leancloud-config.js"></script>
   <script src="src/userBanner.js"></script>
@@ -573,5 +600,6 @@
   <script src="src/graph.js"></script>
   <script src="src/addgraph.js"></script>
   <script src="src/search.js"></script>
+  <script src="src/bear_helper.js"></script>
 </body>
 </html>

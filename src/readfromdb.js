@@ -10,6 +10,8 @@
 // const ticker = getUrlParams(window.location.search).ticker;
 // let year = [2013, 2014, 2015, 2016, 2017];
 
+
+
 for (const y of year) {
   const query = new AV.Query('Balance_Sheet')
     .equalTo('FY', y)
@@ -24,4 +26,3 @@ for (const y of year) {
       };
     });
 };
-
