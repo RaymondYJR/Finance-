@@ -82,7 +82,7 @@
     </div>
   </div>
 
-  <div class="container" id="bootstrap-overrides">
+  <div class="dash-container" id="bootstrap-overrides">
 
     <div class="row">
       <div class="col-lg-3">
@@ -118,14 +118,34 @@
 
       <div class="col-lg-offset-1 col-lg-8">
         <div class="company-header">
-          <p id="company-header-name">
+          <img id="companyLogo">
+          <div id="companyLogo-right">
+            <p id="company-header-name">
+            </p>
+            <p id="company-header-ticker">
+            </p>
 
-          </p>
-<!--           <i class="fas fa-plus-circle btn" id="company-header-subscribe-btn"></i>
-          <i class="fas fa-times-circle btn" id="company-header-unsubscribe-btn"></i> -->
-          <i class="iconfont icon-iconfontzhizuobiaozhun023108 btn" id="company-header-subscribe-btn"></i>
-          <i class="iconfont icon-iconfontzhizuobiaozhunbduan34 btn" id="company-header-unsubscribe-btn"></i>
+            <div id="company-header-subscribe-btn">
+              <i class="far fa-star"></i>
+            </div>
+
+<!--             <i class="iconfont icon-iconfontzhizuobiaozhun023108 btn" id="company-header-subscribe-btn"></i> -->
+
+            <div id="company-header-unsubscribe-btn">
+              <i class="fas fa-star"></i>
+            </div>
+<!--             <i class="iconfont icon-iconfontzhizuobiaozhunbduan34 btn" id="company-header-unsubscribe-btn"></i> -->
+            <p id="company-header-industry">
+            </p>
+          </div>
+
+          <div id="company-header-desc-with-collapse">
+            <p id="company-header-desc">
+            </p>
+            <i class="fas fa-plus" id="company-header-collapse"></i>
+          </div>
         </div>
+
 
 
         <div class="card">
@@ -500,6 +520,7 @@
           </div>
         </div>
 
+
         <div id="addgraph-popup">
           <div class="addgraph-content card">
             <div id="addgraph-form">
@@ -529,17 +550,20 @@
               </form>
             </div>
           </div>
-        </div>
+
 
       </div>
     </div>
   </div>
 
+  <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="src/av-min.js"></script>
   <script src="src/leancloud-config.js"></script>
   <script src="src/userBanner.js"></script>
   <script src="src/login.js"></script>
   <script src="src/registration.js"></script>
+
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
 
   <script src="src/enrichdb.js"></script>
   <script src="src/readfromdb.js"></script>

@@ -87,6 +87,7 @@ body {
 
 .container {
   min-height: 100vh;
+  width: 100% !important;
 }
 
 .color-change-hover {
@@ -99,6 +100,74 @@ body {
   color: #87D9F3;
 }
 
-/*.text-white-color {
-  color: white;
-}*/
+
+.landing-companies {
+  margin-top: 150px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.landing-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.company {
+  width: 144px;
+  height: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.logo-image {
+  width: 75px;
+  height: 75px;
+}
+
+
+
+
+
+.save-bear {
+  width: 225px;
+}
+
+.speech-bubble {
+  position: relative;
+  border-radius: .4em;
+  border: 2px solid #89C0EF;
+  width: 350px;
+  height: 160px;
+}
+
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-right-color: #89C0EF;
+  border-left: 0;
+  border-top: 0;
+  margin-top: -10px;
+  margin-left: -20px;
+}
+
+.landing-enrichment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
