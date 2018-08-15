@@ -13,10 +13,24 @@ let year = [2013, 2014, 2015, 2016, 2017];
 let headers = new Headers();
 headers.set('Authorization', 'Basic ' + 'ZjNkNmRkMTcxNjNmNGZmMjU2OGE4YWE1ZjNiMTU1YmM6NzQ0OGNiNjY1YTBkYmNjMGNjMjdjNzBlZGRhMGRlZTE=');
 
-const Company = AV.Object.extend('Company');
+// const Company = AV.Object.extend('Company');
 // const Balance_Sheet = AV.Object.extend('Balance_Sheet');
 // const Income_Statement = AV.Object.extend('Income_Statement');
 // const Cash_Flow_Statement = AV.Object.extend('Cash_Flow_Statement');
+
+
+// let url_comp = `https://api.intrinio.com/companies?identifier=${ticker}`;
+// fetch(url_comp, {method:'GET', headers: headers})
+//   .then(response => response.json())
+//   .then((data) => {
+//     const company = new Company();
+//     company.set('Ticker', ticker);
+//     company.set('Name', data["name"]);
+//     company.set('Company_url', data["Company_url"]);
+//     company.set('Industry_group', data["industry_group"]);
+//     company.set('Short_description', data["short_description"]);
+//     company.save();
+//   });
 
 function insideviewCompId(company) {
   let url_iv = 'https://cors-anywhere.herokuapp.com/https://api.insideview.com/api/v1/companies?ticker=' + ticker;
@@ -39,6 +53,7 @@ function insideviewCompId(company) {
     }
   });
 }
+
 
 function displayCompanyLogo(company, id) {
   let url_ivlogo = `https://cors-anywhere.herokuapp.com/https://api.insideview.com/api/v1/company/${id}/logos/100`;

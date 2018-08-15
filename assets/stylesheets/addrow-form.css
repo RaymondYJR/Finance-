@@ -1,0 +1,53 @@
+#addrow-popup {
+  display: none;
+  position: absolute;
+  left: 13vw;
+  top: -1.5vh;
+  z-index: 2;
+}
+
+.addrow-submit-btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 60px;
+  background-color: #89C0EF;
+  border: #89C0EF;
+  opacity: 0.8;
+}
+
+.addrow-submit-btn:hover {
+  background-color: #89C0EF;
+  opacity: 1;
+}
+
+.addrow-cancel-btn {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 60px;
+  background-color: #89C0EF;
+  border: #89C0EF;
+  opacity: 0.8;
+}
+
+.addrow-cancel-btn:hover {
+  background-color: #89C0EF;
+  opacity: 1;
+}
+
+#addrow-form {
+  background: #FFFFFF;
+  padding: 20px 8vw 20px 8vw;
+/*  margin-left: 10px;
+  margin-right: 10px;*/
+  border-radius: 2px;
+}
+
+#addrow-form h4 {
+  color: #444;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-calculation {
+  background: #FFFFFF;
+}
