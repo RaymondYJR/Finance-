@@ -1,7 +1,8 @@
-
+companyQuery = new AV.Query('Company');
+let subscriptionQuery = new AV.Query('Subscription');
 
 if (ticker) {
-  document.getElementById("company-header-name").innerHTML = ticker;
+  document.getElementById("company-header-ticker").innerHTML = ticker;
 } else {
   alert("请输入股票名称");
 }
@@ -42,9 +43,13 @@ subToCompanyBtn();
 const sidebarForComp = document.getElementById("sidebar-company-display");
 
 function displayCompanyHTML(comps) {
-  // console.log(comps)
-  // console.log(comps.attributes.name, comps.attributes.Ticker);
   sidebarForComp.insertAdjacentHTML("beforeend", `<a href="dashboard.html?ticker=${comps.attributes.Ticker}"><div class="side-card-comp"><div class="side-card-comp-title">${comps.attributes.Name}</div><div class="side-card-comp-description">${comps.attributes.Ticker}</div></div></a>`);
+  // displayCompanyLogo(comps);
+  if (comps.attributes.Ticker === ticker) {
+    console.log(comps);
+    let array = document.getElementsByClassName("side-card-comp");
+    array[array.length - 1].classList.add("selected-company-side-bar");
+  }
 }
 
 function iterateSubList(subs) {
@@ -72,11 +77,15 @@ const subscribeToCompany = (event) => {
   .find()
   .then(res => {
     subscription.set('company', res[0]);
-    subscription.save().then(function (success) {
-      window.location.reload(false);
-    }, function (error) {
-      alert(error.message);
-    });
+    if (!res[0]) {
+      alert("请稍等");
+    } else {
+      subscription.save().then(function (success) {
+        window.location.reload(false);
+      }, function (error) {
+        alert(error.message);
+      });
+    }
   });
 }
 
@@ -118,4 +127,10 @@ if (currentUser) {
 } else {
   document.getElementById("company-header-subscribe-btn").addEventListener("click", requireRegistration);
 }
+
+const displayDescription = (event) => {
+  document.getElementById("company-header-desc").classList.toggle("comp-header-collapse-action");
+}
+
+document.getElementById("company-header-collapse").addEventListener("click", displayDescription);
 
