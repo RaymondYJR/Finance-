@@ -16,18 +16,19 @@
   margin-bottom: 50px;
 }
 
-#company-header-subscribe-btn {
-  padding-top: 0px;
+#company-header-subscribe-btn, #company-header-unsubscribe-btn {
+  padding-top: -5px;
   padding-left: 0px;
-  color: #45CB85;
+  color: #FFCD51;
+  font-size: 20px;
+  position: relative;
+/*  top: 16px;*/
   display: none;
+  margin-left: 5px;
 }
 
-#company-header-unsubscribe-btn {
-  padding-top: 0px;
-  color: #D5573B;
-  padding-left: 0px;
-  display: none;
+#company-header-subscribe-btn:hover, #company-header-unsubscribe-btn:hover {
+  cursor: pointer;
 }
 
 #company-header-industry, #company-header-desc {

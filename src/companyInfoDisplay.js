@@ -45,6 +45,11 @@ const sidebarForComp = document.getElementById("sidebar-company-display");
 function displayCompanyHTML(comps) {
   sidebarForComp.insertAdjacentHTML("beforeend", `<a href="dashboard.html?ticker=${comps.attributes.Ticker}"><div class="side-card-comp"><div class="side-card-comp-title">${comps.attributes.Name}</div><div class="side-card-comp-description">${comps.attributes.Ticker}</div></div></a>`);
   // displayCompanyLogo(comps);
+  if (comps.attributes.Ticker === ticker) {
+    console.log(comps);
+    let array = document.getElementsByClassName("side-card-comp");
+    array[array.length - 1].classList.add("selected-company-side-bar");
+  }
 }
 
 function iterateSubList(subs) {

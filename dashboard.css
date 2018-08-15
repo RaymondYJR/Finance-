@@ -20,7 +20,7 @@ body {
   right: -2.7vw;
   position: relative;
   color: white;
-  max-width: 85%;
+  max-width: 90%;
 }
 
 /* temp fix: login card + reg card bg; */
@@ -85,6 +85,7 @@ body {
   height: 100vh;
   background-color: #89C0EF;
   position: fixed;
+  overflow: hidden;
 }
 
 .nav-search {
@@ -154,15 +155,12 @@ body {
 }
 
 #right-card{
-  margin-left: 100px;
   margin-right: -70px;
 }
 
 th {
   color: rgb(79, 79, 79);
 }
-
-
 
 .expand {
   padding: 0 10px;
