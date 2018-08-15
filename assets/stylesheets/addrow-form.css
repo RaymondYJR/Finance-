@@ -1,3 +1,23 @@
+#css-bitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(137, 192, 239, 1);
+}
+
+#css-bitch:hover {
+  background-color: #649ed1;
+}
+
+#btn-addrow {
+  color: rgb(250, 250, 250);
+}
+
+.row-button {
+  width: 100%;
+  text-align: center;
+}
+
 #addrow-popup {
   display: none;
   position: absolute;

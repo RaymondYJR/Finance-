@@ -442,6 +442,16 @@
                     <td id="noncurrentdeferredrevenue2016"></td>
                     <td id="noncurrentdeferredrevenue2017"></td>
                   </tr>
+
+                </tbody>
+              </table>
+            </div>
+            <div class="card-body">
+              <table class="table table-striped" id="user-designed-data">
+                <tbody>
+                  <tr>
+
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -449,16 +459,25 @@
         </div>
 
         <div class="card">
-          <div class="card-body">
-            <table class="table table-striped" id="user-designed-data">
-              <tbody>
-                <tr>
-                  <a onclick="div_show_addrow()"><span class="btn" id="btn-addrow">+ 创建新数据</span></a>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+
         </div>
+
+        <div class="card" id="css-bitch">
+          <a onclick="div_show_addrow()" class="row-button">
+            <span class="btn" id="btn-addrow">
+              <div class="card-body">
+                <table class="table table-striped">
+                  <tbody>
+                    <tr>
+                        + 创建新数据
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </span>
+          </a>
+        </div>
+
 
         <div id="addrow-popup">
           <div class="addrow-content card">
@@ -497,6 +516,15 @@
 
         <div class="graph-container">
           <div class="row">
+            <a onclick="div_show_addgraph()"><span class="btn" id="btn-addgraph">
+              <div class="col-md-6">
+                <div class="graph-card" id="left-bottom-card">
+                    <div class="graph-filler">
+                      <p class="classic-calvin">+ 创建新图表</p>
+                    </div>
+                </div>
+              </div>
+            </span></a>
             <div class="col-md-6">
               <div class="graph-card">
                 <canvas id="default-barchart" width="200" height="200"></canvas>
@@ -512,13 +540,10 @@
                 <canvas id="default-pieChart" width="200" height="200"></canvas>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="graph-card" id="left-bottom-card">
-                <a onclick="div_show_addgraph()"><span class="btn" id="btn-addgraph">+ 创建新图表</span></a>
-              </div>
-            </div>
           </div>
         </div>
+
+
 
 
         <div id="addgraph-popup">
@@ -575,5 +600,6 @@
   <script src="src/graph.js"></script>
   <script src="src/addgraph.js"></script>
   <script src="src/search.js"></script>
+  <script src="src/bear_helper.js"></script>
 </body>
 </html>
