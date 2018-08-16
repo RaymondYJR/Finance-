@@ -43,24 +43,19 @@ function divide(arr1, arr2) {
 };
 
 function rowCreateFunction(str,arr) {
-  const table = document.getElementById("user-designed-data");
-  const row = table.insertRow(0);
-  const cell1 = document.createElement('th');
-  row.appendChild(cell1)
-  const cell2 = row.insertCell(1);
-  const cell3 = row.insertCell(2);
-  const cell4 = row.insertCell(3);
-  const cell5 = row.insertCell(4);
-  const cell6 = row.insertCell(5);
-  row.classList.add("parent", "graphhelper");
-  cell1.innerHTML = str;
-  cell2.innerHTML = arr[0];
-  cell3.innerHTML = arr[1];
-  cell4.innerHTML = arr[2];
-  cell5.innerHTML = arr[3];
-  cell6.innerHTML = arr[4];
-  cell1.classList.add("first-show", "i-hate-raymond");
-  cell1.setAttribute('scope', 'row');
+  const tablebody = document.getElementById("user-designed-data");
+  tablebody.insertAdjacentHTML("beforeend",
+   `<tr class="graphhelper parent" id="${str}">
+      <th scope="row" class="first-show i-hate-raymond">${str}</th>
+      <td id="${str}2013">${arr[0]}</td>
+      <td id="${str}2014">${arr[1]}</td>
+      <td id="${str}2015">${arr[2]}</td>
+      <td id="${str}2016">${arr[3]}</td>
+      <td id="${str}2017">${arr[4]}</td>
+      <td><a onclick="hide_added_row(${str})"><span class="btn">隐藏</span></a></td>
+    </tr>`
+  );
+  console.log(str);
 }
 
 let add_row_form = document.getElementById('addrow-form');

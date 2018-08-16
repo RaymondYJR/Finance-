@@ -3,8 +3,11 @@ function div_show_addrow() {
   document.getElementsByClassName("overlay")[0].style.display = "block";
 }
 
-function div_hide_addrow(){
+function div_hide_addrow() {
   document.getElementById('addrow-popup').style.display = "none";
   document.getElementsByClassName("overlay")[0].style.display = "none";
 }
 
+function hide_added_row(str) {
+  str.style.display = "none";
+}
