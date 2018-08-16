@@ -1,15 +1,3 @@
-function getHead() {
-  result = {};
-  const tablerows = document.getElementsByClassName('graphhelper');
-  for (let k = 1; k < tablerows.length; k++) {
-    const tablerow = document.getElementsByClassName('graphhelper')[k].textContent.split("\n").join("").split(" ").filter(item => item !== "");
-    let tablerow_data = [];
-    tablerow.slice(1).forEach(function(num){tablerow_data.push(Number(num))});
-    result[tablerow[0]] = tablerow_data;
-  };
-  return result;
-};
-
 function add(arr1, arr2) {
   add_result = [];
   for (let i = 0; i < arr1.length; i++) {
@@ -62,9 +50,9 @@ let add_row_form = document.getElementById('addrow-form');
 const addrow = (event) => {
   event.preventDefault();
   let newdataname = document.getElementById("addrow-dataname-input").value;
-  let datasetonename = document.getElementById("data-select-one").value;
+  let datasetonename = getSelectedOption(document.getElementById("dataselectone")).innerHTML;
   const datasetonedata = getHead()[datasetonename];
-  let datasettwoname = document.getElementById("data-select-two").value;
+  let datasettwoname = getSelectedOption(document.getElementById("dataselecttwo")).innerHTML;
   const datasettwodata = getHead()[datasettwoname];
 
   let addstatus = document.getElementById("addrow-add").checked;

@@ -5,8 +5,6 @@
 //       w.insertAdjacentHTML('beforeend', '?');
 //     }
 //     w.addEventListener("mouseover", appearsQM);
-
-
 // };
 
 
