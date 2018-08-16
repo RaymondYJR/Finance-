@@ -11,7 +11,7 @@ let currentUser = AV.User.current();
 
 if (!currentUser) {
    document.getElementsByClassName("user-header")[0].style.display = "none";
-   document.getElementById("sidebar-dash-link").href = "dashboard.html?ticker=AAPL";
+   document.getElementById("sidebar-dash-link").href = "dashboard?ticker=AAPL";
 }
 else {
    // display user info
@@ -38,7 +38,7 @@ else {
 
 function displayCompanyHTMLDash(comps) {
   console.log(comps);
-  document.getElementById("sidebar-dash-link").href = `dashboard.html?ticker=${comps.attributes.Ticker}`;
+  document.getElementById("sidebar-dash-link").href = `dashboard?ticker=${comps.attributes.Ticker}`;
   // displayCompanyLogo(comps);
 }
 

@@ -37,7 +37,7 @@ const displayResults = (companyList) => {
   const list = document.getElementById("results");
   if (companyList) {
     for (let i = 0; i < companyList.length; i += 1) {
-      list.insertAdjacentHTML("beforeend", `<a href="dashboard.html?ticker=${companyList[i].ticker}"><div class="hit"><div class="hit-title">${companyList[i].name}</div><div class="hit-description"><div class="hit-description">${companyList[i].ticker}</div></div></a>`);
+      list.insertAdjacentHTML("beforeend", `<a href="dashboard?ticker=${companyList[i].ticker}"><div class="hit"><div class="hit-title">${companyList[i].name}</div><div class="hit-description"><div class="hit-description">${companyList[i].ticker}</div></div></a>`);
 
       // list.addEventListener("click", function() {
       //   document.getElementsByClassName('hit')[i].href = `dashboard${window.location.protocol == 'file:' ? '.html' : ''}?ticker=` + companyList[i].ticker;
