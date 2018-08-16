@@ -5,6 +5,7 @@
 @import url(assets/stylesheets/registration-form.css);
 @import url(assets/stylesheets/button.css);
 @import url(assets/stylesheets/user-dropdown.css);
+@import url(assets/stylesheets/logo.css);
 
 .reg-login-header {
   position: absolute;
@@ -61,9 +62,16 @@
   letter-spacing: 0px;
   margin-top: 20vh;
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   text-align: center;
   font-weight: 600;
+}
+
+.home-h6 {
+  text-align: center;
+  font-weight: 200;
+  margin-bottom: 20px;
+  margin-left: -20px;
 }
 
 .overlay {
