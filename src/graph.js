@@ -6,7 +6,7 @@ let myChart = new Chart(ctx, {
   data: {
     labels: ["2013", "2014", "2015", "2016", "2017"],
     datasets: [{
-      label: '# of Votes',
+      label: '# 总资产',
       data: [1,2,3,4,5],
       borderWidth: 1
     }]
@@ -28,6 +28,7 @@ let lineChart = new Chart(lctx, {
   data: {
     labels: ["2013", "2014", "2015", "2016", "2017"],
     datasets: [{
+      label: '# 总负债',
       data: [1,2,3,4,5]
     }]
   },
@@ -46,22 +47,32 @@ const pctx = document.getElementById("default-pieChart").getContext('2d');
 let pieChart = new Chart(pctx, {
   type: 'pie',
   data: {
-    labels: [, , , , ],
+    labels: ["现金", "短期投资", "应收款", "存货", "其他流动资产", "固定资产", "长期投资", "商誉", "无形资产", "其他非流动资产"],
     datasets: [{
-      data: [20, 10, 30, 48, 8],
+      data: [20, 10, 30, 48, 8, 12, 34, 5, 4, 14],
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
         'rgba(255, 206, 86, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
         'rgba(75, 192, 192, 0.2)',
-        'rgba(153, 102, 255, 0.2)'
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(152, 114, 132, 0.2)',
+        'rgba(117, 185, 190, 0.2)',
+        'rgba(208, 214, 181, 0.2)',
+        'rgba(249, 181, 172, 0.2)',
+        'rgba(238, 118, 116, 0.2)'
       ],
       borderColor: [
-        'rgba(255,99,132,1)',
-        'rgba(54, 162, 235, 1)',
         'rgba(255, 206, 86, 1)',
+        'rgba(54, 162, 235, 1)',
         'rgba(75, 192, 192, 1)',
-        'rgba(153, 102, 255, 1)'
+        'rgba(255, 99, 132, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(152, 114, 132, 1)',
+        'rgba(117, 185, 190, 1)',
+        'rgba(208, 214, 181, 1)',
+        'rgba(249, 181, 172, 1)',
+        'rgba(238, 118, 116, 1)'
       ],
     }]
   }

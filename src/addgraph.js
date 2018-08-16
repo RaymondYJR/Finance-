@@ -7,20 +7,6 @@ function graphCreateBar(str, arr) {
       datasets: [{
         label: `# ${str}`,
         data: arr,
-        // backgroundColor: [
-        //   'rgba(255, 99, 132, 0.2)',
-        //   'rgba(54, 162, 235, 0.2)',
-        //   'rgba(255, 206, 86, 0.2)',
-        //   'rgba(75, 192, 192, 0.2)',
-        //   'rgba(153, 102, 255, 0.2)'
-        // ],
-        // borderColor: [
-        //   'rgba(255,99,132,1)',
-        //   'rgba(54, 162, 235, 1)',
-        //   'rgba(255, 206, 86, 1)',
-        //   'rgba(75, 192, 192, 1)',
-        //   'rgba(153, 102, 255, 1)'
-        // ],
         borderWidth: 1
       }]
     },
@@ -28,18 +14,32 @@ function graphCreateBar(str, arr) {
   });
 };
 
-// function graphCreatePie(str, arr) {
-//   const plosefield = document.getElementById("default-pieChart").getContext('2d');
-//   let newPieChart = new Chart(plosefield, {
-//     type: 'pie',
-//     data: {
-//       labels: [, , , , ],
-//       datasets: [{
-//         data: arr
-//       }]
-//     }
-//   });
-// };
+function graphCreatePie(str, arr) {
+  const plosefield = document.getElementById("default-pieChart").getContext('2d');
+  let newPieChart = new Chart(plosefield, {
+    type: 'pie',
+    data: {
+      labels: [`${str}2013`, `${str}2014`, `${str}2015`, `${str}2016`, `${str}2017`],
+      datasets: [{
+        data: arr,
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)'
+        ],
+        borderColor: [
+          'rgba(255,99,132,1)',
+          'rgba(54, 162, 235, 1)',
+          'rgba(255, 206, 86, 1)',
+          'rgba(75, 192, 192, 1)',
+          'rgba(153, 102, 255, 1)'
+        ],
+      }]
+    }
+  });
+};
 
 function graphCreateLine(str, arr) {
   const llosefield = document.getElementById(str).getContext('2d');
@@ -87,7 +87,7 @@ const addgraph = (event) => {
       graphCreateBar(`${newgraphname}`, datasetgraphdata);
     } else if (piestatus === true) {
       addCanvasToHtml(`${newgraphname}`);
-      graphCreatePie(datasetgraphdata);
+      graphCreatePie(`${newgraphname}`, datasetgraphdata);
     } else {
       addCanvasToHtml(`${newgraphname}`);
       graphCreateLine(`${newgraphname}`, datasetgraphdata);
