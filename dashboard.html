@@ -485,8 +485,13 @@
                   <input type="dataname" class="form-control" id="addrow-dataname-input" placeholder="命名创建的数据">
                 </div>
                 <div class="form-group">
+                  <label>选择数据</label>
+                  <br>
+                  <select name="dataselectone" class="dataname-dropdown" id="dataselectone">
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>制定运算方法</label>
-                  <input type="data" class="form-control" id="data-select-one" placeholder="选择数据">
                   <div>
                     <label>
                       <input type="checkbox" id="addrow-add">➕
@@ -501,7 +506,12 @@
                       <input type="checkbox" id="addrow-divide">➗
                     </label>
                   </div>
-                  <input type="data" class="form-control" id="data-select-two" placeholder="选择数据">
+                </div>
+                <div class="form-group">
+                  <label>选择数据</label>
+                  <br>
+                  <select name="dataselecttwo" class="dataname-dropdown" id="dataselecttwo">
+                  </select>
                 </div>
                 <div id="addrow-submit">添加</div>
                 <div type="cancel" class="btn btn-primary btn-flat addrow-cancel-btn" id="addrow-cancel" onclick="div_hide_addrow()">取消</div>
@@ -554,9 +564,6 @@
           </div>
         </div>
 
-
-
-
         <div id="addgraph-popup">
           <div class="addgraph-content card">
             <div id="addgraph-form">
@@ -567,8 +574,13 @@
                   <input type="graphname" class="form-control" id="addgraph-graphname-input" placeholder="命名创建的图表">
                 </div>
                 <div class="form-group">
+                  <label>选择数据</label>
+                  <br>
+                  <select name="dataselectgraph" class="dataname-dropdown" id="dataselectgraph">
+                  </select>
+                </div>
+                <div class="form-group">
                   <label>选择图表类型</label>
-                  <input type="data" class="form-control" id="data-select-graph" placeholder="选择数据">
                   <div>
                     <label>
                       <input type="checkbox" id="addgraph-bar">柱状图

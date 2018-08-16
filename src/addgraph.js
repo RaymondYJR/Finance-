@@ -66,7 +66,7 @@ let add_graph_form = document.getElementById('addgraph-form');
 const addgraph = (event) => {
   event.preventDefault();
   let newgraphname = document.getElementById("addgraph-graphname-input").value;
-  let datasetgraphname = document.getElementById("data-select-graph").value;
+  let datasetgraphname = getSelectedOption(document.getElementById("dataselectgraph")).innerHTML;
   const datasetgraphdata = getHead()[datasetgraphname];
 
   let barstatus = document.getElementById("addgraph-bar").checked;
