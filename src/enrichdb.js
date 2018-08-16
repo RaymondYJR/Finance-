@@ -14,7 +14,7 @@ let headers = new Headers();
 headers.set('Authorization', 'Basic ' + 'ZjNkNmRkMTcxNjNmNGZmMjU2OGE4YWE1ZjNiMTU1YmM6NzQ0OGNiNjY1YTBkYmNjMGNjMjdjNzBlZGRhMGRlZTE=');
 
 const Company = AV.Object.extend('Company');
-const Balance_Sheet = AV.Object.extend('Balance_Sheet');
+// const Balance_Sheet = AV.Object.extend('Balance_Sheet');
 // const Income_Statement = AV.Object.extend('Income_Statement');
 // const Cash_Flow_Statement = AV.Object.extend('Cash_Flow_Statement');
 
@@ -202,28 +202,28 @@ function searchForCompanyInDb() {
 
 searchForCompanyInDb();
 
-for (const y of year) {
-  let url_bs = `https://api.intrinio.com/financials/standardized?identifier=${ticker}&statement=balance_sheet&type=FY&fiscal_year=${y}`;
-  fetch(url_bs, {method:'GET', headers: headers})
-    .then(response => response.json())
-    .then((data) => {
-      const balance_sheet = new Balance_Sheet();
-      balance_sheet.set('FY', y);
-      balance_sheet.set('Ticker', ticker);
-      for (let i = 0; i < (data["data"].length); i++) {
-        balance_sheet.set(data["data"][i]["tag"], data["data"][i]["value"]);
-      };
-      const financials = data["data"].reduce(function(map, obj) {
-          map[obj.tag] = obj.value;
-          return map;
-      }, {});
-      const row_name = ['cashandequivalents', 'shortterminvestments', 'notereceivable', 'accountsreceivable', 'netinventory', 'othercurrentassets', 'totalcurrentassets', 'netppe', 'longterminvestments', 'goodwill', 'intangibleassets', 'othernoncurrentassets', 'totalnoncurrentassets', 'totalassets', 'shorttermdebt', 'accountspayable', 'accruedexpenses', 'totalcurrentliabilities', 'longtermdebt', 'othernoncurrentliabilities', 'totalnoncurrentliabilities', 'totalliabilities', 'commitmentsandcontingencies', 'commonequity', 'retainedearnings', 'aoci', 'totalcommonequity', 'totalequity', 'totalequityandnoncontrollinginterests', 'totalliabilitiesandequity', 'currentdeferredrevenue', 'noncurrentdeferredrevenue']
-      for (const item of row_name) {
-        const output = document.getElementById(item+`${y}`);
-        output.innerHTML = (financials[item] / 100000000).toFixed(2);
-      };
-      balance_sheet.save();
-    });
+// for (const y of year) {
+//   let url_bs = `https://api.intrinio.com/financials/standardized?identifier=${ticker}&statement=balance_sheet&type=FY&fiscal_year=${y}`;
+//   fetch(url_bs, {method:'GET', headers: headers})
+//     .then(response => response.json())
+//     .then((data) => {
+//       const balance_sheet = new Balance_Sheet();
+//       balance_sheet.set('FY', y);
+//       balance_sheet.set('Ticker', ticker);
+//       for (let i = 0; i < (data["data"].length); i++) {
+//         balance_sheet.set(data["data"][i]["tag"], data["data"][i]["value"]);
+//       };
+//       const financials = data["data"].reduce(function(map, obj) {
+//           map[obj.tag] = obj.value;
+//           return map;
+//       }, {});
+//       const row_name = ['cashandequivalents', 'shortterminvestments', 'notereceivable', 'accountsreceivable', 'netinventory', 'othercurrentassets', 'totalcurrentassets', 'netppe', 'longterminvestments', 'goodwill', 'intangibleassets', 'othernoncurrentassets', 'totalnoncurrentassets', 'totalassets', 'shorttermdebt', 'accountspayable', 'accruedexpenses', 'totalcurrentliabilities', 'longtermdebt', 'othernoncurrentliabilities', 'totalnoncurrentliabilities', 'totalliabilities', 'commitmentsandcontingencies', 'commonequity', 'retainedearnings', 'aoci', 'totalcommonequity', 'totalequity', 'totalequityandnoncontrollinginterests', 'totalliabilitiesandequity', 'currentdeferredrevenue', 'noncurrentdeferredrevenue']
+//       for (const item of row_name) {
+//         const output = document.getElementById(item+`${y}`);
+//         output.innerHTML = (financials[item] / 100000000).toFixed(2);
+//       };
+//       balance_sheet.save();
+//     });
 
 
   // let url_is = `https://api.intrinio.com/financials/standardized?identifier=${ticker}&statement=income_statement&type=FY&fiscal_year=${y}`;
@@ -251,4 +251,4 @@ for (const y of year) {
   //     };
   //     cash_flow_statement.save();
   //   });
-};
+// };
