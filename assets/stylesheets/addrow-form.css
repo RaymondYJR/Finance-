@@ -20,16 +20,18 @@
 
 #addrow-popup {
   display: none;
-  position: absolute;
-  left: 13vw;
-  top: -1.5vh;
+ /* position: absolute;*/
+  left: 50%;
+  top: 50%;
   z-index: 2;
+  position: fixed;
+  transform: translate( -50%, -50%);
+
 }
 
 .addrow-submit-btn {
   margin-top: 5px;
   margin-bottom: 5px;
-  margin-left: 60px;
   background-color: #89C0EF;
   border: #89C0EF;
   opacity: 0.8;
@@ -40,13 +42,42 @@
   opacity: 1;
 }
 
-.addrow-cancel-btn {
+#addrow-submit {
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
   margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 60px;
+  margin-bottom: 7px;
   background-color: #89C0EF;
   border: #89C0EF;
   opacity: 0.8;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+#addrow-submit:hover {
+  opacity: 1;
+}
+
+.addrow-cancel-btn {
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 7px;
+  background-color: #89C0EF;
+  border: #89C0EF;
+  opacity: 0.8;
+  border-radius: 4px;
+  margin-left: 50px;
 }
 
 .addrow-cancel-btn:hover {
