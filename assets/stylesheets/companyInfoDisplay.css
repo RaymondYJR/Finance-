@@ -25,3 +25,11 @@
   padding-bottom: 15px;
   padding-left: 20px;
 }
+
+.company-side-bar-signal {
+  padding-bottom: 8px;
+}
+
+.company-side-bar-signal .fa-star {
+  color: #FFCD51;
+}
