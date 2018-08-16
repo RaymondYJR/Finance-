@@ -1,16 +1,23 @@
 .nice-logo {
   width: 50px;
   height: 50px;
-  left: 5%;
+  left: 6%;
   display: block;
   position: fixed;
-  margin-bottom: 10px;
-  top: 4%;
+  top: 4vh;
 
 }
 
 .logo-container {
-  top: 50px;
-  left: 50px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18%;
+  margin-top: 5.5vh;
+  margin-left: 4%;
+}
+
+.sugar {
+  color: #4F4F4F;
 }
