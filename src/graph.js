@@ -7,7 +7,7 @@ let myChart = new Chart(ctx, {
     labels: ["2013", "2014", "2015", "2016", "2017"],
     datasets: [{
       label: '# 总资产',
-      data: [1,2,3,4,5],
+      data: [2070.00, 2318.39, 2903.45, 3216.86, 3753.19],
       borderWidth: 1
     }]
   },
@@ -29,7 +29,7 @@ let lineChart = new Chart(lctx, {
     labels: ["2013", "2014", "2015", "2016", "2017"],
     datasets: [{
       label: '# 总负债',
-      data: [1,2,3,4,5]
+      data: [834.51, 1202.92, 1709.90, 1934.37, 2412.72]
     }]
   },
   options: {
