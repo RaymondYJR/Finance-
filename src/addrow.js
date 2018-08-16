@@ -55,7 +55,6 @@ function rowCreateFunction(str,arr) {
       <td><a onclick="hide_added_row(${str})"><span class="btn">隐藏</span></a></td>
     </tr>`
   );
-  console.log(str);
 }
 
 let add_row_form = document.getElementById('addrow-form');
