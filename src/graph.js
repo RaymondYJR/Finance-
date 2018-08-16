@@ -7,21 +7,7 @@ let myChart = new Chart(ctx, {
     labels: ["2013", "2014", "2015", "2016", "2017"],
     datasets: [{
       label: '# of Votes',
-      data: [1,2,3,4,5],//getHead()['资产总计'],
-      // backgroundColor: [
-      //   'rgba(255, 99, 132, 0.2)',
-      //   'rgba(54, 162, 235, 0.2)',
-      //   'rgba(255, 206, 86, 0.2)',
-      //   'rgba(75, 192, 192, 0.2)',
-      //   'rgba(153, 102, 255, 0.2)'
-      // ],
-      // borderColor: [
-      //   'rgba(255,99,132,1)',
-      //   'rgba(54, 162, 235, 1)',
-      //   'rgba(255, 206, 86, 1)',
-      //   'rgba(75, 192, 192, 1)',
-      //   'rgba(153, 102, 255, 1)'
-      // ],
+      data: [1,2,3,4,5],
       borderWidth: 1
     }]
   },
@@ -42,7 +28,7 @@ let lineChart = new Chart(lctx, {
   data: {
     labels: ["2013", "2014", "2015", "2016", "2017"],
     datasets: [{
-      data: [1,2,3,4,5]//getHead()['负债总计']
+      data: [1,2,3,4,5]
     }]
   },
   options: {
@@ -56,14 +42,28 @@ let lineChart = new Chart(lctx, {
   }
 });
 
-// const pctx = document.getElementById("default-pieChart").getContext('2d');
-// let pieChart = new Chart(pctx, {
-//   type: 'pie',
-//   data: {
-//     labels: [, , , , ],
-//     datasets: [{
-//       data: [20, 10, 30, 48, 8]
-//     }]
-//   }
-// });
+const pctx = document.getElementById("default-pieChart").getContext('2d');
+let pieChart = new Chart(pctx, {
+  type: 'pie',
+  data: {
+    labels: [, , , , ],
+    datasets: [{
+      data: [20, 10, 30, 48, 8],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)'
+      ],
+    }]
+  }
+});
 

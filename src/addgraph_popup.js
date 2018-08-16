@@ -7,3 +7,4 @@ function div_hide_addgraph(){
   document.getElementById('addgraph-popup').style.display = "none";
   document.getElementsByClassName("overlay")[0].style.display = "none";
 }
+
