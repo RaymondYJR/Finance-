@@ -31,9 +31,6 @@ const Company = AV.Object.extend('Company');
 //     company.set('Short_description', data["short_description"]);
 //     company.save();
 //   });
-function loadGraphs() {
-  console.log("load graph!");
-}
 
 function insideviewCompId(company) {
   let url_iv = 'https://cors-anywhere.herokuapp.com/https://api.insideview.com/api/v1/companies?ticker=' + ticker;
@@ -53,6 +50,20 @@ function insideviewCompId(company) {
       let id = data.companies[0].companyId;
       company.set('Insideview_id', id);
       displayCompanyLogo(company, id);
+    }
+  });
+}
+
+function insideviewCompId2(company) {
+  let token = 'Q1WhO/7I8UEXgNgwj/xV47kBhFdbsSZZsalIyaPx0geXcpj2q/dKlj68DS5toPjD/RPzvU39vYeL2shp7s9omcejKycrl5Wr764u3kS6P22gpTnPqnotyx0jVLfFkUpkd3HBH2CeUp/yP2p3jjOQP1z4jI4DsOZTcqTMWTNY5MY=.eyJmZWF0dXJlcyI6InsgfSIsImNsaWVudElkIjoiMjBsaDc1ZXI4Z2J0aGNqNHBqNmkiLCJncmFudFR5cGUiOiJjcmVkIiwidHRsIjoiMTIwOTYwMCIsImlhdCI6IjE1MzQyMzcwNzQiLCJ2ZXJzaW9uIjoidjEiLCJqdGkiOiJkMWIzZGQ2Yy1mNzQ2LTRhZmYtODk5Ni03ZGVkYmM0YjI1ZGEifQ==';
+  $.ajax({
+    headers: {"accessToken": token},
+    url: `https://api.insideview.com/api/v1/companies?ticker=${ticker}&accessToken=${token}`,
+    // accessToken: token,
+    type: 'get',
+    // Accept: 'application/json',
+    success: function (data) {
+      console.log(data);
     }
   });
 }
@@ -81,20 +92,6 @@ function displayCompanyLogo(company, id) {
       console.log(error);
     });
   });
-  // }).then(function(blob) {
-    // var objectURL = URL.createObjectURL(blob);
-    // companyLogo.src = objectURL;
-    // const Company2 = AV.Object.extend('Company');
-
-    // let base64Data = blob
-    // var img = "url('data:image/png;base64, "+base64Data + "')";
-    // companyLogo.style.backgroundImage = img;
-    // company.set('Ticker','RAND');
-    // company.save();
-    // let image = data.toDataURL();
-    // companyHeader.insertAdjacentHTML("afterbegin", `${data}`);
-    // companyLogo.src = data;
-  // });
 }
 
 function translate(company, industry, description, name) {
@@ -133,7 +130,7 @@ function translate(company, industry, description, name) {
       company.set("Description_chn", chnDes);
       company.set("Industry_chn", chnInd);
       company.set("Name_chn", chnNam);
-      insideviewCompId(company);
+      insideviewCompId2(company);
     }
   });
 }
