@@ -11,6 +11,7 @@ let currentUser = AV.User.current();
 
 if (!currentUser) {
    document.getElementsByClassName("user-header")[0].style.display = "none";
+   document.getElementById("sidebar-dash-link").href = "dashboard.html?ticker=AAPL";
 }
 else {
    // display user info
@@ -32,4 +33,31 @@ else {
   }
 
   document.getElementById("user-logout").addEventListener("click", userLogOut);
+  sidebarDashboardLink();
+}
+
+function displayCompanyHTMLDash(comps) {
+  console.log(comps);
+  document.getElementById("sidebar-dash-link").href = `dashboard.html?ticker=${comps.attributes.Ticker}`;
+  // displayCompanyLogo(comps);
+}
+
+function iterateSubListDash(subs) {
+  if (subs.length === 0) {
+    document.getElementById("sidebar-dash-link").href = "dashboard.html?ticker=AAPL";
+  } else {
+    sub = subs[0];
+    let dashCompQuery = new AV.Query('Company')
+    dashCompQuery
+    .get(sub.attributes.company.id)
+    .then( comps => displayCompanyHTMLDash(comps) )
+  }
+}
+
+function sidebarDashboardLink() {
+  let dashSubQuery = new AV.Query('Subscription')
+  dashSubQuery
+  .equalTo('user', currentUser)
+  .find()
+  .then( subs => iterateSubListDash(subs));
 }

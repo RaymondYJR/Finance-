@@ -130,7 +130,7 @@ function translate(company, industry, description, name) {
       company.set("Description_chn", chnDes);
       company.set("Industry_chn", chnInd);
       company.set("Name_chn", chnNam);
-      insideviewCompId2(company);
+      insideviewCompId(company);
     }
   });
 }
