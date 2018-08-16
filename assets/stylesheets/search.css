@@ -7,6 +7,15 @@
   height: 47px;
 }
 
+.sm-search-dropdown {
+  max-width: 70.5%;
+  left: 14.6%;
+}
+
+.sm-search-input {
+  margin-left: 3px;
+}
+
 .sm-search-icon {
   left: 0px !important;
 }
@@ -89,6 +98,8 @@
 .search-dropdown {
   box-sizing: border-box;
   color: #B3B3B3;
+  position: absolute;
+  z-index: 2;
   opacity: 1.00;
   padding: 20px;
   width: 100%;
