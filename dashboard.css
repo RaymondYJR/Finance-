@@ -11,7 +11,7 @@
 @import url(assets/stylesheets/companyInfoDisplay.css);
 @import url(assets/stylesheets/addrow-form.css);
 @import url(assets/stylesheets/addgraph-form.css);
-@import url(assets/stylesheets/logo.css)
+@import url(assets/stylesheets/logo.css);
 
 body {
   font-family: "SourceHan", sans-serif;
@@ -19,7 +19,7 @@ body {
 }
 
 .company-sidebar {
-  top: 5vh;
+  top: 0;
   right: -2.7vw;
   position: relative;
   color: white;
@@ -297,6 +297,30 @@ th {
 
 .dash-bear {
   margin-left: -30px;
+}
+
+#jackson {
+  width: 100%;
+  margin-left: 8vh;
+}
+
+.fuck-off {
+  top: 0;
+}
+
+.curious {
+  color: #89C0EF;
+  text-align: center;
+  margin-left: 3vh;
+  padding-right: 3vh;
+
+}
+
+.ray-says {
+  margin-top: 2vh;
+  padding-top: 2vh;
+  color: rgb(79, 79, 79);
+  margin-left: 3vh;
 }
 /*#left-bottom-card {
   margin-top: 50px;

@@ -47,7 +47,7 @@ span:hover {
 {
   display: block;
   position: fixed;
-  top: 50px;
+  top: 6vh;
   left: 22.5px;
 
   z-index: 1;
