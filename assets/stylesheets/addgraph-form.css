@@ -9,30 +9,46 @@
   transform: translate( -50%, -50%);
 }
 
-.addgraph-submit-btn {
+#addgraph-submit {
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
   margin-top: 5px;
-  margin-bottom: 5px;
-  background-color: #89C0EF !important;
+  margin-bottom: 7px;
+  background-color: #89C0EF;
   border: #89C0EF;
   opacity: 0.8;
+  border-radius: 4px;
+  margin-left: 10px;
 }
 
-.addgraph-submit-btn:hover {
-  background-color: #89C0EF;
+#addgraph-submit:hover {
   opacity: 1;
 }
 
-.addgraph-cancel-btn {
+#addgraph-cancel {
+  color: white;
+  padding: 7px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
   margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 60px;
-  background-color: #89C0EF;
+  margin-bottom: 7px;
+  background-color: #ef4343;
   border: #89C0EF;
   opacity: 0.8;
+  border-radius: 4px;
+  margin-left: 40px;
 }
 
-.addgraph-cancel-btn:hover {
-  background-color: #89C0EF;
+#addgraph-cancel:hover {
+  background-color: #ef4343;
   opacity: 1;
 }
 

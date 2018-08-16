@@ -56,7 +56,7 @@
   border: #89C0EF;
   opacity: 0.8;
   border-radius: 4px;
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
 #addrow-submit:hover {
@@ -73,15 +73,15 @@
   cursor: pointer;
   margin-top: 5px;
   margin-bottom: 7px;
-  background-color: #89C0EF;
+  background-color: #ef4343;
   border: #89C0EF;
   opacity: 0.8;
   border-radius: 4px;
-  margin-left: 50px;
+  margin-left: 40px;
 }
 
 .addrow-cancel-btn:hover {
-  background-color: #89C0EF;
+  background-color: #ef4343;
   opacity: 1;
 }
 

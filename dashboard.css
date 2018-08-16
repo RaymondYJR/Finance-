@@ -157,6 +157,10 @@ body {
 #right-card{
 }
 
+.row-align {
+  text-align: right;
+}
+
 th {
   color: rgb(79, 79, 79);
 }

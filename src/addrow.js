@@ -61,6 +61,11 @@ function rowCreateFunction(str,arr) {
   cell6.innerHTML = arr[4];
   cell1.classList.add("first-show", "i-hate-raymond");
   cell1.setAttribute('scope', 'row');
+  cell2.classList.add("row-align")
+  cell3.classList.add("row-align")
+  cell4.classList.add("row-align")
+  cell5.classList.add("row-align")
+  cell6.classList.add("row-align")
 }
 
 let add_row_form = document.getElementById('addrow-form');
