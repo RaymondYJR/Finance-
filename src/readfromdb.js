@@ -11,6 +11,13 @@
 // let year = [2013, 2014, 2015, 2016, 2017];
 
 
+let promises = []
+let resolves = {}
+
+year.forEach(function(y){ promises.push(new Promise((resolve, reject) => {
+                                          resolves[y] = resolve;
+                                        }))
+})
 
 for (const y of year) {
   const query = new AV.Query('Balance_Sheet')
@@ -24,5 +31,6 @@ for (const y of year) {
         const output = document.getElementById(item+`${y}`);
         output.innerHTML = (financials[item] / 100000000).toFixed(2);
       };
+      resolves[y]();
     });
 };
