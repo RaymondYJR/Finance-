@@ -10,7 +10,7 @@
 .reg-login-header {
   position: absolute;
   right: 3vw;
-  top: 7vh;
+  top: 5vh;
 }
 
 .btn-login, .btn-signup {
@@ -21,7 +21,7 @@
   position: absolute;
   color: #89C0EF;
   right: 3vw;
-  top: 4vh;
+  top: 5vh;
   cursor: pointer;
 }
 

@@ -40,7 +40,7 @@ function rowCreateFunction(str,arr) {
       <td id="${str}2015">${arr[2]}</td>
       <td id="${str}2016">${arr[3]}</td>
       <td id="${str}2017">${arr[4]}</td>
-      <td><a onclick="hide_added_row(${str})"><span class="btn">隐藏</span></a></td>
+      <td><a onclick="hide_added_row(${str})"><span class="btn"><i class="fas fa-trash-alt"></i></span></a></td>
     </tr>`
   );
 }
