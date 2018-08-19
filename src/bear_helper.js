@@ -1,29 +1,19 @@
-//  const more = document.getElementsByClassName('question-helper')
-//   console.log(more)
-//   for (const w of more) {
-//     function appearsQM() {
-//       w.insertAdjacentHTML('beforeend', '?');
-//     }
-//     w.addEventListener("mouseover", appearsQM);
-// };
-
-
 let suk = {}
 
-function div_show_bear(event) {
-  changeBear = document.getElementById('bear-popup')
-  let speechBubble = document.getElementsByClassName("curious")[0]
+function div_show_bear (event) {
+  let changeBear = document.getElementById('bear-popup')
+  let speechBubble = document.getElementsByClassName('curious')[0]
   let wKey = event.target.innerText
   speechBubble.innerText = suk[wKey]
   console.log(speechBubble)
-  changeBear.style.display = "flex";
+  changeBear.style.display = 'flex'
   console.log(suk)
-  document.getElementsByClassName("overlay")[0].style.display = "block";
+  document.getElementsByClassName("overlay")[0].style.display = "block"
 }
 
-function div_hide_bear(){
-  document.getElementById('bear-popup').style.display = "none";
-  document.getElementsByClassName("overlay")[0].style.display = "none";
+function div_hide_bear (){
+  document.getElementById('bear-popup').style.display = "none"
+  document.getElementsByClassName("overlay")[0].style.display = "none"
 }
 
 

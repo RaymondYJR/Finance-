@@ -84,6 +84,7 @@ const addgraph = (event) => {
   } else {
     if (barstatus === true) {
       addCanvasToHtml(`${newgraphname}`);
+      console.log(newgraphname);
       graphCreateBar(`${newgraphname}`, datasetgraphdata);
     } else if (piestatus === true) {
       addCanvasToHtml(`${newgraphname}`);
