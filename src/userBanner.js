@@ -16,7 +16,10 @@ if (!currentUser) {
 else {
    // display user info
   console.log(currentUser.attributes.username);
-  document.getElementsByClassName("reg-login-header")[0].style.display = "none";
+  let loginHeader = document.getElementsByClassName("reg-login-header")[0];
+  if (loginHeader) {
+    loginHeader.style.display = "none";
+  }
   document.getElementById("username-display").innerHTML = currentUser.attributes.username;
 
   // make it a function
