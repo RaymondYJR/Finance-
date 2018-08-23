@@ -21,4 +21,14 @@
   font-size: 13px;
 }
 
+#btn-id-change-pw, #btn-contact-us {
+  opacity: 0.8;
+  color: white;
+  margin: 0 2vw;
+}
+
+#btn-id-change-pw:hover, #btn-contact-us:hover {
+  opacity: 1;
+}
+
 

@@ -11,12 +11,15 @@ let currentUser = AV.User.current();
 
 if (!currentUser) {
    document.getElementsByClassName("user-header")[0].style.display = "none";
-   document.getElementById("sidebar-dash-link").href = "dashboard?ticker=AAPL";
+   document.getElementById("sidebar-dash-link").href = "dashboard.html?ticker=AAPL";
 }
 else {
    // display user info
   console.log(currentUser.attributes.username);
-  document.getElementsByClassName("reg-login-header")[0].style.display = "none";
+  let loginHeader = document.getElementsByClassName("reg-login-header")[0];
+  if (loginHeader) {
+    loginHeader.style.display = "none";
+  }
   document.getElementById("username-display").innerHTML = currentUser.attributes.username;
 
   // make it a function
@@ -38,7 +41,7 @@ else {
 
 function displayCompanyHTMLDash(comps) {
   console.log(comps);
-  document.getElementById("sidebar-dash-link").href = `dashboard?ticker=${comps.attributes.Ticker}`;
+  document.getElementById("sidebar-dash-link").href = `dashboard.html?ticker=${comps.attributes.Ticker}`;
   // displayCompanyLogo(comps);
 }
 
