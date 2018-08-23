@@ -1,0 +1,26 @@
+@import url(assets/stylesheets/button.css);
+
+#user-profile-reg-days-header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  font-size: 30px;
+  color: #5DA9E9;
+  letter-spacing: 3px;
+}
+
+.myaccount-container {
+  height: 60%;
+  text-align: center;
+  /*display: flex;*/
+}
+
+#user-profile-reg-days {
+  font-size: 55px;
+  color: gold;
+}
+
+#user-account-content {
+  margin: 30vh auto;
+}

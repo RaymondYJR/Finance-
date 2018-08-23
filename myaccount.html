@@ -1,0 +1,63 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>我的账户 My Account</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="dashboard.css">
+  <link rel="stylesheet" type="text/css" href="myaccount.css">
+</head>
+<body>
+  <div class="user-header" id="user-header-dropdown-call">
+    <span class="btn btn-login" id="username-display"></span>
+    <i class="fas fa-caret-down"></i>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="myaccount.html" id="user-profile">个人信息</a>
+      <a href="#" id="user-logout">登出</a>
+    </div>
+  </div>
+
+  <!-- side-bar -->
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="./index.html"><li><i class="fas fa-search"></i>搜索</li></a>
+      <a href="#" id="sidebar-dash-link"><li><i class="fas fa-chart-pie"></i>面板</li></a>
+    </ul>
+  </div>
+
+<div class="container myaccount-container">
+  <div id="user-account-content">
+    <div id="user-profile-reg-days-header">
+      点点投已伴您投资
+      <span id="user-profile-reg-days">
+      20
+      </span>
+      天
+    </div>
+    <div class="btn btn-signup" id="btn-id-change-pw">
+      更改密码
+    </div>
+    <div class="btn btn-signup" id="btn-contact-us">
+      联系我们
+    </div>
+  </div>
+
+</div>
+
+
+
+
+  <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="src/av-min.js"></script>
+  <script src="src/leancloud-config.js"></script>
+  <script src="src/userBanner.js"></script>
+
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.js"></script>
+</body>
+</html>
