@@ -7,11 +7,69 @@
 @import url(assets/stylesheets/user-dropdown.css);
 @import url(assets/stylesheets/logo.css);
 
-.reg-login-header {
-  position: absolute;
-  right: 3vw;
-  top: 5vh;
+@media only screen and (max-width: 375px) {
+  .reg-login-header{
+    position: fixed;
+    right: 8vw;
+    top: 5vh;
+    z-index: 1
+  }
+  .mobile-hide {
+    display: none;
+  }
+  .ladning-companies {
+    margin-top: 12vh !important;
+  }
+  .landing-list {
+    margin-right: 55px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+  }
+  .company {
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .save-bear {
+    width: 125px !important;
+  }
+
+  .speech-bubble {
+    position: relative;
+    border-radius: .4em;
+    border: 2px solid #89C0EF;
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  #lala {
+    padding: 4vh;
+    text-align: justify;
+    font-size: small;
+  }
+
+  .home-banner{
+    margin-top: 8vh;
+  }
 }
+@media only screen and (min-width: 768px) {
+  .reg-login-header {
+    position: absolute;
+    right: 3vw;
+    top: 5vh;
+  }
+
+
+}
+
+
 
 .btn-login, .btn-signup {
   font-size: 15px;
@@ -93,6 +151,10 @@ body {
   color: #5DA9E9;
 }
 
+header {
+  display: flex;
+  justify-content: space-evenly;
+}
 .container {
   min-height: 100vh;
   width: 100% !important;
@@ -115,6 +177,8 @@ body {
   margin-top: 20vh;
 }
 
+
+
 .landing-list {
   list-style: none;
   margin: 0;
@@ -135,6 +199,13 @@ body {
 
 }
 
+.top-header {
+  width: 100%;
+  margin-top: 3%;
+  margin-left: 3vw;
+  margin-right: 3vw;
+}
+
 .logo-image {
   width: 75px;
   height: 75px;
@@ -153,6 +224,7 @@ body {
   width: 225px;
 }
 
+
 .speech-bubble {
   position: relative;
   border-radius: .4em;
@@ -160,6 +232,8 @@ body {
   width: 350px;
   height: 160px;
 }
+
+
 
 .speech-bubble:after {
   content: '';

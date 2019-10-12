@@ -1,22 +1,48 @@
 .nice-logo {
   width: 50px;
   height: 50px;
-  left: 6%;
   display: block;
   position: fixed;
-  top: 4vh;
+
 
 }
 
-.logo-container {
+@media only screen and (max-width: 375px) {
+  .nice-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 17%;
+    top: 4.2%;
+    z-index: 1;
+  }
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 18%;
-  margin-top: 5.5vh;
-  margin-left: 4%;
+  .logo-container {
+    top: 5.6%;
+    position: fixed;
+    left: 32%;
+    z-index: 1;
+  }
 }
+
+/* @media only screen and (min-width: 768px) {
+  
+} */
+@media only screen and (min-width: 768px) {
+  .logo-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18%;
+    margin-left: 8px;
+  }
+  .nice-logo {
+    left: 6%;
+    top: 4vh
+  }
+}
+
 
 .sugar {
   color: #4F4F4F;

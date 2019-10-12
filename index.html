@@ -30,48 +30,57 @@
   </head>
   <body>
     <div class="overlay"></div>
-    <div class="reg-login-header">
-      <a onclick="div_show_login()"><span class="btn btn-login">登录</span></a>
-      <a onclick="div_show()"><span class="btn btn-clear btn-signup" id="test">注册</span></a>
-    </div>
-    <div class="user-header" id="user-header-dropdown-call">
-      <span class="btn btn-login" id="username-display"></span>
-      <i class="fas fa-caret-down"></i>
-      <div id="myDropdown" class="dropdown-content">
-        <a href="myaccount.html" id="user-profile">个人信息</a>
-        <a href="#" id="user-logout">登出</a>
-      </div>
-    </div>
-    <div id="menuToggle">
-    <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-      <input type="checkbox" />
 
-    <!--
-    Some spans to act as a hamburger.
+    <div class="top-header">
+      <div id="menuToggle">
+              <!--
+              A fake / hidden checkbox is used as click reciever,
+              so you can use the :checked selector on it.
+              -->
+                <input type="checkbox" />
+        
+              <!--
+              Some spans to act as a hamburger.
+        
+              They are acting like a real hamburger,
+              not that McDonalds stuff.
+              -->
+                <span></span>
+                <span></span>
+                <span></span>
+        
+              <!--
+              Too bad the menu has to be inside of the button
+              but hey, it's pure CSS magic.
+              -->
+                <ul id="menu">
+                  <a href="#"><li><i class="fas fa-search"></i>搜索</li></a>
+                  <a href="#" id="sidebar-dash-link"><li><i class="fas fa-chart-pie"></i>面板</li></a>
+                </ul>
+        </div>
+        <div class="pls-help">
+            <img src="assets/vectors/diandiantou.png" alt="" class="nice-logo">
+        </div>
+        <div class="logo-container">   
+            <h4 class="sugar">点点投</h4>
+        </div>
+        <div class="reg-login-header">
+          <a onclick="div_show_login()"><span class="btn btn-login">登录</span></a>
+          <a onclick="div_show()"><span class="btn btn-clear btn-signup" id="test">注册</span></a>
+        </div>
+        <div class="user-header" id="user-header-dropdown-call">
+          <span class="btn btn-login" id="username-display"></span>
+          <i class="fas fa-caret-down"></i>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="myaccount.html" id="user-profile">个人信息</a>
+            <a href="#" id="user-logout">登出</a>
+          </div>
+        </div>
+        
+        
 
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-      <span></span>
-      <span></span>
-      <span></span>
-
-    <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-      <ul id="menu">
-        <a href="#"><li><i class="fas fa-search"></i>搜索</li></a>
-        <a href="#" id="sidebar-dash-link"><li><i class="fas fa-chart-pie"></i>面板</li></a>
-      </ul>
     </div>
-    <div class="logo-container">
-      <img src="assets/vectors/diandiantou.png" alt="" class="nice-logo">
-      <h4 class="sugar">点点投</h4>
-    </div>
+    
     <div class="container">
 
       <div class= "home-banner">
@@ -155,7 +164,7 @@
     <div class="landing-companies">
       <ul class="landing-list">
         <li class="company">
-          <a href="dashboard?ticker=AAPL">
+          <a href="dashboard?ticker=AAPL" class="mobile-hide">
             <img src="assets/vectors/apple.svg" alt="" class="logo-image">
           </a>
         </li>
@@ -180,12 +189,12 @@
           </a>
         </li>
         <li class="company">
-          <a href="dashboard?ticker=TWTR">
+          <a href="dashboard?ticker=TWTR" class="mobile-hide">
             <img src="assets/vectors/twitter.svg" alt="" class="logo-image">
           </a>
         </li>
         <li class="company">
-          <a href="dashboard?ticker=BIDU">
+          <a href="dashboard?ticker=BIDU" class="mobile-hide">
             <img src="assets/vectors/baidu.svg" alt="" class="logo-image">
           </a>
         </li>
@@ -194,7 +203,7 @@
       <ul class="landing-list">
 
         <li class="company">
-          <a href="dashboard?ticker=FB">
+          <a href="dashboard?ticker=FB" class="mobile-hide">
             <img src="assets/vectors/facebook-2.svg" alt="" class="logo-image">
           </a>
         </li>
@@ -219,12 +228,12 @@
           </a>
         </li>
         <li class="company">
-          <a href="dashboard?ticker=MSFT">
+          <a href="dashboard?ticker=MSFT" class="mobile-hide">
             <img src="assets/vectors/microsoft.svg" alt="" class="logo-image">
           </a>
         </li>
         <li class="company">
-          <a href="dashboard?ticker=V">
+          <a href="dashboard?ticker=V" class="mobile-hide">
             <img src="assets/vectors/visa.svg" alt="" class="logo-image">
           </a>
         </li>

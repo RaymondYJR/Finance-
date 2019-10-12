@@ -3,8 +3,16 @@
   -ms-flex-positive: 1;
   position: relative;
   width: 60vw;
-  max-width: 80vw
+  max-width: 80vw;
   height: 47px;
+}
+
+@media only screen and (max-width: 375px) {
+  .nav-search{
+    left: 11vw;
+    width: 56.5vw;
+    position: relative;
+  }
 }
 
 .sm-search-dropdown {
